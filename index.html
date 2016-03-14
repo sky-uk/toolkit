@@ -7,7 +7,7 @@
 
   <title>Sky Toolkit</title>
 
-  <link rel="stylesheet" href="/toolkit/css/toolkit.css">
+  <link rel="stylesheet" href="/toolkit/assets/css/styleguide.css">
   <link rel="canonical" href="http://sky-uk.github.io/toolkit/">
 </head>
 
@@ -20,6 +20,83 @@
 
     <main class="o-container">
       <h1 class="c-heading-alpha">Toolkit</h1>
+
+<hr class="c-keyline">
+
+<section>
+  <h2 class="c-heading-beta">Colours</h2>
+  <div class="o-layout o-layout--spaced">
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--brand">
+        <div class="c-text-body c-text-bold">Brand</div>
+        <div class="c-text-body">#0072c9</div>
+        <div class="c-text-body-small">color(brand)</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--highlight">
+        <div class="c-text-body c-text-bold">Highlight</div>
+        <div class="c-text-body">#73add8</div>
+        <div class="c-text-body-small">color(highlight)</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--text">
+        <div class="c-text-body c-text-bold">Text</div>
+        <div class="c-text-body">#4a4a4a</div>
+        <div class="c-text-body-small">color(text)</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--keyline">
+        <div class="c-text-body c-text-bold">Keyline</div>
+        <div class="c-text-body">#c0c0c0</div>
+        <div class="c-text-body-small">color(keyline)</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--error">
+        <div class="c-text-body c-text-bold">Error</div>
+        <div class="c-text-body">#ff2744</div>
+        <div class="c-text-body-small">color(error)</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/3@medium">
+      <div class="sg-swatch sg-swatch--success">
+        <div class="c-text-body c-text-bold">Success</div>
+        <div class="c-text-body">#299934</div>
+        <div class="c-text-body-small">color(success)</div>
+      </div>
+    </div>
+  </div>
+  <h2 class="c-heading-beta">Gradients</h2>
+  <div class="o-layout o-layout--spaced">
+    <div class="o-layout__item u-width-1/1 u-width-1/2@medium">
+      <div class="sg-swatch sg-swatch--large-linear">
+        <div class="c-text-body c-text-bold">Large (Linear)</div>
+        <div class="c-text-body-small">@include background-gradient("large");</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/1 u-width-1/2@medium">
+      <div class="sg-swatch sg-swatch--large-radial">
+        <div class="c-text-body c-text-bold">Large (Radial)</div>
+        <div class="c-text-body-small">@include background-gradient("large", "radial");</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/1 u-width-1/2@medium">
+      <div class="sg-swatch sg-swatch--small-linear">
+        <div class="c-text-body c-text-bold">Small (Linear)</div>
+        <div class="c-text-body-small">@include background-gradient("small");</div>
+      </div>
+    </div>
+    <div class="o-layout__item u-width-1/1 u-width-1/2@medium">
+      <div class="sg-swatch sg-swatch--small-radial">
+        <div class="c-text-body c-text-bold">Small (Radial)</div>
+        <div class="c-text-body-small">@include background-gradient("small", "radial");</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr class="c-keyline">
 
@@ -218,7 +295,7 @@
   </article>
 </section>
 
-<hr class="c-keyline">
+<hr class="c-keyline u-margin-top-large">
 
 <section>
   <h2 class="c-heading-beta">Buttons</h2>

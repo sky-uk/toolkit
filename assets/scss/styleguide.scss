@@ -1,0 +1,62 @@
+@import 'sky-toolkit-core/all';
+@import 'sky-toolkit-ui/all';
+
+.c-text-bold {
+  font-weight: bold;
+}
+
+.sg-swatch {
+  padding: $global-spacing-unit-small;
+  border-radius: $global-border-radius;
+}
+
+/* Color modifiers
+   =========================================== */
+
+.sg-swatch--brand {
+  background-color: color(brand);
+  color: color(white);
+}
+
+.sg-swatch--highlight {
+  background-color: color(highlight);
+  color: color(white);
+}
+
+.sg-swatch--text {
+  background-color: color(text);
+  color: color(white);
+}
+
+.sg-swatch--keyline {
+  background-color: color(keyline);
+}
+
+.sg-swatch--error {
+  background-color: color(error);
+  color: color(white);
+}
+
+.sg-swatch--success {
+  background-color: color(success);
+  color: color(white);
+}
+
+/* Gradient modifiers
+   =========================================== */
+
+.sg-swatch--large-linear {
+  @include background-gradient("large");
+}
+
+.sg-swatch--large-radial {
+  @include background-gradient("large", "radial");
+}
+
+.sg-swatch--small-linear {
+  @include background-gradient("small");
+}
+
+.sg-swatch--small-radial {
+  @include background-gradient("small", "radial");
+}

@@ -320,6 +320,84 @@
 <hr class="c-keyline">
 
 <section>
+  <h2 class="c-heading-beta">Inputs</h2>
+  <form>
+    <fieldset>
+      <legend>Example form</legend>
+      <ul class="c-form-list">
+        <li class="c-form-list__item">
+          <label class="c-form-label" for="f-username">
+            Username <abbr title="This field is required" class="c-form-required">*</abbr>
+          </label>
+          <input type="text" class="c-form-input" placeholder="e.g. hulk42" name="f-username" id="f-username"/>
+        </li>
+        <li class="c-form-list__item">
+          <label class="c-form-label" for="f-email">
+            Email <abbr title="This field is required" class="c-form-required">*</abbr>
+          </label>
+          <input type="email" class="c-form-input" placeholder="e.g. ironman@avengers.com" name="f-email" id="f-email"/>
+        </li>
+        <li class="c-form-list__item">
+          <span class="c-form-label">
+            Select a hero <abbr title="This field is required" class="c-form-required">*</abbr>
+          </span>
+          <div class="c-form-select">
+            <select class="c-form-select__dropdown">
+              <option value="" disabled selected>Heroes</option>
+              <option value="captainAmerica">Captain America</option>
+              <option value="ironMan">Iron Man</option>
+              <option value="blackWidow">Black Widow</option>
+              <option value="thor">Thor</option>
+            </select>
+          </div>
+        </li>
+        <li class="c-form-list__item  c-form-pair">
+          <span class="c-form-pair__label">
+            <label class="c-form-label  u-margin-right">
+              Which side?
+            </label>
+          </span>
+          <span class="c-form-pair__input">
+            <label class="c-form-checkbox  c-form-checkbox--radio  u-margin-bottom-small">
+              <input type="radio" class="c-form-checkbox__input" name="f-side" id="f-side_1" value="good"/>
+              <span class="c-form-checkbox__faux"></span>
+              Good
+            </label>
+            <label class="c-form-checkbox  c-form-checkbox--radio">
+              <input type="radio" class="c-form-checkbox__input" name="f-side" id="f-side_2" value="evil"/>
+              <span class="c-form-checkbox__faux"></span>
+              Evil
+            </label>
+          </span>
+        <li>
+        <li class="c-form-list__item">
+          <label class="c-form-label" for="f-date">
+            Date of birth
+          </label>
+          <input type="date" class="c-form-date" placeholder="dd/mm/yyyy" name="f-date" id="f-date"/>
+        </li>
+        <li class="c-form-list__item">
+          <label class="c-form-label" for="f-message">
+            Message
+          </label>
+          <textarea class="c-form-input  c-form-input--long" placeholder="Enter a message" name="f-message" id="f-message"></textarea>
+        </li>
+        <li class="c-form-list__item">
+          <label class="c-form-checkbox">
+            <input type="checkbox" class="c-form-checkbox__input" name="f-terms" id="f-terms_1" value="1"/>
+            <span class="c-form-checkbox__faux"></span>
+            I agree to the terms & conditions
+          </label>
+        <li>
+      </ul>
+    </fieldset>
+  </form>
+</section>
+
+
+<hr class="c-keyline">
+
+<section>
   <h2 class="c-heading-beta">Tiles</h2>
   <article class="c-tile">
     <div class="c-tile__content">
@@ -386,7 +464,7 @@
       </div>
     </div>
   </article>
-  
+
   <div class="o-layout">
     <div class="o-layout__item u-width-1/3@medium">
       <article class="c-tile c-tile--square">

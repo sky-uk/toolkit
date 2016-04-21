@@ -216,6 +216,61 @@ layout: default
 <hr class="c-keyline  u-margin-top-large">
 
 <section>
+  <h3 class="c-heading-gamma">Default Media Queries</h3>
+  <p>When using the Responsive Grids, you can control how the grid behaves at specific breakpoints by adding class names.</p>
+  <div class="o-layout o-layout--spaced">
+    <div class="o-layout__item">
+      <table class="c-table-simple">
+        <thead>
+          <tr>
+            <td><strong>Key</strong></td>
+            <td><strong>CSS Media Query</strong></td>
+            <td><strong>Applies</strong></td>
+            <td><strong>Classname</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="c-table-simple__row">
+            <td class="c-table-simple__cell"><i>None</i></td>
+            <td class="c-table-simple__cell"><i>None</i></td>
+            <td class="c-table-simple__cell"><i>Always</i></td>
+            <td class="c-table-simple__cell"><code>.u-width-*</code></td>
+          </tr>
+
+          <tr class="c-table-simple__row">
+            <td class="c-table-simple__cell"><strong><code>small</code></strong></td>
+            <td class="c-table-simple__cell"><code>@include mq($from: small) { }</code></td>
+            <td class="c-table-simple__cell">≥ <strong>small</strong></td>
+            <td class="c-table-simple__cell"><code>.u-width-*<strong>@small</strong></code></td>
+          </tr>
+
+          <tr class="c-table-simple__row">
+            <td class="c-table-simple__cell"><strong><code>medium</code></strong></td>
+            <td class="c-table-simple__cell"><code>@include mq($from: medium) { }</code></td>
+            <td class="c-table-simple__cell">≥ <strong>medium</strong></td>
+            <td class="c-table-simple__cell"><code>.u-width-*<strong>@medium</strong></code></td>
+          </tr>
+          <tr class="c-table-simple__row">
+            <td class="c-table-simple__cell"><strong><code>large</code></strong></td>
+            <td class="c-table-simple__cell"><code>@include mq($from: large) { }</code></td>
+            <td class="c-table-simple__cell">≥ <strong>large</strong></td>
+            <td class="c-table-simple__cell"><code>.u-width-*<strong>@large</strong></code></td>
+          </tr>
+          <tr class="c-table-simple__row">
+            <td class="c-table-simple__cell"><strong><code>x-large</code></strong></td>
+            <td class="c-table-simple__cell"><code>@include mq($from: x-large) { }</code></td>
+            <td class="c-table-simple__cell">≥ <strong>x-large</strong></td>
+            <td class="c-table-simple__cell"><code>.u-width-*<strong>@x-large</strong></code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="c-keyline  u-margin-top-large">
+
+<section>
   <h2 id="ui-typography" class="c-heading-beta">Typography</h2>
   <h1 class="c-heading-alpha">Heading Level 1</h1>
   <h2 class="c-heading-beta">Heading Level 2</h2>

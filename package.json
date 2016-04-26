@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm run build",
     "build": "npm run build-toolkit && npm run build-styleguide",
-    "build-toolkit": "cat pages/assets/scss/toolkit.scss | node_modules/.bin/node-sass --include-path node_modules/ --output-style compressed > pages/assets/css/toolkit.css",
-    "build-styleguide": "cat pages/assets/scss/styleguide.scss | node_modules/.bin/node-sass --include-path node_modules/ --output-style compressed > pages/assets/css/styleguide.css",
+    "build-toolkit": "cat pages/assets/scss/toolkit.scss | node_modules/node-sass/bin/node-sass --include-path node_modules/ --output-style compressed > pages/assets/css/toolkit.css",
+    "build-styleguide": "cat pages/assets/scss/styleguide.scss | node_modules/node-sass/bin/node-sass --include-path node_modules/ --output-style compressed > pages/assets/css/styleguide.css",
     "update-pages": "rm -r -f node_modules/sky-toolkit-core && rm -r -f node_modules/sky-toolkit-ui && npm install && npm run build-toolkit && npm run build-styleguide"
   },
   "author": "Sky UK",

@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Sky Toolkit",
   "main": "toolkit.scss",
   "scripts": {
@@ -21,7 +21,7 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
-    "sky-toolkit-core": "git+ssh://git@github.com:sky-uk/toolkit-core.git#v0.3.9",
+    "sky-toolkit-core": "git+ssh://git@github.com:sky-uk/toolkit-core.git#v0.3.10",
     "sky-toolkit-ui": "git+ssh://git@github.com:sky-uk/toolkit-ui.git#v0.2.6"
   }
 }

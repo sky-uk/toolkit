@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Sky Toolkit",
   "main": "toolkit.scss",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "sky-toolkit-core": "0.5.0",
-    "sky-toolkit-ui": "0.4.1"
+    "sky-toolkit-ui": "0.4.2"
   }
 }

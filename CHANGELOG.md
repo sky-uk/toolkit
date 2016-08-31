@@ -1,3 +1,13 @@
+# Toolkit v0.4.2
+
+## Toolkit UI v0.4.2
+
+## 1. Bug Fixes
+- [tiles] Only title now underlines on hover.
+- [tiles] Specificity reduced with hover style allowing easier customisation.
+
+===
+
 # Toolkit v0.4.1
 
 ## Toolkit UI v0.4.1
@@ -5,7 +15,7 @@
 ## 1. Enhancements
 - [select] Reduced horizontal padding from 60px to 40px.
 
-## 1. Bug Fixes
+## 2. Bug Fixes
 - [select] Border styles are now applied to the label element, this resolves a rendering issue were multiple select buttons  lost their borders.
 - [select] Webkit vendor prefixes applied so buttons look and function correctly in older versions of Safari (including iOS8).
 

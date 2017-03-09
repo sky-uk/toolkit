@@ -50,7 +50,7 @@ See [sky.com/toolkit](http://sky.com/toolkit) for full documentation and informa
 For rapid prototyping and static sites you can include our latest compiled CSS in the `<head>` of your page.
 
 ```
-<link rel="stylesheet" href="https://www.sky.com/assets/toolkit/v1.7.0/toolkit.css">
+<link rel="stylesheet" href="https://www.sky.com/assets/toolkit/v1.8.0/toolkit.css">
 ```
 
 **We strongly advise not to use this method in live projects**.

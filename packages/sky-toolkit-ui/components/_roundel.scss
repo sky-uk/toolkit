@@ -1,0 +1,130 @@
+/* ==========================================================================
+   COMPONENT / #ROUNDEL
+   ========================================================================== */
+// Imports
+@import "sky-toolkit-core/tools";
+
+// Settings
+$roundel-size: 50px;
+$roundel-border-opacity: 1;
+$roundel-ring-size: 3px;
+
+/**
+ * Roundel Component.
+ *
+ * For inputs used as a radio button (`.c-roundel`) to allow the selection of a product variant.
+ */
+
+/* Base
+   =========================================== */
+
+/**
+ * Roundel
+ *
+ * The overall wrapper for the roundel component
+ * Is rendered as a <label> element.
+ */
+
+.c-roundel {
+  display: inline-block;
+  margin-right: $global-spacing-unit-tiny;
+  cursor: pointer;
+}
+
+/**
+ * Roundel Input
+ *
+ * The <input> radio element that is responsible for the selection
+ *
+ * 1. We use the hide-visually() mixin to hide the html input element from the user
+ *    but the input remains functional when the user selects a roundel.
+ */
+
+.c-roundel__input {
+  @include hide-visually(); /* [1] */
+}
+
+/**
+ * Roundel Option
+ *
+ * The component that the user interacts with
+ *
+ * 1. Responsible for the blue to white effect to indicate the selection of a roundel.
+ * 2. Defence code for issues with Firefox.
+ * 3. Overrides JS set background
+ * 4. Defence code for issues with Firefox.
+ * 5. Override default styles for .c-roundel__label to indicate the selected state.
+ */
+
+.c-roundel__option {
+  /*! autoprefixer: off */
+  border: 1px solid color(grey-20);
+  border-radius: 50%;
+  display: table;
+  height: $roundel-size - 10px;
+  width: $roundel-size - 10px;
+  background-clip: padding-box;
+  background-image: linear-gradient(to bottom right, rgba(color(brand), $roundel-border-opacity) 0%, rgba(color(brand), $roundel-border-opacity) 50%, rgba(#fff, 0) 50%); /* [1] */
+  background-image: -moz-linear-gradient(bottom right, rgba(color(brand), 0) 0%, rgba(#fff, 0) 100%); /* [2] */
+  background-size: 200%;
+  background-position: 100% 100%;
+  transition: all 0.25s linear;
+  transform: scale(0.9);
+  will-change: transform;
+
+  @include mq($from: small) {
+    height: $roundel-size;
+    width: $roundel-size;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  .c-roundel__input:checked + & {
+    /*! autoprefixer: off */
+    background-position: 0 0;
+    background-color: transparent !important; /* [3] */
+    border-color: color(white);
+    transform: scale(1.2);
+    padding: $roundel-ring-size;
+    background-image: -moz-linear-gradient(bottom right, rgba(color(brand), 1) 0%, rgba(color(brand), 1) 100%); /* [4] */
+
+    /* [5] */
+    .c-roundel__label {
+      border: 1px solid color(white);
+      font-weight: bold;
+    }
+
+    .c-roundel__icon path {
+      fill: color(brand);
+    }
+  }
+}
+
+/**
+ * Roundel Label
+ *
+ * The label use to describe the product variant e.g capacity size: 32GB or colour
+ *
+ * 1. By default the background colour for .c-roundel__label is white. But if we are rendering a
+ *    colour-picker, toolkit-react will set an inline style which equates to the provided colour.
+ */
+
+.c-roundel__label {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: color(white); /* [1] */
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 2px solid transparent;
+  transition: all 0.25s linear;
+
+  @include mq($from: small) {
+    font-size: 14px;
+  }
+}

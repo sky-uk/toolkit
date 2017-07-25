@@ -2,6 +2,11 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+## 2.2.0
+
+### Features
+
+* New Roundel component designed to give the user the ability to select a product variant e.g. Phone Colour. - [#253](https://github.com/sky-uk/toolkit/issues/253)
 
 ## 2.1.1
 
@@ -18,9 +23,9 @@
 
 ### Notes
 
-* [Node.js] If you're looking to access a compiled stylesheet for the UI 
-  (similar to `sky-toolkit-core`), use `sky-toolkit`'s entry point. 
-  
+* [Node.js] If you're looking to access a compiled stylesheet for the UI
+  (similar to `sky-toolkit-core`), use `sky-toolkit`'s entry point.
+
   For usage information, see [Toolkit's `README.md`](https://github.com/sky-uk/toolkit/blob/master/README.md#hybrid).
 
 

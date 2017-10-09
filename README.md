@@ -2,6 +2,8 @@
 
 # Toolkit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sky-uk/toolkit.svg)](https://greenkeeper.io/)
+
 **Sky’s CSS Toolkit**
 
 For full documentation, visit [sky.com/toolkit](http://sky.com/toolkit)

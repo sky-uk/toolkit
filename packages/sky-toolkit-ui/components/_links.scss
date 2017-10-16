@@ -9,6 +9,28 @@
   =========================================== */
 
 /**
+ * Link
+ *
+ * Make a element look and act like an `<a:link>`. Recommended for `<button>s`
+ * that need an alterntive display.
+ *
+ * 1. Reset browser styles.
+ * 2. Force element to appear clickable.
+ * 3. Match to a:link styling.
+ */
+.c-link {
+  border: none;  /* [1] */
+  background: none;  /* [1] */
+  padding: 0;  /* [1] */
+  cursor: pointer; /* [2] */
+  color: color(brand); /* [3] */
+
+  @include hocus() {
+    text-decoration: underline; /* [3] */
+  }
+}
+
+/**
  * Link External
  *
  * Adding icons to the end of any external links

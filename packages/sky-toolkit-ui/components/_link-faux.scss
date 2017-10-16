@@ -15,8 +15,10 @@ $link-faux-border-radius: $global-border-radius;
 /**
  * Link (Faux)
  *
- * When a `<button>` needs to appear similar to a link for cosmetic reasons,
- * Link (Faux) should be used.
+ * See `c-link` for a `<button>` styled as `<a:link> `only
+ *
+ * When a `<button>` needs to appear as a hybrid of a `<a:link>` and a `<button>`
+ * for cosmetic reasons, Link (Faux) should be used.
  *
  * 1. Reset browser styles.
  * 2. Tidy aligment for when the button size needs to be modified.

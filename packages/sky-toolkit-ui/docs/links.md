@@ -29,6 +29,12 @@ The default `sky-toolkit-core` styling provides a minimal branded link with
 <a href="#">This is a default link</a>
 ```
 
+`.c-link` Applies the branded link style to an alternative element such as a `<button>`. 
+
+```html
+<button class="c-link">This is a Button styled as a link</button>
+```
+
 ---
 
 ## External

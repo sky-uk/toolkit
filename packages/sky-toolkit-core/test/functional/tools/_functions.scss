@@ -130,7 +130,7 @@ $test-module-area: "Tools / Functions /";
   @include test("should return a reversed map.") {
 
     $actual: reverse(map-get($gradients, sky-1));
-    $expected: (100% #1ea0f5), (0% #0082dc);
+    $expected: (100% #079ef8), (0% #0080df);
 
     @include assert-equal($actual, $expected);
   }

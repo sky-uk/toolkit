@@ -13,12 +13,22 @@ $form-background: color(white);
 $form-border-width: $global-border-width;
 $form-border: $form-border-width solid color(grey-20);
 $form-font-size: text-body;
-$form-icon-size: 15px;
+$form-icon-size: $global-spacing-unit;
 $form-icon-offset: $global-spacing-unit-large;
 $form-checkbox-size: 1em;
 $form-checkbox-margin: $form-checkbox-size;
 $form-checkbox-y-offset: 3px;
 $form-animation-speed: $global-animation-speed-fast;
+$form-spacing: $global-spacing-unit-small - $form-border-width;
+
+// Tools
+// Note: This is not intended for use outside of Forms; it is purely to improve
+//       design consistency of inputs and avoid repetition of code.
+@mixin _form-spacing() {
+  @include height-sizing();
+  padding-left: $form-spacing;
+  padding-right: $form-spacing;
+}
 
 /* Base
   ============================================ */
@@ -111,16 +121,14 @@ $form-animation-speed: $global-animation-speed-fast;
  */
 .c-form-input {
   @include font($form-font-size, large);
+  @include _form-spacing();
   display: inline-block;
-  padding: 0 $global-spacing-unit-small; /* [1] */
   margin-bottom: $global-spacing-unit-small;
-  height: 2.111em; /* [2] */
   width: 100%;
   background-color: $form-background;
   border: $form-border;
   border-radius: $global-border-radius;
   box-shadow: $form-shadow;
-  line-height: 2.111em; /* [2] */
   transition: box-shadow $form-animation-speed ease, border-color $form-animation-speed ease;
   outline: 0;
   -webkit-appearance: none;
@@ -156,8 +164,8 @@ $form-animation-speed: $global-animation-speed-fast;
  */
 .c-form-date {
   @include font($form-font-size, large);
+  @include _form-spacing();
   display: inline-block;
-  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
   margin-bottom: $global-spacing-unit-small;
   width: 100%;
   background-color: $form-background;
@@ -222,7 +230,6 @@ $form-animation-speed: $global-animation-speed-fast;
 .c-form-combo__btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  height: 2.111em; /* [1] */
   white-space: nowrap;
 }
 
@@ -233,8 +240,6 @@ $form-animation-speed: $global-animation-speed-fast;
 .c-form-combo__btn,
 .c-form-combo__input {
   @include font($form-font-size, large);
-  padding-top: $global-spacing-unit-tiny;
-  padding-bottom: $global-spacing-unit-tiny;
 }
 
 /* Form Select Inputs
@@ -280,10 +285,9 @@ $form-animation-speed: $global-animation-speed-fast;
     position: absolute;
     z-index: z-index(0);
     top: 50%;
-    margin-bottom: $global-spacing-unit-tiny;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: $form-icon-size;
+    right: $global-spacing-unit-small;
     width: $form-icon-size;
     height: $form-icon-size;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAkCAYAAAA5DDySAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPVJREFUeNrk2s0NgzAMhmFno47EKGzQETpSR2CEjkCjyEg0aiAhP7Y/IuUSuLyPhDg4RLycc5PfH78fBLy48/3TyYcrb1iEv53RISxCqpM4dkVGSMSHTakHKAhH8RvAExXhLD58AvziCw0hJz7+E8AgFMcjIVyOR0CojreM0CzeIkLzeEsI3eItIHSP14wwLF4jwvB4TQhi8RoQxOMlEdTESyCoix+JoDZ+BIL6+J4IZuJ7IJiLb4lgNr4Fgvn4GgSY+CsIcPGFCDP0bCIDAXowU4OANZ8sRMCcUGciYN9ROEGAv6BxhHCP+B3CvLubsEjFfwUYAKjtGJxFvDJsAAAAAElFTkSuQmCC");
@@ -294,9 +298,11 @@ $form-animation-speed: $global-animation-speed-fast;
 }
 
 .c-form-select__dropdown {
+  @include height-sizing(padding);
   position: relative;
   z-index: z-index(1);
-  padding: $global-spacing-unit-tiny $form-icon-offset $global-spacing-unit-tiny $global-spacing-unit-small;
+  padding-right: $form-icon-offset;
+  padding-left: $global-spacing-unit-small;
   width: 100%;
   border: $form-border;
   border-radius: $global-border-radius;

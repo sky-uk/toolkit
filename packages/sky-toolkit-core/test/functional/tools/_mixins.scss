@@ -147,3 +147,82 @@ $test-module-area: "Tools / Mixins /";
     }
   }
 }
+
+// @include height-sizing
+// ==============================================
+
+@include test-module("#{$test-module-area} @mixin height-sizing") {
+  @include test("should return fixed height sizing by default") {
+    @include assert("outputs default fixed height/line-height sizing") {
+      @include input() {
+        .foo {
+          @include height-sizing();
+        }
+      }
+
+      @include expect() {
+        .foo {
+          padding-top: 0;
+          padding-bottom: 0;
+          height: 2.222222222em;
+          line-height: 2.222222222em;
+        }
+      }
+    }
+  }
+
+  @include test("should return fixed height sizing when defined") {
+    @include assert("outputs default fixed height/line-height sizing") {
+      @include input() {
+        .foo {
+          @include height-sizing(fixed);
+        }
+      }
+
+      @include expect() {
+        .foo {
+          padding-top: 0;
+          padding-bottom: 0;
+          height: 2.222222222em;
+          line-height: 2.222222222em;
+        }
+      }
+    }
+  }
+
+  @include test("should return padding-based height-sizing when defined") {
+    @include assert("outputs default padding-based sizing and line-height") {
+      @include input() {
+        .foo {
+          @include height-sizing(padding);
+        }
+      }
+
+      @include expect() {
+        .foo {
+          padding-top: 6px;
+          padding-bottom: 6px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  @include test("should return custom padding-based height-sizing when defined") {
+    @include assert("outputs custom padding-based sizing and line-height") {
+      @include input() {
+        .foo {
+          @include height-sizing(padding, 18px);
+        }
+      }
+
+      @include expect() {
+        .foo {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

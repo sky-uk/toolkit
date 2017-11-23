@@ -189,7 +189,7 @@
 
 // @include edge-position()
 // ==============================================
-//
+
 // Used to simplify and avoid repeated use of individual edge positioning.
 // eg. if 5px is passed in as a parameter, all offsets will be set at 5px.
 
@@ -198,4 +198,40 @@
   right: $edge-position-offset;
   bottom: $edge-position-offset;
   left: $edge-position-offset;
+}
+
+// @include height-sizing()
+// ==============================================
+
+// Used to calculate fixed height elements via line-height and height or
+// padding-based spacing
+
+@mixin height-sizing($height: fixed, $line-height: 26px) {
+  // Note: 26px is the hard-coded value of `line-height(text-body, large)`.
+  $default-border-width: $global-border-width;
+  $default-height: $global-spacing-unit-large;
+
+  @if $height == fixed {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: convert-to-em($default-height);
+    line-height: convert-to-em($default-height);
+  }
+
+  @else if $height == padding {
+    @if type-of($line-height) == number {
+      $padding-vertical: ($default-height - $line-height) / 2;
+      padding-top: $padding-vertical - $default-border-width;
+      padding-bottom: $padding-vertical - $default-border-width;
+      line-height: $line-height;
+    }
+
+    @else {
+      @warn "#{$line-height}` is not a valid option. Line-height can only be a sizing unit";
+    }
+  }
+
+  @else {
+    @warn "`#{$height}` is not a valid option. Height can only be `fixed` or `padding`-based.";
+  }
 }

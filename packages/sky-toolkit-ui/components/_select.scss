@@ -60,6 +60,7 @@ $select-animation-speed: $global-animation-speed-fast !default;
  *    postition out of view, considering the border-width.
  */
 .c-select__btn {
+  @include height-sizing(padding);
   display: block;
   position: relative;
   border: $select-border-width solid color(brand);

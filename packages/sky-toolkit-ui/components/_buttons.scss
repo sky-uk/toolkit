@@ -7,9 +7,8 @@
 
 // Settings
 $btn-font-size: font-size(text-body) !default;
-$btn-padding-x: 15px !default;
-$btn-padding-y: 5px !default;
 $btn-border-width: $global-border-width !default;
+$btn-spacing: $global-spacing-unit - $btn-border-width !default;
 $btn-border-radius: $global-border-radius !default;
 $btn-animation-speed: $global-animation-speed !default;
 $btn-animation-speed-fast: $global-animation-speed-fast !default;
@@ -25,38 +24,37 @@ $btn-animation-speed-fast: $global-animation-speed-fast !default;
  * 3.  Subtract border-width from the padding so buttons don't grow if the
  *     border-width is modified.
  * 4.  Tidy aligment for when the button size needs to be modified.
- * 5.  Make buttons inherit font styles (necessary when styling `input`s as
- *     buttons).
- * 6.  Set default button font-size.
- * 7.  Set default button font-weight.
- * 8.  Set default button text-alignment.
- * 9.  Remove anchor text-decoration (necessary when styling `a`s as buttons).
- * 10. Base transparent border for modifers to alter.
- * 11. Set default button border-radius.
- * 12. Set default button transition (color, background-color, border-color and box-shadow)
- * 13. Force all button-styled elements to appear clickable.
- * 14. Remove browser outline styles.
+ * 5.  Set default button font-size.
+ * 6.  Set default button font-weight.
+ * 7.  Set default button text-alignment.
+ * 8.  Remove anchor text-decoration (necessary when styling `a`s as buttons).
+ * 9.  Base transparent border for modifers to alter.
+ * 10. Set default button border-radius.
+ * 11. Set default button transition (color, background-color, border-color and box-shadow)
+ * 12. Force all button-styled elements to appear clickable.
+ * 13. Remove browser outline styles.
  */
 .c-btn {
+  @include height-sizing(fixed);
   display: inline-block; /* [1] */
   margin: 0; /* [2] */
-  padding: $btn-padding-y - $btn-border-width  $btn-padding-x - $btn-border-width; /* [3] */
+  padding-left: $btn-spacing; /* [3] */
+  padding-right: $btn-spacing; /* [3] */
   vertical-align: middle; /* [4] */
-  font: inherit; /* [5] */
-  font-size: $btn-font-size; /* [6] */
-  font-weight: bold; /* [7] */
-  text-align: center; /* [8] */
-  text-decoration: none; /* [9] */
-  border: $btn-border-width solid transparent; /* [10] */
-  border-radius: $btn-border-radius; /* [11] */
-  transition: color $btn-animation-speed ease, background-color $btn-animation-speed ease, border-color $btn-animation-speed ease, box-shadow $btn-animation-speed ease; /* [12] */
-  cursor: pointer; /* [13] */
+  font-size: $btn-font-size; /* [5] */
+  font-weight: bold; /* [6] */
+  text-align: center; /* [7] */
+  text-decoration: none; /* [8] */
+  border: $btn-border-width solid transparent; /* [9] */
+  border-radius: $btn-border-radius; /* [10] */
+  transition: color $btn-animation-speed ease, background-color $btn-animation-speed ease, border-color $btn-animation-speed ease, box-shadow $btn-animation-speed ease; /* [11] */
+  cursor: pointer; /* [12] */
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none; /* [9] */
-    outline: none; /* [15] */
+    text-decoration: none; /* [8] */
+    outline: none; /* [13] */
   }
 
   /**

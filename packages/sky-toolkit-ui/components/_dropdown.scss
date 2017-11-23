@@ -9,11 +9,13 @@
 $dropdown-animation-speed: $global-animation-speed !default;
 $dropdown-background: color(white) !default;
 $dropdown-background-focus: #f4f4f4 !default;
-$dropdown-border: 1px solid color(grey-20) !default;
+$dropdown-border-width: 1px;
+$dropdown-border: $dropdown-border-width solid color(grey-20) !default;
 $dropdown-border-radius: $global-border-radius !default;
 $dropdown-shadow-blur-radius: 8px !default;
 $dropdown-shadow-active: 0 0 $dropdown-shadow-blur-radius 0 rgba(0, 0, 0, 0.2) !default;
-$dropdown-icon-size: 15px;
+$dropdown-icon-size: $global-spacing-unit;
+$dropdown-spacing: $global-spacing-unit-small - $dropdown-border-width;
 
 /* Base
   ============================================ */
@@ -47,9 +49,11 @@ $dropdown-icon-size: 15px;
  */
 .c-dropdown__toggle {
   @include font(text-body); /* [1] */
+  @include height-sizing(padding);
   display: block; /* [2] */
   position: relative;
-  padding: $global-spacing-unit-tiny ($global-spacing-unit*1.5 + $dropdown-icon-size) $global-spacing-unit-tiny $global-spacing-unit-small; /* [3] */
+  padding-left: $dropdown-spacing;
+  padding-right: $global-spacing-unit-small + $dropdown-icon-size + $dropdown-spacing; /* [3] */
   font-weight: bold;
   text-align: left;
   border: $dropdown-border;

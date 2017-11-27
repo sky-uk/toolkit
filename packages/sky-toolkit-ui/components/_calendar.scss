@@ -169,6 +169,7 @@ $calendar-navigation-modifiers: (
  */
 .c-calendar__title {
   font-weight: normal;
+  padding-bottom: $global-spacing-unit;
 }
 
 /**
@@ -178,8 +179,10 @@ $calendar-navigation-modifiers: (
  * Overrides normalize abbr[title]
  */
 .c-calendar__weekday[title] {
+  display: block;
   text-decoration: none;
   font-weight: normal;
+  margin-bottom: $global-spacing-unit-small;
 }
 
 /**

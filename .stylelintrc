@@ -1,6 +1,30 @@
 {
   "extends": "stylelint-config-sky-uk",
   "rules": {
-    "declaration-no-important": null
+    "declaration-no-important": null,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        except: [
+          "blockless-after-blockless",
+          "first-nested",
+        ],
+        ignore: [
+          "after-comment",
+        ],
+        ignoreAtRules: [
+          "else"
+        ],
+      },
+    ],
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        ignoreAtRules: [
+          "else",
+          "if"
+        ],
+      }
+    ]
   }
 }

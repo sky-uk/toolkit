@@ -210,12 +210,13 @@
   // Note: 26px is the hard-coded value of `line-height(text-body, large)`.
   $default-border-width: $global-border-width;
   $default-height: $global-spacing-unit-large;
+  $default-height-rounded: decimal-round(convert-to-em($default-height), 2);
 
   @if $height == fixed {
     padding-top: 0;
     padding-bottom: 0;
-    height: convert-to-em($default-height);
-    line-height: convert-to-em($default-height);
+    height: $default-height-rounded;
+    line-height: $default-height-rounded;
   }
 
   @else if $height == padding {

@@ -3,6 +3,21 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.7.0
+
+### Fixes
+
+* [Settings] Align hex values in `_colors.scss` + `_gradients.scss` with design.
+
+### Features
+
+* [Tools]
+  * New `height-sizing()` mixin to improve vertical rhythm and align common
+    components.
+  * New `decimal-round()` functions to provide greater accuracy when rounding
+    numbers; functionality that isn't available in Sass by default.
+
+
 ## 2.6.0
 
 > Woah! What the hell happened between `2.1.4` and `2.6.0`? 😱

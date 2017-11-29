@@ -2,6 +2,17 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+## 2.7.0
+
+### Features
+
+* [Accordion, Buttons, Dropdown, Forms, Select] Implementation of
+  `height-sizing()` for greater height consistency between components
+* [Calendar] Align Calendar spacing with design.
+  * Note: `.c-calendar__title` must be applied to the surrounding `<th>` for
+    spacing to be applied.
+
+
 ## 2.6.0
 
 ### Features

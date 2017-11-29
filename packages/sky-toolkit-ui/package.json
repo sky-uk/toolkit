@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-ui",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "The UI layer of Sky's CSS Toolkit",
   "author": "Sky UK",
   "repository": "sky-uk/toolkit",
@@ -13,7 +13,7 @@
     "test": "mocha ./test/functional/sass-true.js"
   },
   "dependencies": {
-    "sky-toolkit-core": "^2.6.0"
+    "sky-toolkit-core": "^2.7.0"
   },
   "devDependencies": {
     "eyeglass": "^1.3.0",

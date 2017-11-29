@@ -2,6 +2,14 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+## 2.8.0
+
+### Features
+
+* [Links] Added `.c-link` to alleviate `.c-link-faux` pain and suffering through
+a handy "style this as a link" class for buttons.
+
+
 ## 2.7.0
 
 ### Features

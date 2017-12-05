@@ -115,8 +115,8 @@ control and context to ATs.
       </tbody>
     </table>
     <div class="c-calendar__feedback">
-      <h3 class="c-text-body u-margin-bottom-none" role="heading">Chosen install date</h3>
-      <p class="c-text-lead u-margin-bottom-small">Fri 15th April 2016</p>
+      <h3 class="c-text-body u-margin-bottom-none" role="heading">Your selected installation date is</h3>
+      <p class="c-text-lead u-margin-bottom-small">Friday 15th April 2016</p>
     </div>
   </div>
 </div>

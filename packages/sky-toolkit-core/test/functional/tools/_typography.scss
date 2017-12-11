@@ -39,7 +39,7 @@ $test-module-area: "Tools / Typography /";
 @include test-module("#{$test-module-area} @function line-height") {
   @include test("should return a large line-height value for given key.") {
     $actual: line-height(text-body, large);
-    $expected: 1.44;
+    $expected: 1.445;
 
     @include assert-equal($actual, $expected);
   }
@@ -53,7 +53,7 @@ $test-module-area: "Tools / Typography /";
 
   @include test("should return a large line-height value if no variant is provided.") {
     $actual: line-height(text-body);
-    $expected: 1.44;
+    $expected: 1.445;
 
     @include assert-equal($actual, $expected);
   }
@@ -75,7 +75,7 @@ $test-module-area: "Tools / Typography /";
       @include expect() {
         font-size: 18px;
         font-size: 1rem;
-        line-height: 1.44;
+        line-height: 1.445;
       }
     }
   }

@@ -57,22 +57,27 @@ $accordion-spacing: $global-spacing-unit - $accordion-border-width;
  * Accordion labels provide context on the group and also toggles content.
  *
  * 1. Set the label's font properties.
- * 2. Allows styling of box-model properties and absolute potitioning of child/
+ * 2. Ensure consistent styling between <a> and <button>.
+ * 3. Allows styling of box-model properties and absolute potitioning of child/
  *    pseudo-elements.
- * 3. Overwrite default link styles.
- * 4. Overwrite browser interaction styles to hide outline and show pointer.
+ * 4. Overwrite default link styles.
+ * 5. Overwrite browser interaction styles to hide outline and show pointer.
  */
 .c-accordion__label {
   @include font(text-body); /* [1] */
   @include height-sizing(fixed);
+  width: 100%; /* [2] */
   padding-left: $accordion-spacing;
   padding-right: $accordion-spacing;
-  display: block; /* [2] */
-  position: relative; /* [2] */
+  display: block; /* [3] */
+  border-width: 0; /* [2] */
+  position: relative; /* [3] */
   font-weight: bold; /* [1] */
-  color: color(text); /* [3] */
-  outline: 0; /* [4] */
-  cursor: pointer; /* [4] */
+  text-align: inherit; /* [2] */
+  color: color(text); /* [4] */
+  background-color: transparent; /* [2] */
+  outline: 0; /* [5] */
+  cursor: pointer; /* [5] */
 
   @include hocus() {
     text-decoration: underline;

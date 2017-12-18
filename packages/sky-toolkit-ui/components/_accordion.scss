@@ -73,7 +73,7 @@ $accordion-spacing: $global-spacing-unit - $accordion-border-width;
   border-width: 0; /* [2] */
   position: relative; /* [3] */
   font-weight: bold; /* [1] */
-  text-align: left; /* [2] */
+  text-align: inherit; /* [2] */
   color: color(text); /* [4] */
   background-color: transparent; /* [2] */
   outline: 0; /* [5] */

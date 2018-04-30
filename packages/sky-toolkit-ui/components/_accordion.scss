@@ -113,6 +113,16 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
 }
 
 /**
+ * Removes some of the default button styles when used as accordion label
+ */
+button.c-accordion__label {
+  width: 100%;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+
+/**
  * Accordion Content
  *
  * The content for an accordion section, which is displayed on toggle.

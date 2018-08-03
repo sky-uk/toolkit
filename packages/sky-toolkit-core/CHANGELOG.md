@@ -3,6 +3,11 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help
 manage the impact of releasing new library versions.
 
+## 2.27.0
+
+### Features
+
+* [Settings] Add `sky-witness` gradient to gradients map and defence.
 
 ## 2.26.0
 

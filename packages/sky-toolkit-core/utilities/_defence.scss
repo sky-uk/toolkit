@@ -13,7 +13,7 @@ If you experience any issues with this required change, please visit https://git
 // 1. Sets classic-masthead sass-mq breakpoint.
 // 2. Sets default Tile themes to defend.
 @include mq-add-breakpoint(classic-masthead, 768px); // [1]
-$defence-tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets", "sky-cinema", "sky-kids", "sky-living", "sky-news", "sky-sports", "sky-store" !default; // [2]
+$defence-tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets", "sky-cinema", "sky-kids", "sky-living", "sky-witness", "sky-news", "sky-sports", "sky-store" !default; // [2]
 
 /**
  * Repair alterations to the current masthead caused by the Toolkit.

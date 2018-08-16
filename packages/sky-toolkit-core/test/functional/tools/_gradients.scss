@@ -159,7 +159,6 @@ $test-module-area: "Tools / Gradients /";
       @include contains() {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-transform: translate3d(0, 0, 0);
         display: inline-block;
         color: #079ef8;
         background-image: -webkit-linear-gradient(left, #0080df 0%, #079ef8 100%);
@@ -177,7 +176,6 @@ $test-module-area: "Tools / Gradients /";
       @include contains() {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-transform: translate3d(0, 0, 0);
         display: inline-block;
         color: #0073c5;
         background-image: -webkit-radial-gradient(center, ellipse cover, #079ef8 0%, #0080df 100%);

@@ -44,12 +44,17 @@ $price-footnote-spacing: $global-spacing-unit-tiny;
  */
 .c-price--strike {
   position: relative;
-  text-decoration: none;  /* [1] */
+  text-decoration: none; /* [1] */
 
   /**
    * Striked Pricing: Pseudo Strike
    *
    * Renders a diagonal line through the text from bottom left to top right
+   *
+   * 1. Fix IE11 and Edge rendering very faint strikethrough depending on the
+   *    vertical position of the price in the viewport. 1.4px is enough to
+   *    fix the issue without changing the rendering of the strikethrough
+   *    on other browsers.
    */
   &::after {
     /*! autoprefixer: off */
@@ -59,7 +64,7 @@ $price-footnote-spacing: $global-spacing-unit-tiny;
     left: 0;
     top: 50%;
     right: 0;
-    border-top: 1px solid;
+    border-top: 1.4px solid; /* [1] */
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }

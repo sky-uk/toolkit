@@ -220,3 +220,18 @@ mixin helps us to set a common height on elements based on our [`text-body`'s
   @include height-sizing(fixed);
 }
 ```
+
+## Browser Hack
+Allows defining rulesets specific to particular browser(s). Set the browser
+versions to target by name. Currently supported:
+
+- ie11
+- edge
+
+```scss { "render": false }
+.foo {
+  @include browser-hack(ie11, edge) {
+    background: pink;
+  }
+}
+```

@@ -3,6 +3,13 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help
 manage the impact of releasing new library versions.
 
+## 2.28.0
+### Enhancements
+* [Settings] Reduce page gradient by 50%.
+
+### Feature
+* [Tools] Mixin for targeting specific browsers.
+
 ## 2.27.1
 
 ### Fixes
@@ -28,7 +35,7 @@ manage the impact of releasing new library versions.
 
 * [Tools] Add `reset` and `important` arguments to `hide-visually()` mixin
 to allow hidden content to be redisplayed and the important value to be toggled.
-* [Tools] Add `_important()` private function to conditionally return 
+* [Tools] Add `_important()` private function to conditionally return
 `!important` rule.
 
 
@@ -217,7 +224,7 @@ We've just reverted the way we use [Lerna](https://github.com/lerna/lerna) withi
   to `sky-toolkit` via:
     * `skyToolkitCoreCdnUrl`
     * `skyToolkitCoreCdnTag`
-  
+
   For usage information, see [Toolkit's `README.md`](https://github.com/sky-uk/toolkit/blob/master/README.md#hybrid).
 
 
@@ -225,11 +232,11 @@ We've just reverted the way we use [Lerna](https://github.com/lerna/lerna) withi
 
 ### Features
 
-* [Node.js] Provide access to a compiled `sky-toolkit-core` stylesheet 
-  link—hosted on our CDN—through the entry point. Automatically 
-  version-controlled to correspond to your app's version of Toolkit in 
+* [Node.js] Provide access to a compiled `sky-toolkit-core` stylesheet
+  link—hosted on our CDN—through the entry point. Automatically
+  version-controlled to correspond to your app's version of Toolkit in
   `package.json`.
-  
+
   For usage information, see [Toolkit's `README.md`](https://github.com/sky-uk/toolkit/blob/master/README.md#hybrid).
 
 

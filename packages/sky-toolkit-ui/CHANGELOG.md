@@ -3,6 +3,11 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
 the impact of releasing new library versions.
 
+## 2.28.0
+### Fixes
+* [Price] IE11 and Edge override for strikethroughs to avoid issue with sub
+pixel rendering.
+
 ## 2.27.0
 
 ### Features
@@ -24,9 +29,9 @@ the impact of releasing new library versions.
   * New `c-link--close` modifier for consistent close links.
   * New `c-link__label` element for hiding link labels on smaller screens.
   * New `c-link--back` modifier to replace `c-link-back` in
-    `sky-toolkit-ui@3.0.0`. 
+    `sky-toolkit-ui@3.0.0`.
   * New `c-link--external` modifier to replace `c-link-external` in
-    `sky-toolkit-ui@3.0.0`. 
+    `sky-toolkit-ui@3.0.0`.
 
 ### Enhancements
 
@@ -41,7 +46,7 @@ the impact of releasing new library versions.
 
 ### Features
 
-* [Forms] New `c-form-caption` to distinguish top level form `<legends>` and 
+* [Forms] New `c-form-caption` to distinguish top level form `<legends>` and
 hide without `!important` values.
 * [Forms] New `c-form-label--group` to support `<legends>` on form groups
 
@@ -175,7 +180,7 @@ Reverted
 
 * [Calendar] Align icon size with `$global-spacing-unit`, provide `color`
   property for further modification.
-* [Overlay] Add inertial touch scrolling for webkit browsers.  
+* [Overlay] Add inertial touch scrolling for webkit browsers.
 
 
 ## 2.12.0
@@ -325,9 +330,9 @@ Price with footnote symbol (strike)
 
 
 ## 2.3.0
- 
+
 ### Features
- 
+
 * [Card] a brand new component to display a selectable item or product based content, e.g. an Accessory Card or Handset Item.
 
 #### Example Markup
@@ -342,9 +347,9 @@ A standard card would look like this:
 
 
 ## 2.2.0
- 
+
 ### Features
- 
+
 * [Roundel] a brand new component to select product variants, e.g. Phone Colour.
 
 #### Example Markup
@@ -396,9 +401,9 @@ A text-filled roundel could look like:
 
 ### Notes
 
-* [Node.js] If you're looking to access a compiled stylesheet for the UI 
-  (similar to `sky-toolkit-core`), use `sky-toolkit`'s entry point. 
-  
+* [Node.js] If you're looking to access a compiled stylesheet for the UI
+  (similar to `sky-toolkit-core`), use `sky-toolkit`'s entry point.
+
   For usage information, see [Toolkit's `README.md`](https://github.com/sky-uk/toolkit/blob/master/README.md#hybrid).
 
 

@@ -205,3 +205,24 @@
     @warn "`#{$height}` is not a valid option. Height can only be `fixed` or `padding`-based.";
   }
 }
+
+// @include browser-hack()
+// ==============================================
+//  Sources for hacks:
+// - IE11: https://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11#22085269
+// - Edge: https://stackoverflow.com/questions/32201586/how-to-identify-microsoft-edge-browser-via-css#32202953
+@mixin browser-hack($browser...) {
+  @each $version in $browser {
+    @if $version == ie11 {
+      @at-root _:-ms-fullscreen, :root & {
+        @content;
+      }
+    } @else if $version == edge {
+      @supports (-ms-ime-align: auto) {
+        @content;
+      }
+    } @else {
+      @warn "#{browser} is not a valid option. $browser can be one of 'ie11' or 'edge'";
+    }
+  }
+}

@@ -8,7 +8,7 @@ manage the impact of releasing new library versions.
 * [Settings] Reduce page gradient by 50%.
 
 ### Feature
-* [Tools] Mixin for targeting specific browsers.
+* [Tools] Mixin for targeting specific browsers (IE11 / Edge).
 
 ## 2.27.1
 

@@ -208,7 +208,6 @@
       // Vendor prefix required as other browsers lack support.
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      -webkit-transform: translate3d(0, 0, 0);
       // Ensure that the gradient finishes flush with the text and not with the
       // element’s natural bounding box.
       display: inline-block;

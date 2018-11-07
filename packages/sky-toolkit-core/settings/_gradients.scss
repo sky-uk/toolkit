@@ -14,12 +14,12 @@ $gradients: (
     100%: #fff
   ),
   page: (
-    0%:   #c9c7d1,
-    6%:   #e5e5ea,
-    20%:  #fefefe,
-    80%:  #fefefe,
+    0%:   #e4e3e8,
+    6%:   #f2f2f5,
+    20%:  #fff,
+    80%:  #fff,
     94%:  #e5e5ea,
-    100%: #c9c7d1
+    100%: #e4e3e8
   ),
   page-small: (
     0%:   #f2f2f5,
@@ -79,6 +79,11 @@ $gradients: (
   sky-witness: (
     0%:   #000,
     100%: #262626
+  ),
+  ultimate-on-demand: (
+    0%:   #000514,
+    50%:  #133e73,
+    100%: #3c7191
   ),
   tile: (
     50%:  #fff,

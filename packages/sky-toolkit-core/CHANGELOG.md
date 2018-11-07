@@ -3,6 +3,12 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help
 manage the impact of releasing new library versions.
 
+## 2.27.1
+
+### Fixes
+
+* [Tools] Remove transform from `gradient-text` mixin to prevent rendering issue in Chrome.
+
 ## 2.27.0
 
 ### Features

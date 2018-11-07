@@ -23,6 +23,7 @@ Exposed in [sky-toolkit-core/utilities/spacing](../../utilities/_spacing.scss).
 | `$global-spacing-unit-tiny`    | ¼ Default     |
 | `$global-spacing-unit-small`   | ½ Default     |
 | `$global-spacing-unit-large`   | 2 × Default   |
+| `$global-spacing-unit-x-large` | 4 × Default   |
 
 ---
 
@@ -73,7 +74,7 @@ Exposed in [sky-toolkit-core/utilities/widths](../../utilities/_widths.scss).
 | `$global-shadow-intensity`     | Default       |
 | `$global-shadow-x`             | Default       |
 | `$global-shadow-y`             | Default       |
-| `$global-shadow-blur`          | Default       | 
+| `$global-shadow-blur`          | Default       |
 | `$global-shadow-spread`        | Default       |
 | `$global-shadow`               | All of above  |
 | `$global-text-shadow`          | All of above  |

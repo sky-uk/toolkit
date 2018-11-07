@@ -3,6 +3,11 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
 the impact of releasing new library versions.
 
+## 2.29.0
+### Features
+* [Tile] Add `ultimate-on-demand` to tile themes
+
+
 ## 2.28.0
 ### Fixes
 * [Price] IE11 and Edge override for strikethroughs to avoid issue with sub

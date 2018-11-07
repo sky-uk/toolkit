@@ -3,6 +3,12 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help
 manage the impact of releasing new library versions.
 
+## 2.29.0
+### Feature
+* [Settings] Add `$global-spacing-unit-x-large` to globals.
+* [Settings] Add `ultimate-on-demand` to gradient set.
+* [Utilities] Add `-x-large` to spacing utilties.
+
 ## 2.28.0
 ### Enhancements
 * [Settings] Reduce page gradient by 50%.

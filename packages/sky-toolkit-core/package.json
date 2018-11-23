@@ -22,6 +22,5 @@
     "eyeglass": "^1.3.0",
     "mocha": "^4.0.1",
     "sass-true": "3.1.0"
-  },
-  "gitHead": "4f36a97d4ef238505b7beb977677ae9a10e72508"
+  }
 }

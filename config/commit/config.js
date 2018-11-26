@@ -37,6 +37,15 @@ module.exports = {
       name: 'Revert - Reverts a previous commit',
     },
   ],
+  messages: {
+    type: 'What kind of change did you make?',
+    scope: 'Which category does the change most relate to?',
+    subject: 'Complete the sentence "This Commit will...',
+    body: 'Give context with some extra background info (optional)\n',
+    breaking: 'List any BREAKING CHANGES (optional):\n',
+    footer: 'Which issue does this relate to? e.g. #469',
+    confirmCommit: 'Are you sure you want to proceed with the commit above?',
+  },
   scopes: [
     {
       name: 'core',
@@ -55,4 +64,5 @@ module.exports = {
     },
   ],
   allowBreakingChanges: ['feat', 'fix', 'refactor'],
+  footerPrefix: 'Closes:',
 };

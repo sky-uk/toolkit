@@ -155,7 +155,7 @@ A combination of compiled and Sass implementation:
       <link rel="stylesheet" href="main.css">
       ```
 
-2. Follow the [Sass Imports](#sass-imports) steps defined below, making sure you 
+2. Follow the [Sass Imports](#sass-imports) steps defined below, making sure you
    import `sky-toolkit-core/tools`, **not** `/all`.
 
 ### Sass Imports
@@ -170,11 +170,11 @@ A combination of compiled and Sass implementation:
       /* main.scss (compiles to main.css) */
       @import "sky-toolkit-core/tools";
       ```
-      
+
       This is required if you're extending any Toolkit styles or creating
       custom components.
 
-    * If you're **not** following the Hybrid method above and you're using 
+    * If you're **not** following the Hybrid method above and you're using
       Toolkit fully via Sass, you **must** use **`/all`** to output the core.
 
       ```css

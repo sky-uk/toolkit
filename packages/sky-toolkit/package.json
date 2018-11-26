@@ -13,6 +13,5 @@
   "dependencies": {
     "sky-toolkit-core": "2.29.0",
     "sky-toolkit-ui": "2.29.0"
-  },
-  "gitHead": "4f36a97d4ef238505b7beb977677ae9a10e72508"
+  }
 }

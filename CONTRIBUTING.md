@@ -21,7 +21,7 @@ curl -L https://raw.githubusercontent.com/sky-uk/toolkit/master/_template.scss -
 When contributing a **new design** to Toolkit, you **must** adhere to the
 following checklist.
 
-These steps are in place to keep code and design quality to the highest 
+These steps are in place to keep code and design quality to the highest
 standard, whilst preserving Toolkit as the **single source of truth** for the
 Sky digital estate.
 
@@ -189,22 +189,12 @@ _Tabs navigation width issue with many tabs_.
         $ git checkout -b tkt-224
 
    All commits pertaining to this issue must happen within this branch.
-4. All commits in this branch should begin with the issue number,
-   e.g. `[refs #224]`.
-    * Instead of running `git commit -m "<message>"`, stage your files as you
-      would normally, and run `git commit`. This will fire open your text
-      editor with the prepopulated template ready for you to fill out.
-6. Now your commits—based on the template—should resemble this:
+4. Commits in this branch should be done using `npm run commit` or `yarn commit`.
+   This will take you through a series of prompts that will build a commit which resembles:
 
-        commit 1dcf5d4bc18d5fd3321f4c60d879cfd5d5e2dd1f
-        Author: Harry Roberts <csswizardry@gmail.com>
-        Date:   Wed, 21 Jun 2017 10:08:36 +0100
+        feature(toolkit-ui): added new ui component
 
-            [refs #224] Add Git workflow documentation
-
-            Though relatively straightforward, our Git workflow is pretty
-            involved. I’ve made my best attempt at documenting the setup and
-            steps involved in writing compliant commit messages.
+NOTE: Toolkit has commitlint enabled, so if your commit doesn't follow the correct structure it will not create the commit.
 
 ### Why?
 
@@ -303,8 +293,8 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 ## Releases
 
 1. Ensure the fully-approved PR is up to date with `develop`.
-    * If necessary, run `git rebase develop` within the branch. **Avoid** using 
-      GitHub's "update branch" button as it leaves us with unhelpful merge 
+    * If necessary, run `git rebase develop` within the branch. **Avoid** using
+      GitHub's "update branch" button as it leaves us with unhelpful merge
       commit messages.
 2. Merge the fully-approved PR into `develop` via the "Merge pull request" button.
     * If handling multiple PRs, go back to Step 1 until all are merged. Then continue to Step 3.
@@ -321,8 +311,8 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 8. Commit the `CHANGELOG.md` changes to `master`.
    * Don't worry about issue references here, a simple `"Update CHANGELOG"` or `"Update CHANGELOGs"` will do.
 9. Run `lerna publish`.
-    * Be sure to read and follow the wizard very carefully, making sure to use
-      the correct and appropriate patch/minor/major semver tag(s).
+    * Be sure to read and follow the wizard very carefully, the version numbers will be decided based on
+    the commits done since the last release.
 10. Check the compiled assets have been published via CircleCI to S3 (this may
     take a few minutes to propagate):
     * For releases and pre-releases:

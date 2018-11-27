@@ -194,7 +194,7 @@ _Tabs navigation width issue with many tabs_.
 
         feature(toolkit-ui): added new ui component
 
-NOTE: Toolkit has commitlint enabled so if your commit doesnt follow the correct structure it will create the commit.
+NOTE: Toolkit has commitlint enabled, so if your commit doesn't follow the correct structure it will create not the commit.
 
 ### Why?
 

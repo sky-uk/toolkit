@@ -190,7 +190,7 @@ _Tabs navigation width issue with many tabs_.
 
    All commits pertaining to this issue must happen within this branch.
 4. Commits in this branch should be done using `npm run commit` or `yarn commit`.
-   This will take you through a series of prompts that will build a commit that looks like:
+   This will take you through a series of prompts that will build a commit which resembles:
 
         feature(toolkit-ui): added new ui component
 
@@ -312,7 +312,7 @@ the core maintainers or [Tom Davidson](@tom-davidson).
    * Don't worry about issue references here, a simple `"Update CHANGELOG"` or `"Update CHANGELOGs"` will do.
 9. Run `lerna publish`.
     * Be sure to read and follow the wizard very carefully, the version numbers will be decided based on
-    the commits done since the last release
+    the commits done since the last release.
 10. Check the compiled assets have been published via CircleCI to S3 (this may
     take a few minutes to propagate):
     * For releases and pre-releases:

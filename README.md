@@ -306,24 +306,17 @@ To view a complete history of many of the files, you will need to pass the
 Without `--follow`:
 
 ```
-$ git log --oneline packages/sky-toolkit-core/objects/_media.scss
+$ git log --oneline commitlint.config.js
 
-8b6541a [refs #173] Move into packages to merge into Toolkit
+ef54c12 build(core): added comittizen, commitlint and new lerna config
 ```
 
 With `--follow`:
 
-<pre><code>$ git log --oneline <b>--follow</b> packages/sky-toolkit-core/objects/_media.scss
+<pre><code>$ git log --oneline <b>--follow</b> commitlint.config.js
 
-8b6541a [refs #173] Move into packages to merge into Toolkit
-3485ad7 [refs #204] Tidy up comments and file titles
-b12bfcd [refs #204] Modify spacing of list-inline and media to align with Supercell
-b496258 Various typos
-ec9dee7 Add more functionality to the media object
-feba9a8 Use a clearfix mixin instead of @\extends
-7d8ad25 Rename base variables to global
-804f36c Revert media object margin to spacing unit
-5224fa5 Tidy up existing typographical rules into neater groups</code></pre>
+bf439b3 (HEAD -> commitizen, origin/commitizen) refactor(core): change wording of commit questions
+ef54c12 (squash-branch) build(core): added comittizen, commitlint and new lerna config</code></pre>
 
 ## Maintainers
 

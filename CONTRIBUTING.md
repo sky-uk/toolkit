@@ -302,18 +302,12 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 4. Run `git checkout master && git pull`.
 5. Run `git merge develop`.
 6. Run `npm i && lerna bootstrap`.
-7. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
-    * Pro tip: use the following command to get a commit summary of changes.
-
-        ```
-        $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
-        ```
-8. Commit the `CHANGELOG.md` changes to `master`.
-   * Don't worry about issue references here, a simple `"Update CHANGELOG"` or `"Update CHANGELOGs"` will do.
-9. Run `lerna publish`.
-    * Be sure to read and follow the wizard very carefully, the version numbers will be decided based on
+7. Run `lerna publish`.
+    * This will bring up a prompt to confirm the new versions. At this point you can choose to accept or decline them.
+    * This will also auto-generate our CHANGELOGS for each package.
+    * NOTE: the version numbers will be decided based on commits since the last release.
     the commits done since the last release.
-10. Check the compiled assets have been published via CircleCI to S3 (this may
+8. Check the compiled assets have been published via CircleCI to S3 (this may
     take a few minutes to propagate):
     * For releases and pre-releases:
         * [sky.com/assets/toolkit-core/v[version]/toolkit-core.min.css](
@@ -325,12 +319,12 @@ the core maintainers or [Tom Davidson](@tom-davidson).
           https://www.sky.com/assets/toolkit-core/latest/toolkit-core.min.css)
         * [sky.com/assets/toolkit/latest/toolkit.min.css](
           https://www.sky.com/assets/toolkit/latest/toolkit.min.css)
-11. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
+9. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
     check the tag exists.
     * If the tag exists, congrats! Now create a [**new**
       release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
       tag.
     * If the tag doesn't exist, something went wrong.
-12. Communicate changes out on Slack.
-13. Update our `develop` branch with `master`.
+10. Communicate changes out on Slack.
+11. Update our `develop` branch with `master`.
     * Run `git checkout develop && git merge master && git push`

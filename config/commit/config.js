@@ -51,9 +51,6 @@ module.exports = {
       name: 'core',
     },
     {
-      name: 'docs',
-    },
-    {
       name: 'toolkit-ui',
     },
     {
@@ -62,7 +59,11 @@ module.exports = {
     {
       name: 'preview',
     },
+    {
+      name: 'readme',
+    },
   ],
   allowBreakingChanges: ['feat', 'fix', 'refactor'],
+  allowCustomScopes: true,
   footerPrefix: 'Closes:',
 };

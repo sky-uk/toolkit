@@ -35,7 +35,7 @@
     "test:preview": "mocha --compilers js:babel-core/register ./preview/test/**/*.spec.js",
     "test:toolkit-core": "cd packages/sky-toolkit-core && npm run test && cd -",
     "test:toolkit-ui": "cd packages/sky-toolkit-ui && npm run test && cd -",
-    "watch": "node-sass $npm_package_config_precision --output-style expanded -w $npm_package_config_paths build.scss build/toolkit.css",
+    "watch": "node-sass $npm_package_config_precision --output-style expanded -w $npm_package_config_paths build.scss build/toolkit.css"
   },
   "pre-commit": [
     "lint",

@@ -34,7 +34,8 @@
     "test:toolkit-core": "cd packages/sky-toolkit-core && npm run test && cd -",
     "test:toolkit-ui": "cd packages/sky-toolkit-ui && npm run test && cd -",
     "test": "npm run test:preview && npm run test:toolkit-core && npm run test:toolkit-ui",
-    "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch"
+    "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch",
+    "release": "./scripts/release.sh"
   },
   "pre-commit": [
     "lint",

@@ -9,8 +9,8 @@
 // ==============================================
 
 // Toolkit (from `packages/`)
-@import "~sky-toolkit-core/all";
-@import "~sky-toolkit-ui/all";
+@import "../../packages/sky-toolkit-core/all";
+@import "../../packages/sky-toolkit-ui/all";
 
 // Preview-specific Styles
 @import "scss/bespoke";

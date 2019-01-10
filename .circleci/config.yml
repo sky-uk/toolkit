@@ -21,6 +21,7 @@ jobs:
           name: Install Dependencies
           command: |
             npm i
+            npm run postinstall
             sudo npm i -g lerna
             lerna bootstrap
       - run: npm run lint

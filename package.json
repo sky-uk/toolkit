@@ -29,6 +29,7 @@
     "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build.scss build/toolkit.min.css",
     "minify:toolkit-core": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths --include-path packages/sky-toolkit-core/node_modules/ packages/sky-toolkit-core/_all.scss build/toolkit-core.min.css",
     "nuke": "npm run clean && rm -rf node_modules/ && lerna clean",
+    "postinstall": "cd packages/sky-toolkit && npm i && cd ../sky-toolkit-core && npm i && cd ../sky-toolkit-ui && npm i && cd -",
     "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch",
     "release": "./scripts/release.sh",
     "test": "npm run test:preview && npm run test:toolkit-core && npm run test:toolkit-ui",
@@ -65,10 +66,10 @@
     "eslint-plugin-mocha": "4.12.1",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-promise": "3.7.0",
-    "extract-text-webpack-plugin": "^3.0.2",
     "eyeglass": "^1.3.0",
     "husky": "1.2.0",
     "lerna": "3.4.3",
+    "mini-css-extract-plugin": "0.5.0",
     "mocha": "^4.0.1",
     "node-sass": "^4.7.2",
     "pre-commit": "^1.2.2",
@@ -79,6 +80,7 @@
     "remark-html": "^7.0.0",
     "sass-loader": "^6.0.7",
     "sass-true": "3.1.0",
+    "sky-toolkit": "2.30.0",
     "style-loader": "^0.20.3",
     "stylelint": "^8.2.0",
     "stylelint-config-sky-uk": "3.1.0",
@@ -86,7 +88,8 @@
     "stylelint-selector-bem-pattern": "^2.0.0",
     "unist-util-remove": "^1.0.0",
     "unist-util-visit": "^1.3.0",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.5.0"
+    "webpack": "4.28.3",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14"
   }
 }

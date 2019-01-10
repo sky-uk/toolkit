@@ -1,6 +1,6 @@
 const path = require('path');
 
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   entry: './preview/src/index.js',
@@ -29,31 +29,28 @@ const config = {
         loader: 'babel-loader',
       },
       {
-        test: /\.scss$/,
-        use: ['css-hot-loader'].concat(
-          ExtractTextWebpackPlugin.extract({
-            use: [
-              { loader: 'css-loader' },
-              {
-                loader: 'sass-loader',
-                options: {
-                  includePaths: [
-                    path.resolve(__dirname, '../packages/sky-toolkit-core/node_modules'),
-                    path.resolve(__dirname, '../packages/'),
-                  ],
-                },
-              },
-            ],
-            fallback: 'style-loader',
-          })
-        ),
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['node_modules'], // scoped-module-name exists here
+            },
+          },
+        ],
       },
     ],
   },
   node: {
     fs: 'empty',
   },
-  plugins: [new ExtractTextWebpackPlugin('styles.css')],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, './public'),
     historyApiFallback: true,

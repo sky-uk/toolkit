@@ -14,7 +14,7 @@ related:
 
 # Widths
 
-At Sky we design to a 12-column grid, however that's [not a one-size-fits-all 
+At Sky we design to a 12-column grid, however that's [not a one-size-fits-all
 solution](https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/).
 
 When it comes to writing your layout, select one with the number of columns you
@@ -33,7 +33,7 @@ By default, Toolkit surfaces the following width utilities from [Supercell](http
 | Sixths   | `.u-width-1/6`, `.u-width-2/6`, `.u-width-3/6`, `.u-width-4/6`,|
 |          | `.u-width-5/6`                                                 |
 
-The above values meet the vast majority of our use-cases, and are are completely 
+The above values meet the vast majority of our use-cases, and are are completely
 **customisable**. Override `$global-widths` to meet your project's preference:
 
 ```scss
@@ -49,12 +49,12 @@ $global-widths: 1 2 3 4 5 6 7 8 9 10 11 12;
 ```
 
 These utilities aren't tied exclusively to
-[Layout](https://github.com/sky-uk/supercell#usage); they can be applied 
+[Layout](https://github.com/sky-uk/supercell#usage); they can be applied
 anywhere.
 
 ## Responsive
 
-Width classes can be set to trigger at any of our breakpoints, following a 
+Width classes can be set to trigger at any of our breakpoints, following a
 **mobile-first** approach. Add the prefix `@breakpoint-name` to the end
 of your class.
 

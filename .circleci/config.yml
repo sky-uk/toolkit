@@ -25,9 +25,15 @@ jobs:
             sudo npm i -g lerna
             sudo npm i -g danger
             lerna bootstrap
-      - run: npm run lint
-      - run: npm run test
-      - run: danger ci
+      - run:
+          name: Lint changes
+          command: npm run lint
+      - run:
+          name: Test changes
+          command: npm run test
+      - run:
+          name: Danger.js checks
+          command: danger ci
       - run: npm run minify
       - persist_to_workspace:
           root: .

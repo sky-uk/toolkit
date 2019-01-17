@@ -34,7 +34,9 @@ jobs:
       - run:
           name: Danger.js checks
           command: danger ci
-      - run: npm run minify
+      - run:
+          name: Build and Minify CSS
+          command: npm run minify
       - persist_to_workspace:
           root: .
           paths:

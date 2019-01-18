@@ -3,8 +3,8 @@
 // =============================================================================
 
 // Our brand and project gradients are held in maps.
-// Access these using tools from `tools/gradients`.
-$gradients: (
+// Grouped to allow specific targeting
+$ui-gradients: (
   default: (
     0%:   #f2f2f5,
     100%: #fff
@@ -26,13 +26,26 @@ $gradients: (
     50%:  #fff,
     100%: #f2f2f5
   ),
-  sky-1: (
-    0%:   #0080df,
-    100%: #079ef8
+  tile: (
+    50%:  #fff,
+    100%: #e6e6ea
   ),
   sky-account: (
     0%:   #135fa0,
     100%: #197bc9
+  ),
+  sky-spectrum: (
+    0%: #f08300,
+    30%: #e3000f,
+    60%: #a72879,
+    100%: #0644a1
+  ),
+) !default;
+
+$channel-gradients: (
+  sky-1: (
+    0%:   #0080df,
+    100%: #079ef8
   ),
   sky-atlantic: (
     0%:   #003a7f,
@@ -54,23 +67,13 @@ $gradients: (
     0%:   #4c0080,
     100%: #6626a1
   ),
-  sky-living: (
-    0%:   #68879c,
-    100%: #67a0b5
-  ),
-  sky-mobile: (
-    0%: #ff00a5,
-    100%: #ff6400
+  sky-kids-alternative: (
+    0%:   #0b5c26,
+    100%: #75b338
   ),
   sky-news: (
     0%:   #041957,
     100%: #122d74
-  ),
-  sky-spectrum: (
-    0%: #f08300,
-    30%: #e3000f,
-    60%: #a72879,
-    100%: #0644a1
   ),
   sky-sports: (
     0%:   #021158,
@@ -84,16 +87,87 @@ $gradients: (
     0%:   #000,
     100%: #262626
   ),
+) !default;
+
+$mobile-gradients: (
+  sky-mobile: (
+    0%: #ff00a5,
+    100%: #ff6400
+  )
+) !default;
+
+$broadband-gradients: (
+  sky-broadband: (
+    0%: #6e00ff,
+    100%: #ff00a5
+  ),
+  broadband-entry: (
+    0%: #b600d2,
+    100%: #ce00c3
+  ),
+  broadband-unlimited: (
+    0%: #6f00ff,
+    100%: #9300e7
+  ),
+  broadband-ultra: (
+    0%: #e600b4,
+    100%: #ff00a5
+  ),
+  broadband-value: (
+    0%: #ce00c3,
+    100%: #e600b4
+  ),
+  fibre-max: (
+    0%: #b600d2,
+    100%: #ce00c3
+  ),
+  fibre-unlimited: (
+    0%: #9300e7,
+    100%: #b600d2
+  ),
+) !default;
+
+$tv-gradients: (
+  sky-tv: (
+    0%: #6e00ff,
+    100%: #00ffdc
+  ),
+  tv-entertainment: (
+    0%:   #0864aa,
+    100%: #0c80db
+  ),
+  tv-hd: (
+    0%:   #000,
+    100%: #535353
+  ),
   ultimate-on-demand: (
     0%:   #000514,
     50%:  #133e73,
     100%: #3c7191
   ),
-  tile: (
-    50%:  #fff,
-    100%: #e6e6ea
-  )
 ) !default;
+
+$deprecated-gradients: (
+sky-living: (
+    0%:   #68879c,
+    100%: #67a0b5
+  ),
+) !default;
+
+// Merge all the gradient maps together - local use only
+@function _merge-groups($maps...) {
+  $group: ();
+
+  @each $map in $maps {
+    $group: map-merge($group, $map);
+  }
+
+  @return $group;
+}
+
+// Merge all the graident groups into one "master" $gradients map for global use
+// Access these values using tools from `tools/gradients`.
+$gradients: _merge-groups($ui-gradients, $channel-gradients, $tv-gradients, $broadband-gradients, $mobile-gradients, $deprecated-gradients);
 
 // Directional settings required for defining both prefixed and standard
 // gradients in our `tools/gradients` mixins.
@@ -113,6 +187,12 @@ $gradient-directions: (
   horizontal: (
     legacy: "left",
     standard: "to right",
+    type: linear,
+    reverse: false
+  ),
+  horizontal-invert: (
+    legacy: "right",
+    standard: "to left",
     type: linear,
     reverse: false
   ),

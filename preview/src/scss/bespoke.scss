@@ -21,3 +21,15 @@
     min-height: 100vh;
   }
 }
+
+// Trim Example
+$custom-trim-gradients: (
+  example-brand: (
+    0%: purple,
+    100%: hotpink
+  )
+);
+
+.c-trim-example {
+  @include trim-brands($custom-trim-gradients);
+}

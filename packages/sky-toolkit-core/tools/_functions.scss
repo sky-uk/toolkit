@@ -102,6 +102,20 @@
   @return true;
 }
 
+// multi-map-merge()
+// ------------------------------------
+
+// Merge mutiple maps together
+@function multi-map-merge($maps...) {
+  $group: ();
+
+  @each $map in $maps {
+    $group: map-merge($group, $map);
+  }
+
+  @return $group;
+}
+
 // Map Shortcuts
 // ==============================================
 

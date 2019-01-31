@@ -15,6 +15,7 @@ const components = [
   'spinner',
   'tables',
   'tile',
+  'trim',
   'tooltip',
 ];
 

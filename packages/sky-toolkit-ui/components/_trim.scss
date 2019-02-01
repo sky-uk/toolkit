@@ -5,52 +5,6 @@
 // Imports
 @import "sky-toolkit-core/tools";
 
-// Tools
-
-// @include trim-brands()
-// ==============================================
-
-// Generate branded trim by passing maps containing gradient values
-//
-// $custom: name of bespoke gradient map
-// $gradient-groups: names of prexisting gradient groups
-// see core/settings/gradients
-//
-// Example:
-// $my-custom-gradients: (
-//   cool-brand: (
-//     0%: purple,
-//     100%: hotpink
-//   )
-// );
-// .c-my-widget {
-//   @include trim-brands($my-custom-gradients, $tv-gradients);
-// }
-//
-// Generates:
-// .c-my-widget--cool-brand .c-trim {
-//   background-image: linear-grad ient(to right, #purple 0%, #hotpink 100%);
-// }
-// .c-my-widget--tv-master .c-trim {
-// ...
-
-@mixin trim-brands($custom, $gradient-groups...) {
-
-  // Add any custom gradients to the gloabl $gradients map
-  $gradients: map-merge($gradients, $custom) !global;
-
-  // Merge all the maps into one master map
-  $grouped-maps: multi-map-merge($custom, $gradient-groups...);
-
-  // Interate though the master map to generate modifers with the
-  // appropriate gradient values
-  @each $gradient in map-keys($grouped-maps) {
-    &--#{$gradient} .c-trim {
-      @include gradient-background($gradient, horizontal);
-    }
-  }
-}
-
 // Settings
 $trim-gradients: (
   trim-fallback: (

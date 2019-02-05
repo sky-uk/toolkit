@@ -48,7 +48,7 @@ module.exports = {
   },
   scopes: [
     {
-      name: 'core',
+      name: 'platform',
     },
     {
       name: 'toolkit-ui',

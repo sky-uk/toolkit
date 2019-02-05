@@ -14,6 +14,10 @@ export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 nvm use
 
+notify "Cleaning the project"
+git clean -dfx
+npm i
+
 notify "Getting latest develop"
 git fetch --all
 git checkout develop
@@ -35,7 +39,8 @@ read -p "Do you want to continue? Press ENTER to continue or CTRL+C to exit" -n 
 
 if [[ $REPLY = "" ]]; then
   notify "Starting lerna"
-  lerna publish
+  lerna publish --no-push
+  git push
 
   notify "Merging master back into develop"
   git checkout develop

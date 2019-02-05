@@ -4,7 +4,7 @@
 
 // Our brand and project gradients are held in maps.
 // Grouped to allow specific targeting
-$ui-gradients: (
+$toolkit-ui-gradients: (
   default: (
     0%:   #f2f2f5,
     100%: #fff
@@ -42,7 +42,7 @@ $ui-gradients: (
   ),
 ) !default;
 
-$channel-gradients: (
+$toolkit-channel-gradients: (
   sky-1: (
     0%:   #0080df,
     100%: #079ef8
@@ -89,14 +89,14 @@ $channel-gradients: (
   ),
 ) !default;
 
-$mobile-gradients: (
+$toolkit-mobile-gradients: (
   sky-mobile: (
     0%: #ff00a5,
     100%: #ff6400
   )
 ) !default;
 
-$broadband-gradients: (
+$toolkit-broadband-gradients: (
   sky-broadband: (
     0%: #6e00ff,
     100%: #ff00a5
@@ -127,7 +127,7 @@ $broadband-gradients: (
   ),
 ) !default;
 
-$tv-gradients: (
+$toolkit-tv-gradients: (
   sky-tv: (
     0%: #6e00ff,
     100%: #00ffdc
@@ -147,7 +147,7 @@ $tv-gradients: (
   ),
 ) !default;
 
-$deprecated-gradients: (
+$toolkit-deprecated-gradients: (
 sky-living: (
     0%:   #68879c,
     100%: #67a0b5
@@ -167,7 +167,7 @@ sky-living: (
 
 // Merge all the graident groups into one "master" $gradients map for global use
 // Access these values using tools from `tools/gradients`.
-$gradients: _merge-groups($ui-gradients, $channel-gradients, $tv-gradients, $broadband-gradients, $mobile-gradients, $deprecated-gradients);
+$gradients: _merge-groups($toolkit-ui-gradients, $toolkit-channel-gradients, $toolkit-tv-gradients, $toolkit-broadband-gradients, $toolkit-mobile-gradients, $toolkit-deprecated-gradients) !default;
 
 // Directional settings required for defining both prefixed and standard
 // gradients in our `tools/gradients` mixins.

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.2](https://github.com/sky-uk/toolkit/compare/v2.31.1...v2.31.2) (2019-02-06)
+
+
+### Bug Fixes
+
+* **core:** defaulting gradient map, better namespacing ([d8324e4](https://github.com/sky-uk/toolkit/commit/d8324e4))
+
+
+
+
+
 ## [2.31.1](https://github.com/sky-uk/toolkit/compare/v2.31.0...v2.31.1) (2019-02-05)
 
 

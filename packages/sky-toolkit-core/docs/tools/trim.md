@@ -8,5 +8,5 @@ layout: component
 
 # Trim
 
-See [sky-toolkit-ui/components/panel
+See [sky-toolkit-ui/components/trim
 ](../../../sky-toolkit-ui/docs/components/trim.md).

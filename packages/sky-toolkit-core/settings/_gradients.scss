@@ -2,8 +2,12 @@
 // SETTINGS / #GRADIENTS
 // =============================================================================
 
+// Groups
+// ==============================================
+
 // Our brand and project gradients are held in maps.
-// Grouped to allow specific targeting
+// Groups allow specific targeting
+
 $toolkit-ui-gradients: (
   default: (
     0%:   #f2f2f5,
@@ -154,6 +158,9 @@ sky-living: (
   ),
 ) !default;
 
+// Combine
+// ==============================================
+
 // Merge all the gradient maps together - local use only
 @function _merge-groups($maps...) {
   $group: ();
@@ -168,6 +175,26 @@ sky-living: (
 // Merge all the graident groups into one "master" $gradients map for global use
 // Access these values using tools from `tools/gradients`.
 $gradients: _merge-groups($toolkit-ui-gradients, $toolkit-channel-gradients, $toolkit-tv-gradients, $toolkit-broadband-gradients, $toolkit-mobile-gradients, $toolkit-deprecated-gradients) !default;
+
+// Sets
+// ==============================================
+
+// Convenient groupings created from $gradients
+
+$toolkit-proposition-brands: (
+  sky-tv: (
+    map-get($gradients, sky-tv)
+  ),
+  sky-mobile: (
+    map-get($gradients, sky-mobile)
+  ),
+  sky-broadband: (
+    map-get($gradients, sky-broadband)
+  )
+);
+
+// Directions
+// ==============================================
 
 // Directional settings required for defining both prefixed and standard
 // gradients in our `tools/gradients` mixins.

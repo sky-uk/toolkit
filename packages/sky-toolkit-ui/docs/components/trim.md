@@ -17,7 +17,7 @@ layout: component
 <div class="c-trim u-margin-bottom"></div>
 ```
 ## Branded Example
-See trim.scss for how to use the `trim-brands()` mixin to generate bepoke brands
+See [sky-toolkit-core/tools/_trim.scss](../../../sky-toolkit-core/tools/_trim.scss). for how to use the `trim-brands()` mixin to generate bepoke brands
 and access values from the `$gradients` groups.
 For example:
 

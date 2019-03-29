@@ -176,10 +176,10 @@ sky-living: (
 // Access these values using tools from `tools/gradients`.
 $gradients: _merge-groups($toolkit-ui-gradients, $toolkit-channel-gradients, $toolkit-tv-gradients, $toolkit-broadband-gradients, $toolkit-mobile-gradients, $toolkit-deprecated-gradients) !default;
 
-// Sets
+// Regroup
 // ==============================================
 
-// Convenient groupings created from $gradients
+// Convenient groupings of gradients already defined and part of $gradients
 
 $toolkit-proposition-brands: (
   sky-tv: (

@@ -11,12 +11,18 @@
    */
   @font-face {
     font-family: "Sky Text";
-    src: url("//static.skyassets.com/assets/fonts/sky-regular.woff") format("woff");
+    font-display: fallback;
+    src: local("Sky Text"),
+         url("//static.skyassets.com/assets/fonts/sky-regular.woff2") format("woff2"),
+         url("//static.skyassets.com/assets/fonts/sky-regular.woff") format("woff");
   }
 
   @font-face {
     font-family: "Sky Text";
-    src: url("//static.skyassets.com/assets/fonts/sky-medium.woff") format("woff");
     font-weight: bold;
+    font-display: fallback;
+    src: local("Sky Text"),
+         url("//static.skyassets.com/assets/fonts/sky-medium.woff2") format("woff2"),
+         url("//static.skyassets.com/assets/fonts/sky-medium.woff") format("woff");
   }
 }

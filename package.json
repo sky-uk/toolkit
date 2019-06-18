@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": "8.9.4"
+    "node": "10.15.0"
   },
   "config": {
     "paths": "--include-path node_modules/ --include-path packages/sky-toolkit-core/node_modules/ --include-path packages/sky-toolkit-ui/node_modules/",

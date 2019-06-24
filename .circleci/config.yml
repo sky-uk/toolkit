@@ -29,9 +29,6 @@ jobs:
           name: Lint changes
           command: npm run lint
       - run:
-          name: Test changes
-          command: npm run test
-      - run:
           name: Danger.js checks
           command: danger ci
       - run:

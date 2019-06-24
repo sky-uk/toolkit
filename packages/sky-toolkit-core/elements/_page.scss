@@ -18,7 +18,7 @@
  */
 html {
   /*! autoprefixer: off */
-  @include gradient-background(page-small, horizontal, color(white));
+  background-color: #f5f5f5;
   font-size: ($global-font-size / 16px) * 1em;
   line-height: $global-line-height / $global-font-size;
   font-family: $global-font-family;
@@ -29,8 +29,4 @@ html {
   -ms-text-size-adjust: 100%; /* [4] */
   -moz-osx-font-smoothing: grayscale; /* [5] */
   -webkit-font-smoothing: antialiased; /* [5] */
-
-  @include mq($from: medium) {
-    @include gradient-background(page, horizontal, color(white));
-  }
 }

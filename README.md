@@ -325,7 +325,7 @@ reach out in [Slack](https://sky.slack.com/messages/toolkit) or contact one of
 the maintainers:
 
 | [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/skitson?s=100)<br />Sam Kitson](https://github.com/stefanmccready)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/stefanmccready?s=100)<br />Stefan McCready](https://github.com/stefanmccready)<br /><sub>💻</sub> | [![Ste Allan](https://avatars.githubusercontent.com/steallan-sky?s=100)<br />Ste Allan](https://github.com/steallan-sky)<br /><sub>💻</sub> | [![Luke Whitehouse](https://avatars.githubusercontent.com/lukewhitehouse?s=100)<br />Luke Whitehouse](https://github.com/lukewhitehouse)<br/><sub>💻</sub> |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 **Special thanks to the following contributors:**
 

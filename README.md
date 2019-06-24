@@ -4,7 +4,7 @@
 
 **Sky’s CSS Toolkit**
 
-For full documentation, visit [sky.com/toolkit](http://sky.com/toolkit)
+For full documentation, visit [https://sky.com/toolkit](http://sky.com/toolkit)
 
 ## Contents
 

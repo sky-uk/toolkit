@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.33.0](https://github.com/sky-uk/toolkit/compare/v2.32.0...v2.33.0) (2019-07-24)
+
+
+### Features
+
+* **toolkit-core:** add 2 new gradients ([3f25d73](https://github.com/sky-uk/toolkit/commit/3f25d73))
+
+
+
+
+
 # [2.32.0](https://github.com/sky-uk/toolkit/compare/v2.31.2...v2.32.0) (2019-06-24)
 
 **Note:** Version bump only for package sky-toolkit-ui

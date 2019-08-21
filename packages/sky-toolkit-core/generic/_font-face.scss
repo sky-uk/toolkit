@@ -13,8 +13,8 @@
     font-family: "Sky Text";
     font-display: fallback;
     src: local("Sky Text"),
-         url("//static.skyassets.com/assets/fonts/sky-regular.woff2") format("woff2"),
-         url("//static.skyassets.com/assets/fonts/sky-regular.woff") format("woff");
+         url("//static.skyassets.com/fonts/sky-regular.woff2") format("woff2"),
+         url("//static.skyassets.com/fonts/sky-regular.woff") format("woff");
   }
 
   @font-face {
@@ -22,7 +22,7 @@
     font-weight: bold;
     font-display: fallback;
     src: local("Sky Text"),
-         url("//static.skyassets.com/assets/fonts/sky-medium.woff2") format("woff2"),
-         url("//static.skyassets.com/assets/fonts/sky-medium.woff") format("woff");
+         url("//static.skyassets.com/fonts/sky-medium.woff2") format("woff2"),
+         url("//static.skyassets.com/fonts/sky-medium.woff") format("woff");
   }
 }

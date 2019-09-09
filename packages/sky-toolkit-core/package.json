@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-core",
-  "version": "2.33.1",
+  "version": "2.33.2",
   "description": "The core of Sky's CSS Toolkit",
   "main": "index.js",
   "author": "Sky UK",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.34.0](https://github.com/sky-uk/toolkit/compare/v2.33.2...v2.34.0) (2019-09-26)
+
+
+### Features
+
+* **toolkit-core:** add new gradient for sky crime ([d7b6e28](https://github.com/sky-uk/toolkit/commit/d7b6e28))
+
+
+
+
+
 ## [2.33.2](https://github.com/sky-uk/toolkit/compare/v2.33.1...v2.33.2) (2019-09-09)
 
 

@@ -1,180 +1,72 @@
 /* ==========================================================================
-   COMPONENTS / #CARD
-   ========================================================================== */
+COMPONENTS / #CARD
+========================================================================== */
 
 // Imports
 @import "sky-toolkit-core/tools";
 
 // Settings
+$card-border-radius: 4px;
+$card-background-color: color(white);
+$card-nested-border-color: color(grey-20);
 $card-animation-speed: $global-animation-speed-fast;
-$card-border-color: color(grey-10);
-$card-border-color-hover: #dfdfdf;
-$card-offset: 6px;
-$card-shadow-container-height: $global-spacing-unit-small;
-$card-shadow-color: rgba(color(black), 0.25);
-$card-shadow-offset: $global-spacing-unit;
-$card-shadow-offset-active: 12px;
-$card-shadow: 0 6px 12px 0 rgba(color(black), 0.2);
-$card-shadow-active:0 ($card-offset * 2) 18px 0 rgba(color(black), 0.25);
+$card-shadow: 0 2px 10px 0 rgba(color(black), 0.1);
+$card-shadow-active-position: 0 6px 15px 0;
+$card-active-highlight: color(brand);
 
 /* Base
   ============================================ */
 
 /**
- * Card
- *
- * A simple interactive container, used primarily to display product options.
- */
+* Card
+*
+* 1. Prevent introducing a collapsing margin on contents
+* 2. Remove default browser rendering when applied to elements such as a button
+*/
 .c-card {
-  /*! autoprefixer: off */
-  display: block;
+  display: inline-block; /* [1] */
   position: relative;
-  width: 100%;
+  z-index: z-index(1);
+  width: 100%; /* [2] */
   height: auto;
   margin-bottom: $global-spacing-unit;
-  z-index: z-index(1);
-  -ms-transform: none;
-  transform: none;
-  -ms-transform-style: none;
-  transform-style: none;
-  will-change: transform;
-  background-color: color(white);
-  border: $global-border-width solid $card-border-color;
-  transition: transform ease $card-animation-speed;
+  background-color: $card-background-color;
+  box-shadow: $card-shadow;
+  border-radius: $card-border-radius;
+  border: none;  /* [2] */
+  outline: none;
+}
 
+/* Interaction
+  -------------------------------- */
+
+button.c-card,
+a.c-card {
   /**
-   * Card Shadows
-   *
-   * To animate our shadows smoothly, we use pseudo elements.
-   * The default shadow uses `::before`, with the active shadow using `::after`.
-   * We then simply change the opacity to switch between them, utilising GPU
-   * animation for a higher FPS.
-   *
-   * We keep this inside an `@supports`, as IE doesn't support `translateZ` and
-   * causes visual defects.
-   *
-   * For more info, see: http://tobiasahlin.com/blog/how-to-animate-box-shadow/
-   *
-   * 1. As `transform` will reset the stacking context and prevent any use of
-   *    `z-index`, we need to position the pseudo elements via `translateZ`.
-   */
-  @supports (transform-style: preserve-3d) {
-    transform-style: preserve-3d;
-    box-shadow: none;
+    * Card Shadow
+    * To animate our shadows smoothly, we use pseudo elements.
+    * We change the opacity to show the hover effect, utilising GPU
+    * animation for a higher FPS.
+    *
+    * For more info, see: http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+    *
+    */
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-shadow: $card-shadow-active-position rgba(color(black), 0.15);
+    transition: opacity $card-animation-speed ease-in-out;
+  }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      transform: translateZ(-1em); /* [1] */
-      transition: opacity ease $card-animation-speed;
-    }
-
-    /**
-     * Card Shadow (Default)
-     */
+  @include hocus() {
     &::before {
-      right: $card-shadow-offset;
-      left: $card-shadow-offset;
-      box-shadow: $card-shadow;
       opacity: 1;
-    }
-
-    /**
-     * Card Shadow (Active)
-     *
-     * 1. As we want our shadow to appear fixed when the card translates up, we
-     *    need to counteract movement and offset our shadow position by the same
-     *    amount.
-     * 2. Hide the shadow pseudo element until the card is active.
-     */
-    &::after {
-      right: $card-shadow-offset-active;
-      left: $card-shadow-offset-active;
-      box-shadow: $card-shadow-active; /* [1] */
-      opacity: 0; /* [2] */
-    }
-  }
-
-  /* Interaction
-    -------------------------------- */
-
-  /**
-   * On `:hover` and `:focus`, we want to apply our card's active styles.
-   *
-   * In its active state, the card will offset upwards, subtly change
-   * border-color and reveal the darker active shadow underneath.
-   *
-   * 1. Hide the default card shadow.
-   * 2. Show the active card shadow.
-   */
-  @include hocus() {
-    /*! autoprefixer: off */
-    border-color: $card-border-color-hover;
-    -ms-transform: translateY(-$card-offset);
-    transform: translateY(-$card-offset);
-    outline: none;
-
-    &::before {
-      opacity: 0; /* [1] */
-    }
-
-    &::after {
-      opacity: 1; /* [2] */
-    }
-  }
-}
-
-/* States
-  ============================================ */
-
-/**
- * Keyboard Focus
- *
- * Should be applied to `.c-card` on keyboard focus for Accessibility.
- */
-.c-card.has-focus {
-  @include focus-styles();
-
-  /**
-   * Remove Card Shadows to prevent overlap with `focus-styles()`.
-   */
-  &::before,
-  &::after {
-    content: normal;
-  }
-}
-
-/* Modifiers
-  ============================================ */
-
-/**
- * Static cards
- *
- * An optional modifier to remove all hover and focus effects from the card
- *
- * 1. Show the default card shadow.
- * 2. Hide the active card shadow.
- */
-.c-card--static {
-  will-change: auto;
-
-  @include hocus() {
-    /*! autoprefixer: off */
-    border-color: $card-border-color;
-    -ms-transform: none;
-    transform: none;
-    -ms-transform-style: none;
-    transform-style: none;
-
-    &::before {
-      opacity: 1; /* [1] */
-    }
-
-    &::after {
-      opacity: 0; /* [2] */
     }
   }
 }

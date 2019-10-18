@@ -18,11 +18,12 @@ Steps to reproduce the behavior:
 
 **Expected behavior**
 
-A clear and concise description of what you expected to happen.
+Description of what you expected to happen.
 
 **Attempted Fixes**
 
-What have you tried to resolve this issue? What have you done to mitigate this problem within your own application?
+What have you tried to resolve this issue? Have you already attempted fixes
+within your own application?
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
@@ -33,15 +34,15 @@ If applicable, add screenshots to help explain your problem.
  - Version [e.g. 22]
 
 **Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
+ - Device: [e.g. iPhone12]
+ - OS: [e.g. iOS14]
  - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+ - Version [e.g. 122]
 
 **Additional context**
 
 Add any other context about the problem here.
 
-*How has this issue affected you?* 
+*How has this issue affected you?*
 *Why is this change required?*
 *What problem does it solve?*

@@ -37,11 +37,16 @@
 //     }
 //   }
 
+// small:   420px,
+//   medium:  740px,
+//   large:   980px,
+//   x-large: 1300px
+
 $mq-breakpoints: (
-  small:   420px,
-  medium:  740px,
-  large:   980px,
-  x-large: 1300px
+  small: 480px,
+  medium: 800px,
+  large: 960px,
+  x-large: 1120px
 ) !default;
 
 // Supercell Configuration

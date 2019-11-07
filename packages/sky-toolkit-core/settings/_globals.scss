@@ -12,14 +12,23 @@ $global-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
 // Global Spacing Settings
 // ==============================================
 
-$global-spacing-unit-tiny: 4px;
-$global-spacing-unit-bob: 8px;
-$global-spacing-unit-dave: 16px;
-$global-spacing-unit-sally: 32px;
-$global-spacing-unit-small: 12px;
-$global-spacing-unit: 24px !default;
-$global-spacing-unit-large: 48px;
-$global-spacing-unit-x-large: 72px;
+$global-spacing-unit-1: 4px;
+$global-spacing-unit-2: 8px;
+$global-spacing-unit-3: 12px;
+$global-spacing-unit-4: 16px;
+$global-spacing-unit-5: 24px;
+$global-spacing-unit-6: 32px;
+$global-spacing-unit-7: 48px;
+$global-spacing-unit-8: 72px;
+
+// Legacy Global Spacing Settings
+// ==============================================
+
+$global-spacing-unit-tiny: $global-spacing-unit-1;
+$global-spacing-unit-small: $global-spacing-unit-2;
+$global-spacing-unit: $global-spacing-unit-4 !default;
+$global-spacing-unit-large: $global-spacing-unit-6;
+$global-spacing-unit-x-large: $global-spacing-unit-8;
 
 // Global Container Settings
 // ==============================================

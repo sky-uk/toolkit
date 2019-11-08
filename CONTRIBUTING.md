@@ -217,16 +217,8 @@ For discussion of issues and general project talk, head over to
       commit messages.
 2. Merge the fully-approved PR into `develop` via the "Merge pull request" button.
     * If handling multiple PRs, go back to Step 1 until all are merged. Then continue to Step 3.
-3. Run `git checkout develop && git pull`.
-4. Run `git checkout master && git pull`.
-5. Run `git merge develop`.
-6. Run `npm i && lerna bootstrap`.
-7. Run `lerna publish`.
-    * This will bring up a prompt to confirm the new versions. At this point you can choose to accept or decline them.
-    * This will also auto-generate our CHANGELOGS for each package.
-    * NOTE: the version numbers will be decided based on commits since the last release.
-    the commits done since the last release.
-8. Check the compiled assets have been published via CircleCI to S3 (this may
+3. Run `npm run release`.
+4. Check the compiled assets have been published via CircleCI to S3 (this may
     take a few minutes to propagate):
     * For releases and pre-releases:
         * [sky.com/assets/toolkit-core/v[version]/toolkit-core.min.css](
@@ -238,12 +230,10 @@ For discussion of issues and general project talk, head over to
           https://www.sky.com/assets/toolkit-core/latest/toolkit-core.min.css)
         * [sky.com/assets/toolkit/latest/toolkit.min.css](
           https://www.sky.com/assets/toolkit/latest/toolkit.min.css)
-9. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
+5. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
     check the tag exists.
     * If the tag exists, congrats! Now create a [**new**
       release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
       tag.
     * If the tag doesn't exist, something went wrong.
-10. Communicate changes out on Slack.
-11. Update our `develop` branch with `master`.
-    * Run `git checkout develop && git merge master && git push`
+6. Communicate changes out on Slack.

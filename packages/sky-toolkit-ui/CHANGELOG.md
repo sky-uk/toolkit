@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.35.0](https://github.com/sky-uk/toolkit/compare/v2.34.0...v2.35.0) (2019-11-08)
+
+
+### Features
+
+* **toolkit-ui:** update to latest card styles ([68a1932](https://github.com/sky-uk/toolkit/commit/68a19328f2327ae123e72c15fe4494a20470449b))
+
+
+
+
+
 # [2.34.0](https://github.com/sky-uk/toolkit/compare/v2.33.2...v2.34.0) (2019-09-26)
 
 

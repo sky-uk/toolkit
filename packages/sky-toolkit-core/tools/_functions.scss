@@ -13,7 +13,7 @@
 
 // Round a number to specified digits.
 // See `docs/` for usage.
-@function decimal-round ($number, $digits: 0, $mode: round) {
+@function decimal-round($number, $digits: 0, $mode: round) {
   $n: 1;
   // $number must be a number
   @if type-of($number) != number {
@@ -50,7 +50,7 @@
 
 // Ceil a number to specified digits.
 // See `docs/` for usage.
-@function decimal-ceil ($number, $digits: 0) {
+@function decimal-ceil($number, $digits: 0) {
   @return decimal-round($number, $digits, ceil);
 }
 
@@ -59,7 +59,7 @@
 
 // Floor a number to specified digits.
 // See `docs/` for usage.
-@function decimal-floor ($number, $digits: 0) {
+@function decimal-floor($number, $digits: 0) {
   @return decimal-round($number, $digits, floor);
 }
 
@@ -137,6 +137,20 @@
   @return map-get-deep($z-index, $key);
 }
 
+// breakpoint()
+// ------------------------------------
+
+// Function to get color from `$breakpoints` instead of using `map-get`.
+@function breakpoint($key, $maxWidth: false) {
+  $breakpoint-value: map-get($breakpoints, $key);
+
+  @if $maxWidth {
+    @return $breakpoint-value;
+  }
+
+  @return $breakpoint-value - 1;
+}
+
 // Conversion
 // ==============================================
 
@@ -165,7 +179,7 @@
 @function reverse($list) {
   $reversed-list: ();
 
-  @for $index from length($list)*-1 through -1 {
+  @for $index from length($list) * -1 through -1 {
     $reversed-list: append($reversed-list, nth($list, abs($index)), comma);
   }
 

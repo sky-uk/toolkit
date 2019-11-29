@@ -38,9 +38,9 @@
 //   }
 
 $mq-breakpoints: (
-  small:   420px,
-  medium:  740px,
-  large:   980px,
+  small: 420px,
+  medium: 740px,
+  large: 980px,
   x-large: 1300px
 ) !default;
 
@@ -51,4 +51,18 @@ $mq-breakpoints: (
 // (github.com/sky-uk/supercell).
 // Supercell has a configurable gutter size, and by default we want it to equal
 // our Global Spacing Unit.
+
 $supercell-spacing-unit: $global-spacing-unit !default;
+$supercell-spacing-unit-small: $global-spacing-unit-2 !default;
+
+// V3 Breakpoints
+// ==============================================
+
+$breakpoints: (
+  x-small: 480px,
+  small: 480px,
+  medium: 640px,
+  large: 960px,
+  x-large: 1120px,
+  xx-large: 1248px
+) !default;

@@ -4,8 +4,13 @@
 
 .o-container {
   max-width: $global-container-width;
-  padding-right: $global-spacing-unit;
-  padding-left: $global-spacing-unit;
+  padding-right: $global-spacing-unit-4 + $global-spacing-unit-2;
+  padding-left: $global-spacing-unit-4 + $global-spacing-unit-2;
   margin-right: auto;
   margin-left: auto;
+
+  @include mq($from: small) {
+    padding-right: $global-spacing-unit-5 + $global-spacing-unit-3;
+    padding-left: $global-spacing-unit-5 + $global-spacing-unit-3;
+  }
 }

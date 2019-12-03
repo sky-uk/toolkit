@@ -60,7 +60,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
   z-index: z-index(1); /* [1] */
   height: auto;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     margin-bottom: $global-spacing-unit-5;
   }
 }

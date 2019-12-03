@@ -142,13 +142,17 @@
 
 // Function to get color from `$breakpoints` instead of using `map-get`.
 @function breakpoint($key, $maxWidth: false) {
-  $breakpoint-value: map-get($breakpoints, $key);
+  @if map-has-key($breakpoints, $key) {
+    $breakpoint-value: map-get($breakpoints, $key);
 
-  @if $maxWidth {
+    @if not $maxWidth {
+      $breakpoint-value: $breakpoint-value - 1px;
+    }
+
     @return $breakpoint-value;
   }
 
-  @return $breakpoint-value - 1;
+  @warn "Breakpoint isn't defined.";
 }
 
 // Conversion

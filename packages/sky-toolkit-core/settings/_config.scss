@@ -4,7 +4,7 @@
 
 // Config-level settings (environment switches, debugging modes, etc.).
 $config: (
-  env:   dev,
+  env: dev,
   debug: false
 ) !default;
 
@@ -17,3 +17,11 @@ $config: (
 @function config($key) {
   @return map-get($config, $key);
 }
+
+// Legacy support approach
+//
+// There are 3 legacy approaches:
+//  * full - provide full class support for legacy and new systems
+//  * fallback - map legacy classes to conform to new values
+//  * none - ignore legacy classes and values
+$legacy-approach: "full" !default;

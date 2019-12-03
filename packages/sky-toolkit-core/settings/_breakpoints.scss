@@ -59,10 +59,10 @@ $supercell-spacing-unit-small: $global-spacing-unit-2 !default;
 // ==============================================
 
 $breakpoints: (
-  x-small: 480px,
-  small: 480px,
-  medium: 640px,
-  large: 960px,
-  x-large: 1120px,
-  xx-large: 1248px
+  xs: 320px,
+  sm: 480px,
+  md: 640px,
+  lg: 800px,
+  xl: 960px,
+  xxl: 1120px
 ) !default;

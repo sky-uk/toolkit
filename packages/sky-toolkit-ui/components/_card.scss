@@ -36,7 +36,7 @@ $card-active-highlight: color(brand);
   border: none; /* [2] */
   outline: none;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     margin-bottom: $global-spacing-unit-5;
   }
 }

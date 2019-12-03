@@ -9,7 +9,7 @@
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     padding-right: $global-spacing-unit-5 + $global-spacing-unit-3;
     padding-left: $global-spacing-unit-5 + $global-spacing-unit-3;
   }

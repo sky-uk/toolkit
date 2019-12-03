@@ -9,86 +9,86 @@ $text: (
   display-1: (
     small: (
       font-size: 36px,
-      line-height: 48
+      line-height: 1.33333
     ),
     large: (
       font-size: 48px,
-      line-height: 64px
+      line-height: 1.33333
     )
   ),
   display-2: (
     small: (
       font-size: 32px,
-      line-height: 44px
+      line-height: 1.375
     ),
     large: (
       font-size: 40px,
-      line-height: 56px
+      line-height: 1.4
     )
   ),
   display-3: (
     small: (
       font-size: 28px,
-      line-height: 40px
+      line-height: 1.42857
     ),
     large: (
       font-size: 32px,
-      line-height: 48px
+      line-height: 1.5
     )
   ),
   display-4: (
     small: (
       font-size: 24px,
-      line-height: 32px
+      line-height: 1.33333
     ),
     large: (
       font-size: 24px,
-      line-height: 36px
+      line-height: 1.5
     )
   ),
   display-5: (
     small: (
       font-size: 20px,
-      line-height: 24px
+      line-height: 1.2
     ),
     large: (
       font-size: 20px,
-      line-height: 24px
+      line-height: 1.2
     )
   ),
   body-1: (
     small: (
       font-size: 16px,
-      line-height: 24px
+      line-height: 1.5
     ),
     large: (
       font-size: 16px,
-      line-height: 24px
+      line-height: 1.5
     )
   ),
   body-2: (
     small: (
       font-size: 14px,
-      line-height: 20px
+      line-height: 1.42857
     ),
     large: (
       font-size: 14px,
-      line-height: 20px
+      line-height: 1.42857
     )
   ),
   legal: (
     small: (
       font-size: 12px,
-      line-height: 16px
+      line-height: 1.33333
     ),
     large: (
       font-size: 12px,
-      line-height: 16px
+      line-height: 1.33333
     )
   )
 ) !default;
 
-// Legacy polaris font-sizes
+$legacy-text: ();
 @if $legacy-approach == "full" {
   $legacy-text: (
     heading-alpha: (
@@ -176,6 +176,4 @@ $text: (
   );
 }
 
-@if $legacy-approach == "fallback" or $legacy-approach == "full" {
-  $text: map-merge($text, $legacy-text);
-}
+$text: map-merge($text, $legacy-text);

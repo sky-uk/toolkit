@@ -58,7 +58,7 @@ $panel-spacing: $global-spacing-unit-8;
   position: absolute; /* [1] */
   top: $global-spacing-unit-4; /* [1] */
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     top: $global-spacing-unit-5;
   }
 }
@@ -127,7 +127,7 @@ $panel-spacing: $global-spacing-unit-8;
   max-height: none;
   margin-bottom: $global-spacing-unit-4;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     margin-bottom: $global-spacing-unit-5;
   }
 }

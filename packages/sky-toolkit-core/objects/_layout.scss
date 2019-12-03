@@ -60,7 +60,7 @@
   box-sizing: border-box;
   margin-left: -$global-spacing-unit-4;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     margin-left: -$global-spacing-unit-5;
   }
 }
@@ -73,7 +73,7 @@
   box-sizing: border-box;
   padding-left: $global-spacing-unit-4;
 
-  @media (min-width: breakpoint(medium)) {
+  @media (min-width: breakpoint(md)) {
     padding-left: $global-spacing-unit-5;
   }
 }

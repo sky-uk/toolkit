@@ -4,7 +4,6 @@
 
 // Dependencies
 // 1. Normalize - Render all elements more consistently across browsers
-// 2. Supercell - Grid/Layout system
 
 // Settings
 @import "settings/all";
@@ -30,7 +29,7 @@
 @import "elements/images";
 
 // Objects
-@import "objects/layout"; // [2]
+@import "objects/layout";
 @import "objects/container";
 @import "objects/flag";
 @import "objects/media";

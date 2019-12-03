@@ -29,12 +29,16 @@ $card-active-highlight: color(brand);
   z-index: z-index(1);
   width: 100%; /* [2] */
   height: auto;
-  margin-bottom: $global-spacing-unit;
+  margin-bottom: $global-spacing-unit-4;
   background-color: $card-background-color;
   box-shadow: $card-shadow;
   border-radius: $card-border-radius;
-  border: none;  /* [2] */
+  border: none; /* [2] */
   outline: none;
+
+  @media (min-width: breakpoint(medium)) {
+    margin-bottom: $global-spacing-unit-5;
+  }
 }
 
 /* Interaction

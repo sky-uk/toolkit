@@ -11,11 +11,13 @@ $panel-shadow-size-top: inset 0 12px 12px -12px;
 $panel-shadow-size-bottom: inset 0 -12px 12px -12px;
 $panel-shadow-color: #9f9f9f;
 $panel-shadow-color-dark: color(black);
-$panel-shadow: $panel-shadow-size-top $panel-shadow-color, $panel-shadow-size-bottom $panel-shadow-color;
-$panel-shadow-dark: $panel-shadow-size-top $panel-shadow-color-dark, $panel-shadow-size-bottom $panel-shadow-color-dark;
+$panel-shadow: $panel-shadow-size-top $panel-shadow-color,
+  $panel-shadow-size-bottom $panel-shadow-color;
+$panel-shadow-dark: $panel-shadow-size-top $panel-shadow-color-dark,
+  $panel-shadow-size-bottom $panel-shadow-color-dark;
 $panel-background-color: color(white) !default;
 $panel-background-color-dark: color(grey-50) !default;
-$panel-spacing: $global-spacing-unit * 3;
+$panel-spacing: $global-spacing-unit-8;
 
 /* Base
   =========================================== */
@@ -54,7 +56,11 @@ $panel-spacing: $global-spacing-unit * 3;
 .c-panel__toggle {
   font-size: font-size(text-body);
   position: absolute; /* [1] */
-  top: $global-spacing-unit; /* [1] */
+  top: $global-spacing-unit-4; /* [1] */
+
+  @media (min-width: breakpoint(medium)) {
+    top: $global-spacing-unit-5;
+  }
 }
 
 /**
@@ -119,7 +125,11 @@ $panel-spacing: $global-spacing-unit * 3;
  */
 .c-panel.is-open {
   max-height: none;
-  margin-bottom: $global-spacing-unit;
+  margin-bottom: $global-spacing-unit-4;
+
+  @media (min-width: breakpoint(medium)) {
+    margin-bottom: $global-spacing-unit-5;
+  }
 }
 
 /* Modifiers

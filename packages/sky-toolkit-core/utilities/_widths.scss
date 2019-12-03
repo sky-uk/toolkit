@@ -2,10 +2,54 @@
    UTILITIES / #WIDTHS
    ========================================================================== */
 
+@mixin generate-layout($columns, $breakpoint: null) {
+  /**
+     * Generate an auto width utility class at each of our breakpoints.
+     */
+  .u-width-auto#{$breakpoint} {
+    width: auto !important;
+  }
+
+  // Loop through the number of columns for each denominator of our fractions.
+  @each $denominator in $columns {
+    // Sanity check number of columns
+    @if ($denominator > 24) {
+      @error "Please choose a more sensible number of columns (less than 25)";
+    }
+
+    // Begin creating a numerator for our fraction up until we hit the
+    // denominator.
+    @for $numerator from 1 through $denominator {
+      // Build a class in the format `.u-width-3/4[@<breakpoint>]`.
+      .u-width-#{$numerator}\/#{$denominator}#{$breakpoint} {
+        width: ($numerator / $denominator) * 100% !important;
+      }
+
+      /**
+         * 1. Defensively reset any leftover or conflicting `left`/`right` values.
+         */
+
+      // Build a class in the format `.u-push-1/2[@<breakpoint>]`.
+      .u-push-#{$numerator}\/#{$denominator}#{$breakpoint} {
+        position: relative;
+        right: auto; /* [1] */
+        left: ($numerator / $denominator) * 100% !important;
+      }
+
+      // Build a class in the format `.u-pull-5/6[@<breakpoint>]`.
+      .u-pull-#{$numerator}\/#{$denominator}#{$breakpoint} {
+        position: relative;
+        right: ($numerator / $denominator) * 100% !important;
+        left: auto; /* [1] */
+      }
+    }
+  }
+}
+
 // Build the grids
 // Create all of our classes for any/all breakpoints (e.g. `.u-width-1/2`).
 
-@include supercell($global-widths);
+@include generate-layout($global-widths);
 
 // Create classes that take effect only at specific breakpoints
 // (e.g. `.u-width-1/3@medium`).
@@ -15,6 +59,6 @@
 
 @each $alias, $bp in $mq-breakpoints {
   @include mq($from: $bp) {
-    @include supercell($global-widths, \@#{$alias});
+    @include generate-layout($global-widths, \@#{$alias});
   }
 }

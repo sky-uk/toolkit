@@ -16,7 +16,9 @@
 //     color: color(sky1);
 //   }
 @mixin add-color($key, $value) {
-  $new-color: ($key: $value);
+  $new-color: (
+    $key: $value
+  );
 
   @if type-of($value) == color {
     $colors: map-merge($colors, $new-color) !global;
@@ -44,9 +46,11 @@
   outline: none;
 
   @if ($color == "default") {
-    box-shadow: 0 1px 3px rgba(color(black), 0.4), 0 1px 15px 3px rgba(color(highlight), 0.75);
+    box-shadow: 0 1px 3px rgba(color(black), 0.4),
+      0 1px 15px 3px rgba(color(highlight), 0.75);
   } @else if ($color == "invert") {
-    box-shadow: 0 1px 3px rgba(color(black), 0.75), 0 1px 15px 3px rgba(color(white), 0.75);
+    box-shadow: 0 1px 3px rgba(color(black), 0.75),
+      0 1px 15px 3px rgba(color(white), 0.75);
   } @else {
     @warn "`#{$color}` is not a valid outline color, it must be `default` or `invert`.";
   }
@@ -80,7 +84,7 @@
     padding: 0,
     position: absolute,
     width: 1px,
-    white-space: nowrap,
+    white-space: nowrap
   );
 
   // Override the default to re-enable display
@@ -91,7 +95,7 @@
     overflow: visible,
     position: static,
     width: auto,
-    white-space: normal,
+    white-space: normal
   );
 
   // Select the map to use
@@ -181,10 +185,13 @@
 // Used to calculate fixed height elements via line-height and height or
 // padding-based spacing.
 // See `docs/` for usage.
-@mixin height-sizing($height: fixed, $line-height: 26px) {
+@mixin height-sizing(
+  $height: fixed,
+  $line-height: 26px,
+  $default-height: 40px
+) {
   // Note: 26px is the hard-coded value of `line-height(text-body, large)`.
   $default-border-width: $global-border-width;
-  $default-height: $global-spacing-unit-large;
   $default-height-rounded: decimal-round(convert-to-em($default-height), 2);
 
   @if $height == fixed {
@@ -214,7 +221,8 @@
 @mixin browser-hack($browser...) {
   @each $version in $browser {
     @if $version == ie11 {
-      @at-root _:-ms-fullscreen, :root & {
+      @at-root _:-ms-fullscreen,
+        :root & {
         @content;
       }
     } @else if $version == edge {

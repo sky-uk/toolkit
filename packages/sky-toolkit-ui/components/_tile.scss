@@ -24,7 +24,10 @@ $tile-sponsor-padding: $tile-border-width + 5px;
 // Array of gradient names to generate specific brand themes for Tiles.
 // By default all themes are generated.
 // You can output specific themes by overwriting `$tile-themes`.
-$tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets", "sky-cinema", "sky-kids", "sky-living", "sky-witness", "sky-news", "sky-sports", "sky-store", "ultimate-on-demand", "sky-mobile", "pick", "challenge", "sky-crime" !default;
+$tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets",
+  "sky-cinema", "sky-kids", "sky-living", "sky-witness", "sky-news",
+  "sky-sports", "sky-store", "ultimate-on-demand", "sky-mobile", "pick",
+  "challenge", "sky-crime" !default;
 
 // Dependencies (Optional)
 // =========================================== */
@@ -52,10 +55,14 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
   background-color: $tile-border-colour;
   box-shadow: $tile-shadow;
   padding: $tile-border-width;
-  margin-bottom: $global-spacing-unit;
+  margin-bottom: $global-spacing-unit-4;
   will-change: transform;
   z-index: z-index(1); /* [1] */
   height: auto;
+
+  @media (min-width: breakpoint(medium)) {
+    margin-bottom: $global-spacing-unit-5;
+  }
 }
 
 /* Structure and Text
@@ -314,7 +321,8 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
   background-color: transparent; /* [1] */
   border: 0; /* [1] */
   outline: none;
-  transition: color $tile-animation-speed ease, box-shadow $global-animation-speed-fast ease;
+  transition: color $tile-animation-speed ease,
+    box-shadow $global-animation-speed-fast ease;
   position: relative;
   height: 100%;
   cursor: pointer;

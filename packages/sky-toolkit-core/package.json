@@ -12,8 +12,7 @@
   "homepage": "http://sky.com/toolkit",
   "dependencies": {
     "normalize.css": "7.0.0",
-    "sass-mq": "^3.3.2",
-    "supercell": "^1.3.0"
+    "sass-mq": "^3.3.2"
   },
   "devDependencies": {
     "eyeglass": "^1.3.0"

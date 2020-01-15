@@ -2,15 +2,18 @@
    OBJECTS / #CONTAINER
    ========================================================================== */
 
+$xs-outer-gutter: $global-spacing-unit-4 + $global-spacing-unit-2;
+$md-outer-gutter: $global-spacing-unit-5 + $global-spacing-unit-3;
+
 .o-container {
   max-width: $global-container-width;
-  padding-right: $global-spacing-unit-4 + $global-spacing-unit-2;
-  padding-left: $global-spacing-unit-4 + $global-spacing-unit-2;
+  padding-right: $xs-outer-gutter;
+  padding-left: $xs-outer-gutter;
   margin-right: auto;
   margin-left: auto;
 
   @media (min-width: breakpoint(md)) {
-    padding-right: $global-spacing-unit-5 + $global-spacing-unit-3;
-    padding-left: $global-spacing-unit-5 + $global-spacing-unit-3;
+    padding-right: $md-outer-gutter;
+    padding-left: $md-outer-gutter;
   }
 }

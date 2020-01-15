@@ -140,8 +140,9 @@
 // breakpoint()
 // ------------------------------------
 
-// Function to get color from `$breakpoints` instead of using `map-get`.
-@function breakpoint($key, $maxWidth: false) {
+// Function to get breakpoint from `$breakpoints`. Set `$max-width`
+// to `false` to use the correct `max-width` size.
+@function breakpoint($key, $max-width: false) {
   @if map-has-key($breakpoints, $key) {
     $breakpoint-value: map-get($breakpoints, $key);
 

@@ -2,7 +2,7 @@
 // SETTINGS / #BREAKPOINTS
 // =============================================================================
 
-// Sass MQ Configuration
+// Legacy Sass MQ Configuration
 // ==============================================
 
 // Define our breakpoints for later use with Sass MQ. The key (e.g. `small`)
@@ -37,6 +37,7 @@
 //     }
 //   }
 
+// Legacy Breakpoints
 $mq-breakpoints: (
   small: 420px,
   medium: 740px,
@@ -44,19 +45,18 @@ $mq-breakpoints: (
   x-large: 1300px
 ) !default;
 
-// Supercell Configuration
-// ==============================================
-
-// Our Grid System is an external dependency called Supercell
-// (github.com/sky-uk/supercell).
-// Supercell has a configurable gutter size, and by default we want it to equal
-// our Global Spacing Unit.
-
-$supercell-spacing-unit: $global-spacing-unit !default;
-$supercell-spacing-unit-small: $global-spacing-unit-2 !default;
-
 // V3 Breakpoints
 // ==============================================
+
+// Moving forward with Toolkit V3 we recommend using more traditional media
+// query syntax. Toolkit provides a `breakpoint()` function apply specific
+// breakpoint values. E.g.
+
+// .some-class {
+//   @media (min-width: breakpoint(md)) {
+//     background: red;
+//   }
+// }
 
 $breakpoints: (
   xs: 320px,

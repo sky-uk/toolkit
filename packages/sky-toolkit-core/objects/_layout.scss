@@ -50,6 +50,16 @@
  * There are plenty more options available to us: explore them below.
  */
 
+/* Gutter sizes
+   =========================================== */
+
+$layout-gutter-default-xs: $global-spacing-unit-4;
+$layout-gutter-default-md: $global-spacing-unit-5;
+$layout-gutter-narrow-xs: $global-spacing-unit-3;
+$layout-gutter-narrow-md: $global-spacing-unit-4;
+$layout-gutter-wide-xs: $global-spacing-unit-5;
+$layout-gutter-wide-md: $global-spacing-unit-6;
+
 /* Default/mandatory classes.
    =========================================== */
 .o-layout {
@@ -61,7 +71,7 @@
   margin-left: -$global-spacing-unit-4;
 
   @media (min-width: breakpoint(md)) {
-    margin-left: -$global-spacing-unit-5;
+    margin-left: -$layout-gutter-default-md;
   }
 }
 
@@ -74,7 +84,7 @@
   padding-left: $global-spacing-unit-4;
 
   @media (min-width: breakpoint(md)) {
-    padding-left: $global-spacing-unit-5;
+    padding-left: $layout-gutter-default-md;
   }
 }
 
@@ -85,10 +95,18 @@
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: -$global-spacing-unit-4;
+  margin-left: -$layout-gutter-narrow-xs;
+
+  @media (min-width: breakpoint(md)) {
+    padding-left: $layout-gutter-narrow-md;
+  }
 
   > .o-layout__item {
-    margin-left: $global-spacing-unit-4;
+    padding-left: $layout-gutter-narrow-xs;
+
+    @media (min-width: breakpoint(md)) {
+      padding-left: $layout-gutter-narrow-md;
+    }
   }
 }
 
@@ -96,10 +114,18 @@
  * Larger gutters between items.
  */
 .o-layout--wide {
-  margin-left: -$global-spacing-unit-7;
+  margin-left: -$layout-gutter-wide-xs;
+
+  @media (min-width: breakpoint(md)) {
+    padding-left: $layout-gutter-wide-md;
+  }
 
   > .o-layout__item {
-    margin-left: $global-spacing-unit-7;
+    padding-left: $layout-gutter-wide-xs;
+
+    @media (min-width: breakpoint(md)) {
+      padding-left: $layout-gutter-wide-md;
+    }
   }
 }
 
@@ -110,7 +136,7 @@
   margin-left: 0;
 
   > .o-layout__item {
-    margin-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -247,22 +273,40 @@
  */
 .o-layout--spaced {
   > .o-layout__item {
-    margin-bottom: $global-spacing-unit-5;
+    margin-bottom: $layout-gutter-default-xs;
+
+    @media (min-width: breakpoint(md)) {
+      margin-bottom: $layout-gutter-default-md;
+    }
   }
 
   /**
    * If we’ve chosen to change the size of the horizontal gutters, let’s change
    * the vertical gutters accordingly.
    */
+  &.o-layout--flush {
+    > .o-layout__item {
+      margin-bottom: 0;
+    }
+  }
+
   &.o-layout--narrow {
     > .o-layout__item {
-      margin-bottom: $global-spacing-unit-4;
+      margin-bottom: $layout-gutter-narrow-xs;
+
+      @media (min-width: breakpoint(md)) {
+        margin-bottom: $layout-gutter-narrow-md;
+      }
     }
   }
 
   &.o-layout--wide {
     > .o-layout__item {
-      margin-bottom: $global-spacing-unit-7;
+      margin-bottom: $layout-gutter-wide-xs;
+
+      @media (min-width: breakpoint(md)) {
+        margin-bottom: $layout-gutter-wide-md;
+      }
     }
   }
 }

@@ -68,7 +68,7 @@ $layout-gutter-wide-md: $global-spacing-unit-6;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  margin-left: -$global-spacing-unit-4;
+  margin-left: -$layout-gutter-default-xs;
 
   @media (min-width: breakpoint(md)) {
     margin-left: -$layout-gutter-default-md;
@@ -81,7 +81,7 @@ $layout-gutter-wide-md: $global-spacing-unit-6;
   vertical-align: top;
   width: 100%;
   box-sizing: border-box;
-  padding-left: $global-spacing-unit-4;
+  padding-left: $layout-gutter-default-xs;
 
   @media (min-width: breakpoint(md)) {
     padding-left: $layout-gutter-default-md;
@@ -279,34 +279,34 @@ $layout-gutter-wide-md: $global-spacing-unit-6;
       margin-bottom: $layout-gutter-default-md;
     }
   }
+}
 
-  /**
-   * If we’ve chosen to change the size of the horizontal gutters, let’s change
-   * the vertical gutters accordingly.
-   */
-  &.o-layout--flush {
-    > .o-layout__item {
-      margin-bottom: 0;
+/**
+  * If we’ve chosen to change the size of the horizontal gutters, let’s change
+  * the vertical gutters accordingly.
+  */
+.o-layout--spaced.o-layout--flush {
+  > .o-layout__item {
+    margin-bottom: 0;
+  }
+}
+
+.o-layout--spaced.o-layout--narrow {
+  > .o-layout__item {
+    margin-bottom: $layout-gutter-narrow-xs;
+
+    @media (min-width: breakpoint(md)) {
+      margin-bottom: $layout-gutter-narrow-md;
     }
   }
+}
 
-  &.o-layout--narrow {
-    > .o-layout__item {
-      margin-bottom: $layout-gutter-narrow-xs;
+.o-layout--spaced.o-layout--wide {
+  > .o-layout__item {
+    margin-bottom: $layout-gutter-wide-xs;
 
-      @media (min-width: breakpoint(md)) {
-        margin-bottom: $layout-gutter-narrow-md;
-      }
-    }
-  }
-
-  &.o-layout--wide {
-    > .o-layout__item {
-      margin-bottom: $layout-gutter-wide-xs;
-
-      @media (min-width: breakpoint(md)) {
-        margin-bottom: $layout-gutter-wide-md;
-      }
+    @media (min-width: breakpoint(md)) {
+      margin-bottom: $layout-gutter-wide-md;
     }
   }
 }

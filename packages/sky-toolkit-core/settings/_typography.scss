@@ -89,6 +89,7 @@ $text: (
 ) !default;
 
 $legacy-text: ();
+
 @if $legacy-approach == "full" {
   $legacy-text: (
     heading-alpha: (

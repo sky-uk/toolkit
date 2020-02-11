@@ -45,7 +45,8 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
   border-radius: $btn-border-radius;
   transition: color $btn-animation-speed ease,
     background-color $btn-animation-speed ease,
-    border-color $btn-animation-speed ease, box-shadow $btn-animation-speed ease;
+    border-color $btn-animation-speed ease,
+    box-shadow $btn-animation-speed ease;
   cursor: pointer; /* [7] */
 
   &:hover,

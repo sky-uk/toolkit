@@ -146,7 +146,7 @@
   @if map-has-key($breakpoints, $key) {
     $breakpoint-value: map-get($breakpoints, $key);
 
-    @if not $maxWidth {
+    @if not $max-width {
       $breakpoint-value: $breakpoint-value - 1px;
     }
 

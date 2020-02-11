@@ -222,7 +222,7 @@
   @each $version in $browser {
     @if $version == ie11 {
       @at-root _:-ms-fullscreen,
-        :root & {
+      :root & {
         @content;
       }
     } @else if $version == edge {

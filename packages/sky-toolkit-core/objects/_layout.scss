@@ -98,7 +98,7 @@ $layout-gutter-wide-md: $global-spacing-unit-6;
   margin-left: -$layout-gutter-narrow-xs;
 
   @media (min-width: breakpoint(md)) {
-    padding-left: $layout-gutter-narrow-md;
+    margin-left: -$layout-gutter-narrow-md;
   }
 
   > .o-layout__item {
@@ -117,7 +117,7 @@ $layout-gutter-wide-md: $global-spacing-unit-6;
   margin-left: -$layout-gutter-wide-xs;
 
   @media (min-width: breakpoint(md)) {
-    padding-left: $layout-gutter-wide-md;
+    margin-left: -$layout-gutter-wide-md;
   }
 
   > .o-layout__item {

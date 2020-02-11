@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.36.0](https://github.com/sky-uk/toolkit/compare/v2.34.0...v2.36.0) (2020-01-15)
+
+
+### Features
+
+* **toolkit-core:** add gradient for sky comedy ([1169d35](https://github.com/sky-uk/toolkit/commit/1169d3560a7f22498550e3a0a3c67a951e503867))
+
+
+
+
+
 # [2.34.0](https://github.com/sky-uk/toolkit/compare/v2.33.2...v2.34.0) (2019-09-26)
 
 

@@ -20,20 +20,20 @@ jobs:
       - run:
           name: Install Dependencies
           command: |
-            npm i
-            npm run postinstall
-            sudo npm i -g lerna
-            sudo npm i -g danger
+            yarn i
+            yarn run postinstall
+            sudo yarn i -g lerna
+            sudo yarn i -g danger
             lerna bootstrap
       - run:
           name: Lint changes
-          command: npm run lint
+          command: yarn run lint
       - run:
           name: Danger.js checks
           command: danger ci
       - run:
           name: Build and Minify CSS
-          command: npm run minify
+          command: yarn run minify
       - persist_to_workspace:
           root: .
           paths:

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.37.0](https://github.com/sky-uk/toolkit/compare/v2.36.0...v2.37.0) (2020-05-19)
+
+
+### Features
+
+* **toolkit-core:** add gradients for sky nature and docs ([eb6cba6](https://github.com/sky-uk/toolkit/commit/eb6cba63e88e5d20722bc768de1cc056d036995e))
+
+
+
+
+
 # [2.36.0](https://github.com/sky-uk/toolkit/compare/v2.34.0...v2.36.0) (2020-01-15)
 
 

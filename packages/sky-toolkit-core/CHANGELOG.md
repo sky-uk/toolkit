@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.39.0](https://github.com/sky-uk/toolkit/compare/v2.38.0...v2.39.0) (2020-07-03)
+
+
+### Features
+
+* **toolkit-core:** updated spectrum ([aefc9d7](https://github.com/sky-uk/toolkit/commit/aefc9d7fc4baa9b2736c6b4236c8bdb6c74f3af5))
+
+
+
+
+
 # [2.37.0](https://github.com/sky-uk/toolkit/compare/v2.36.0...v2.37.0) (2020-05-19)
 
 

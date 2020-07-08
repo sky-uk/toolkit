@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.1](https://github.com/sky-uk/toolkit/compare/v2.39.0...v2.39.1) (2020-07-08)
+
+
+### Bug Fixes
+
+* **toolkit-core:** incorrect gradient colour used ([c5125ca](https://github.com/sky-uk/toolkit/commit/c5125ca4d217492ed8fd7d47f94754905c844dd5))
+
+
+
+
+
 # [2.39.0](https://github.com/sky-uk/toolkit/compare/v2.38.0...v2.39.0) (2020-07-03)
 
 

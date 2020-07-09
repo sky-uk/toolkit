@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.2](https://github.com/sky-uk/toolkit/compare/v2.39.1...v2.39.2) (2020-07-09)
+
+**Note:** Version bump only for package sky-toolkit-ui
+
+
+
+
+
 ## [2.39.1](https://github.com/sky-uk/toolkit/compare/v2.39.0...v2.39.1) (2020-07-08)
 
 **Note:** Version bump only for package sky-toolkit-ui

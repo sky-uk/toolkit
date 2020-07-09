@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.2](https://github.com/sky-uk/toolkit/compare/v2.39.1...v2.39.2) (2020-07-09)
+
+
+### Bug Fixes
+
+* **toolkit-core:** add the correct red hex ([8c7f68f](https://github.com/sky-uk/toolkit/commit/8c7f68f3068b642e969ad86a2e61d16faebe09ef))
+
+
+
+
+
 ## [2.39.1](https://github.com/sky-uk/toolkit/compare/v2.39.0...v2.39.1) (2020-07-08)
 
 

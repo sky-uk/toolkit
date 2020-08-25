@@ -26,7 +26,7 @@
     "lint:js": "eslint .",
     "lint:scss": "stylelint '**/*.scss' --syntax scss",
     "minify": "npm run clean && npm run minify:toolkit-core && npm run minify:toolkit",
-    "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build.scss build/toolkit.min.css",
+    "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build-entrypoint.scss build/toolkit.min.css",
     "minify:toolkit-core": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths --include-path packages/sky-toolkit-core/node_modules/ packages/sky-toolkit-core/_all.scss build/toolkit-core.min.css",
     "nuke": "npm run clean && rm -rf node_modules/ && lerna clean",
     "postinstall": "cd packages/sky-toolkit && npm i && cd ../sky-toolkit-core && npm i && cd ../sky-toolkit-ui && npm i && cd -",

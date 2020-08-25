@@ -324,7 +324,7 @@ If you run into any trouble or need support getting to grips with Toolkit,
 reach out in [Slack](https://sky.slack.com/messages/toolkit) or contact one of
 the maintainers:
 
-| [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/skitson?s=100)<br />Sam Kitson](https://github.com/stefanmccready)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/stefanmccready?s=100)<br />Stefan McCready](https://github.com/stefanmccready)<br /><sub>💻</sub> | [![Ste Allan](https://avatars.githubusercontent.com/steallan-sky?s=100)<br />Ste Allan](https://github.com/steallan-sky) |
+| [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Stefan](https://avatars.githubusercontent.com/stefanmccready?s=100)<br />Stefan McCready](https://github.com/stefanmccready)<br /><sub>💻</sub> | [![Ste Allan](https://avatars.githubusercontent.com/steallan-sky?s=100)<br />Ste Allan](https://github.com/steallan-sky) |
 | :---: | :---: | :---: | :---: | :---: |
 
 **Special thanks to the following contributors:**
@@ -335,3 +335,4 @@ the maintainers:
 * [Richard McIntyre](https://github.com/mackstar)
 * [Aaron Thomas](https://github.com/aaronthomas)
 * [Luke Whitehouse](https://github.com/lukewhitehouse)
+* [Sam Kitson](https://github.com/skitson)

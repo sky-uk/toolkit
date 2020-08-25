@@ -19,7 +19,7 @@
     }
   },
   "scripts": {
-    "build": "node-sass $npm_package_config_precision --output-style expanded $npm_package_config_paths build.scss build/toolkit.css",
+    "build": "node-sass $npm_package_config_precision --output-style expanded $npm_package_config_paths build-entrypoint.scss build/toolkit.css",
     "clean": "touch build/tmp.css && rm build/*.css",
     "commit": "git-cz",
     "lint": "npm run lint:scss && npm run lint:js",

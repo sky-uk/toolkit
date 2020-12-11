@@ -12,6 +12,26 @@ $global-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
 // Global Spacing Settings
 // ==============================================
 
+// OTR units
+
+$global-spacing-units: (
+  0 : 0,
+  1 : 4px,
+  2 : 8px,
+  3 : 12px,
+  4 : 16px,
+  5 : 24px,
+  6 : 32px,
+  7 : 48px,
+  8 : 72px,
+);
+
+@function global-spacing-unit($size: 0) {
+  @return map-get($global-spacing-units, $size);
+}
+
+// Legacy Units
+
 $global-spacing-unit: 20px !default;
 $global-spacing-unit-tiny: round(0.25 * $global-spacing-unit);
 $global-spacing-unit-small: round(0.5 * $global-spacing-unit);

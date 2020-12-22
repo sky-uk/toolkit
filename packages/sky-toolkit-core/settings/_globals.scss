@@ -2,16 +2,19 @@
 // SETTINGS / #GLOBALS
 // =============================================================================
 
-$mq-breakpoints: $breakpoints;
-
-// Global Typography Settings
+// Breakpoints
 // ==============================================
 
-$global-font-size: 18px !default;
-$global-line-height: 26px !default;
+$mq-breakpoints: $breakpoints;
+
+// Typography
+// ==============================================
+
+$global-font-size: font-size(body) !default;
+$global-line-height: line-height(body) !default;
 $global-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
 
-// Global Spacing Settings
+// Spacing
 // ==============================================
 
 $global-spacing-unit: spacing(4);
@@ -20,30 +23,30 @@ $global-spacing-unit-small: spacing(2);
 $global-spacing-unit-large: spacing(6);
 $global-spacing-unit-x-large: spacing(8);
 
-// Global Container Settings
+// Container
 // ==============================================
 
 $global-container-width: 1200px !default;
 
-// Global Utilities Settings
+// Utilities
 // ==============================================
 
 $global-widths: 1 2 3 4 5 6 !default;
 
-// Global Border Settings
+// Border
 // ==============================================
 
 $global-border-width: 1px !default;
 $global-border-radius: 0.25em !default;
 
-// Global Animation Settings
+// Animation
 // ==============================================
 
-$global-animation-speed: 0.5s !default;
-$global-animation-speed-fast: 0.5 * $global-animation-speed;
-$global-animation-speed-slow: 2 * $global-animation-speed;
+$global-animation-speed: transition(medium);
+$global-animation-speed-fast: transition(fast);
+$global-animation-speed-slow: transition(slow);
 
-// Global Shadow Settings
+// Shadow
 // ==============================================
 
 $global-shadow-color: color(black);

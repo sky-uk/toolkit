@@ -26,17 +26,17 @@ $global-spacing-units: (
   8 : 72px,
 );
 
-@function global-spacing-unit($size: 0) {
+@function spacing($size: 0) {
   @return map-get($global-spacing-units, $size);
 }
 
 // Legacy Units
 
-$global-spacing-unit: 20px !default;
-$global-spacing-unit-tiny: round(0.25 * $global-spacing-unit);
-$global-spacing-unit-small: round(0.5 * $global-spacing-unit);
-$global-spacing-unit-large: round(2 * $global-spacing-unit);
-$global-spacing-unit-x-large: round(4 * $global-spacing-unit);
+$global-spacing-unit: $spacing(4) !default;
+$global-spacing-unit-tiny: $spacing(1);
+$global-spacing-unit-small: $spacing(2);
+$global-spacing-unit-large: $spacing(6);
+$global-spacing-unit-x-large: $spacing(8);
 
 // Global Container Settings
 // ==============================================

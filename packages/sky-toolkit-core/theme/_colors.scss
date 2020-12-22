@@ -1,0 +1,57 @@
+// =============================================================================
+// SETTINGS / #COLORS
+// =============================================================================
+
+// Our brand and project colours are held in maps. Access these colours using:
+//
+//   color($KEY, $VARIANT)
+//
+// note - $VARIANT defaults to 'regular'.
+//
+// For example:
+//
+//   .foo {
+//     color: color(brand, dark);
+//   }
+
+$colors: (
+  black: "#000000",
+  white: "#FFFFFF",
+  grey2: "#F9F9F9",
+  grey5: "#F5F5F5",
+  grey10: "#EAEAEA",
+  grey20: "#C0C0C0",
+  grey40: "#9F9F9F",
+  grey50: "#7F7F7F",
+  grey70: "#4A4A4A",
+  grey80: "#222222",
+  primary: (
+    regular: "#0073C5",
+    light: "#3E8EEF",
+    dark: "#004894"
+  ),
+  positive: (
+    regular: "#16AC2E",
+    dark: "#046714"
+  ),
+  negative: (
+    regular: "#FF2744",
+    dark: "#C4001D"
+  ),
+  attention: (
+    regular: "#F15A22",
+    dark: "#B72500"
+  ),
+  tv: (
+    regular: "#5C29F9",
+    dark: "#0000C5"
+  ),
+  mobile: (
+    regular: "#FF4B29",
+    dark: "#C40000"
+  ),
+  broadband: (
+    regular: "#8E2AE6",
+    dark: "#5700B3"
+  )
+);

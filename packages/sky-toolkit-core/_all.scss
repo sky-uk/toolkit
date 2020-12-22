@@ -6,11 +6,14 @@
 // 1. Normalize - Render all elements more consistently across browsers
 // 2. Supercell - Grid/Layout system
 
-// Settings
-@import "settings/all";
+// Theme
+@import "theme/all";
 
 // Tools
 @import "tools/all";
+
+// Settings
+@import "settings/all";
 
 // Generic
 @import "generic/font-face";

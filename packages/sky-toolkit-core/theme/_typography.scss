@@ -1,0 +1,42 @@
+$typography: (
+  display-1: (
+    font-size: 80px,
+    line-height: 98px
+  ),
+  display-2: (
+    font-size: 64px,
+    line-height: 72px
+  ),
+  display-3: (
+    font-size: 56px,
+    line-height: 56px
+  ),
+  display-4: (
+    font-size: 40px,
+    line-height: 48px
+  ),
+  display-5: (
+    font-size: 28px,
+    line-height: 32px
+  ),
+  display-6: (
+    font-size: 24px,
+    line-height: 28px
+  ),
+  display-7: (
+    font-size: 20px,
+    line-height: 24px
+  ),
+  body: (
+    font-size: 16px,
+    line-height: 24px
+  ),
+  body-sm: (
+    font-size: 14px,
+    line-height: 18px
+  ),
+  legal: (
+    font-size: 12px,
+    line-height: 14px
+  )
+) !default;

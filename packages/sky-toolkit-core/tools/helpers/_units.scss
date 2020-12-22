@@ -1,0 +1,42 @@
+// convert-to-em()
+// ------------------------------------
+
+// Converts any `px` or `rem` value to `em`.
+// See `docs/` for usage.
+@function convert-to-em($value, $base-font-size: $global-font-size) {
+  @if unit($value) == "px" {
+    @return (strip-unit($value / $base-font-size)) * 1em;
+  }
+
+  @if unit($value) == "rem" {
+    @return strip-unit($value) * 1em;
+  } @else {
+    @warn "Value must be em or px.";
+  }
+}
+
+// strip-unit()
+// ------------------------------------
+
+// Function to remove the unit from a value.
+// See `docs/` for usage.
+@function strip-unit($num) {
+  @if type_of($num) == number {
+    @return $num / ($num * 0 + 1);
+  } @else {
+    @warn "Value must be a number i.e. 12, 24px etc.";
+  }
+}
+
+// @include rem()
+// ------------------------------------
+
+// Generates a rem-based font-size with its pixel fallback e.g:
+// See `docs/` for usage.
+@mixin rem($value) {
+  @if unit($value) != "px" {
+    @warn "Value must by a px unit";
+  }
+  font-size: $value;
+  font-size: ($value / $global-font-size) * 1rem;
+}

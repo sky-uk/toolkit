@@ -1,0 +1,29 @@
+// @include focus-styles()
+// ==============================================
+
+// Generates a consistent outline shadow for use on `:focus` or `.has-focus`.
+@mixin focus-styles($color: default) {
+  outline: none;
+
+  @if ($color == "default") {
+    box-shadow: 0 1px 3px rgba(color(black), 0.4),
+      0 1px 15px 3px rgba(color(highlight), 0.75);
+  } @else if ($color == "invert") {
+    box-shadow: 0 1px 3px rgba(color(black), 0.75),
+      0 1px 15px 3px rgba(color(white), 0.75);
+  } @else {
+    @warn "`#{$color}` is not a valid outline color, it must be `default` or `invert`.";
+  }
+}
+
+// @include hocus()
+// ==============================================
+
+// Generate `:hover` and `:focus` styles in one go.
+// http://www.456bereastreet.com/archive/201004/whenever_you_use_hover_also_use_focus/
+@mixin hocus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

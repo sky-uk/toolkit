@@ -1,0 +1,52 @@
+// Maps
+// ==============================================
+
+// map-get-deep()
+// ------------------------------------
+
+// Access nested map values.
+// @author Hugo Giraudel (with modifications)
+// See `docs/` for usage.
+@function map-get-deep($map, $keys...) {
+  @if map-has-keys-deep($map, $keys...) {
+    @each $key in $keys {
+      $map: map-get($map, $key);
+    }
+
+    @return $map;
+  }
+
+  @warn "Unknown keys of `#{$keys}` in the defined map";
+  @return null;
+}
+
+// map-has-keys-deep()
+// ------------------------------------
+
+// Check for keys in nested maps.
+// @author Hugo Giraudel
+// See `docs/` for usage.
+@function map-has-keys-deep($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return true;
+}
+
+// multi-map-merge()
+// ------------------------------------
+
+// Merge mutiple maps together
+@function multi-map-merge($maps...) {
+  $group: ();
+
+  @each $map in $maps {
+    $group: map-merge($group, $map);
+  }
+
+  @return $group;
+}

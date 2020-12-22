@@ -1,0 +1,12 @@
+// transition()
+// ------------------------------------
+//
+//   .foo {
+//     transition: transition(slow);
+//   }
+//
+// ------------------------------------
+
+@function transition($key: medium) {
+  @return map-get($transitions, $key);
+}

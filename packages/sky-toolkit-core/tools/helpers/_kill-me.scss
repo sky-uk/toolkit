@@ -1,0 +1,63 @@
+// @include height-sizing()
+// ==============================================
+
+// Used to calculate fixed height elements via line-height and height or
+// padding-based spacing.
+// See `docs/` for usage.
+@mixin height-sizing($height: fixed, $line-height: 26px) {
+  // Note: 26px is the hard-coded value of `line-height(text-body, large)`.
+  $default-border-width: $global-border-width;
+  $default-height: $global-spacing-unit-large;
+  $default-height-rounded: decimal-round(convert-to-em($default-height), 2);
+
+  @if $height == fixed {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: $default-height-rounded;
+    line-height: $default-height-rounded;
+  } @else if $height == padding {
+    @if type-of($line-height) == number {
+      $padding-vertical: ($default-height - $line-height) / 2;
+      padding-top: $padding-vertical - $default-border-width;
+      padding-bottom: $padding-vertical - $default-border-width;
+      line-height: $line-height;
+    } @else {
+      @warn "#{$line-height}` is not a valid option. Line-height can only be a sizing unit";
+    }
+  } @else {
+    @warn "`#{$height}` is not a valid option. Height can only be `fixed` or `padding`-based.";
+  }
+}
+
+// @include browser-hack()
+// ==============================================
+//  Sources for hacks:
+// - IE11: https://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11#22085269
+// - Edge: https://stackoverflow.com/questions/32201586/how-to-identify-microsoft-edge-browser-via-css#32202953
+@mixin browser-hack($browser...) {
+  @each $version in $browser {
+    @if $version == ie11 {
+      @at-root _:-ms-fullscreen,
+        :root & {
+        @content;
+      }
+    } @else if $version == edge {
+      @supports (-ms-ime-align: auto) {
+        @content;
+      }
+    } @else {
+      @warn "#{browser} is not a valid option. $browser can be one of 'ie11' or 'edge'";
+    }
+  }
+}
+
+// @include clearfix()
+// ==============================================
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

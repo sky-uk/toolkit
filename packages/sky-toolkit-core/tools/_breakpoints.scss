@@ -1,0 +1,18 @@
+// breakpoints()
+// ------------------------------------
+//
+//   .foo {
+//     @media (max-width: breakpoints(large, false)) {
+//       // stuff...
+//     }
+//   }
+//
+// ------------------------------------
+
+@function breakpoints($key: medium, $min: true) {
+  @if $min {
+    @return map-get($breakpoints, $key);
+  }
+
+  @return map-get($breakpoints, $key) - 1;
+}

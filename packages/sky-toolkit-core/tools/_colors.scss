@@ -1,7 +1,3 @@
-// =============================================================================
-// TOOLS / #COLORS
-// =============================================================================
-
 // color()
 // ------------------------------------
 //
@@ -12,11 +8,33 @@
 // ------------------------------------
 
 @function color($key, $variant: regular) {
-  $key-value: map-get-deep($colors, $key);
+  $key-value: map-get($colors, $key);
 
-  @if type_of($key-value) == map {
-    @return map-get-deep($key-value, $variant);
+  @if type-of($key-value) == map {
+    @return map-get($key-value, $variant);
   }
 
-  @return $key-value;
+  @return map-get($key-value);
+}
+
+// @include add-color()
+// ------------------------------------
+//
+//   @include add-color(sky1, #0076be);
+//
+//   .foo {
+//     color: color(sky1);
+//   }
+//
+// ------------------------------------
+@mixin add-color($key, $value) {
+  $new-color: (
+    $key: $value
+  );
+
+  @if type-of($value) == color {
+    $colors: map-merge($colors, $new-color) !global;
+  } @else {
+    @warn "#{$value} is not a valid color.";
+  }
 }

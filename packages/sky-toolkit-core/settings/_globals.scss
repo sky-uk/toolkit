@@ -2,6 +2,8 @@
 // SETTINGS / #GLOBALS
 // =============================================================================
 
+$mq-breakpoints: $breakpoints;
+
 // Global Typography Settings
 // ==============================================
 
@@ -59,3 +61,5 @@ $global-shadow: unquote(
 
 $global-text-shadow: 0 0 25px rgba($global-shadow-color, 0.25),
   1px 1px 1px rgba($global-shadow-color, 0.5);
+
+$supercell-spacing-unit: $global-spacing-unit !default;

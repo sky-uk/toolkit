@@ -1,7 +1,3 @@
-// =============================================================================
-// TOOLS / #GRADIENTS
-// =============================================================================
-
 // Functions (Private / Framework Only)
 // ==============================================
 
@@ -33,12 +29,20 @@
         // Invert percentages i.e. 6% => 94%
         $reversed-position: 100% - $position;
         // Append ordered values to stop list
-        $gradient-color-stops: append($gradient-color-stops, ($value $reversed-position), comma);
+        $gradient-color-stops: append(
+          $gradient-color-stops,
+          ($value $reversed-position),
+          comma
+        );
       }
     } @else {
       // By default, append a list of color stops for each percentage key.
       @each $position, $value in $gradient {
-        $gradient-color-stops: append($gradient-color-stops, ($value $position), comma);
+        $gradient-color-stops: append(
+          $gradient-color-stops,
+          ($value $position),
+          comma
+        );
       }
     }
 
@@ -59,7 +63,7 @@
 //   - $key - The gradient key i.e. `sky-arts`
 //   - $fallback - The supplied fallback color to check
 //
-@function _gradient-fallback($key, $fallback:null) {
+@function _gradient-fallback($key, $fallback: null) {
   // Set default fallback value
   $fallback-default: gradient-color($key, end);
 
@@ -135,17 +139,24 @@
 //    - "radial" center to edge gradient
 //
 // See `docs/` for usage.
-@mixin gradient-background($key, $direction:"vertical", $fallback: null) {
+@mixin gradient-background($key, $direction: "vertical", $fallback: null) {
   @if map-has-key($gradients, $key) {
-
     $gradient-color-stops: _gradient-color-stops($key);
 
     @if map-has-key($gradient-directions, $direction) {
       // Fetch the direction map settings and assign to variables.
       $direction-legacy: map-get-deep($gradient-directions, $direction, legacy);
-      $direction-standard: map-get-deep($gradient-directions, $direction, standard);
+      $direction-standard: map-get-deep(
+        $gradient-directions,
+        $direction,
+        standard
+      );
       $direction-type: map-get-deep($gradient-directions, $direction, type);
-      $direction-reverse: map-get-deep($gradient-directions, $direction, reverse);
+      $direction-reverse: map-get-deep(
+        $gradient-directions,
+        $direction,
+        reverse
+      );
 
       // Reverse our gradient color stops for specified directions.
       @if ($direction-reverse == true) {
@@ -157,10 +168,22 @@
 
       // Output fallback background color + gradient with appropriate prefixes.
       background-color: $fallback;
-      background-image: -webkit-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
-      background-image: -moz-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
-      background-image: -o-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
-      background-image: #{$direction-type}-gradient(#{$direction-standard}, $gradient-color-stops);
+      background-image: -webkit-#{$direction-type}-gradient(
+          #{$direction-legacy},
+          $gradient-color-stops
+        );
+      background-image: -moz-#{$direction-type}-gradient(
+          #{$direction-legacy},
+          $gradient-color-stops
+        );
+      background-image: -o-#{$direction-type}-gradient(
+          #{$direction-legacy},
+          $gradient-color-stops
+        );
+      background-image: #{$direction-type}-gradient(
+          #{$direction-standard},
+          $gradient-color-stops
+        );
     } @else {
       @warn "`#{$direction}` is not a valid direction, see toolkit-core/tools/gradients for available options.";
     }
@@ -187,9 +210,15 @@
   @if map-has-key($gradients, $key) {
     @if map-has-key($gradient-directions, $direction) {
       // Fetch the direction map settings and assign to variables.
-      $direction-legacy: map-get(map-get($gradient-directions, $direction), legacy);
+      $direction-legacy: map-get(
+        map-get($gradient-directions, $direction),
+        legacy
+      );
       $direction-type: map-get(map-get($gradient-directions, $direction), type);
-      $direction-reverse: map-get(map-get($gradient-directions, $direction), reverse);
+      $direction-reverse: map-get(
+        map-get($gradient-directions, $direction),
+        reverse
+      );
 
       // Fetch a list of the gradient's color stops from `$gradients`.
       $gradient-color-stops: _gradient-color-stops($key);
@@ -213,7 +242,10 @@
       display: inline-block;
       // Fallback color for unsupported browsers.
       color: $fallback;
-      background-image: -webkit-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
+      background-image: -webkit-#{$direction-type}-gradient(
+          #{$direction-legacy},
+          $gradient-color-stops
+        );
       background-size: 100%;
       /* stylelint-enable */
     } @else {

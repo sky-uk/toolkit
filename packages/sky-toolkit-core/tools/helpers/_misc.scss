@@ -1,0 +1,42 @@
+// _important()
+// ------------------------------------
+
+// @include responsivize()
+// ==============================================
+
+// This mixin can be applied to any class and will produce classes that apply at
+// breakpoints as well as one that applies to all breakpoints.
+// The mixin takes one argument - a list of keys separated by spaces.
+// The keys in the argument must be present in the $mq-breakpoints map
+// (small, medium, large, x-large).
+//
+// If no argument is provided, it is presumed that you want classes generating
+// for all breakpoints in the $mq-breakpoints map.
+//
+// See `docs/` for usage.
+@mixin responsivize($breakpoints: $mq-breakpoints) {
+  @at-root #{&} {
+    @content;
+  }
+
+  @each $alias, $bp in $breakpoints {
+    @if map-has-key($mq-breakpoints, $alias) {
+      @include mq($from: map-get($mq-breakpoints, $alias)) {
+        @at-root #{&}\@#{$alias} {
+          @content;
+        }
+      }
+    } @else {
+      @warn "Unrecognised breakpoint - `#{$alias}` does not match any of the keys in the $mq-breakpoints map";
+    }
+  }
+}
+
+// Function to conditionally return !important rule.
+@function _important($important: true) {
+  @if $important {
+    @return " !important";
+  } @else {
+    @return null;
+  }
+}

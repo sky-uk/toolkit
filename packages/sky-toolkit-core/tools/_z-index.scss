@@ -1,0 +1,11 @@
+// z-index()
+// ------------------------------------
+//
+//   .foo {
+//     z-index: z-index(4);
+//   }
+//
+// ------------------------------------
+@function z-index($key) {
+  @return map-get-deep($z-index, $key);
+}

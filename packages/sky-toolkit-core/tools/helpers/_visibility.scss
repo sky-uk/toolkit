@@ -1,0 +1,56 @@
+// @include hide-visually()
+// ==============================================
+
+// Visually hide content, leaving it accessible to screenreaders and ATs.
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin hide-visually($option: default, $important: true) {
+  // Hiding elements visually overrides any matching property declarations
+  $default: (
+    border: 0,
+    clip: rect(0 0 0 0),
+    height: 1px,
+    margin: -1px,
+    overflow: hidden,
+    padding: 0,
+    position: absolute,
+    width: 1px,
+    white-space: nowrap
+  );
+
+  // Override the default to re-enable display
+  $reset: (
+    clip: auto,
+    height: auto,
+    margin: 0,
+    overflow: visible,
+    position: static,
+    width: auto,
+    white-space: normal
+  );
+
+  // Select the map to use
+  $apply-properties: $default;
+
+  @if ($option == "default") {
+    $apply-properties: $default;
+  } @else if ($option == "reset") {
+    $apply-properties: $reset;
+  } @else {
+    @warn "`#{$option}` is not valid, it must be `default` or `reset`";
+  }
+
+  // Generate rules
+  @each $prop, $value in $apply-properties {
+    #{$prop}: #{$value}#{_important($important)};
+  }
+}
+
+// @include hide-completely()
+// ==============================================
+
+// Completely hide content both visually from the screen, and from screenreaders
+// and ATs.
+@mixin hide-completely() {
+  /* Hiding elements completely overrides any matching property declarations */
+  display: none !important;
+}

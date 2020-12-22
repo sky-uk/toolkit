@@ -1,0 +1,43 @@
+// font-size()
+// ------------------------------------
+//
+//   .foo {
+//     font-size: font-size(display-1);
+//   }
+//
+// ------------------------------------
+@function font-size($key) {
+  @return map-get(map-get($typography, $key), font-size);
+}
+
+// line-height()
+// ------------------------------------
+//
+//   .foo {
+//     line-height: line-height(body-sm);
+//   }
+//
+// ------------------------------------
+@function line-height($key) {
+  @return map-get(map-get($typography, $key), line-height);
+}
+
+// @include font()
+// ------------------------------------
+//
+//   .foo {
+//     @include font(display-1);
+//   }
+//
+// ------------------------------------
+//
+//   .foo {
+//     font-size: 80px;
+//     line-height: 98px;
+//   }
+//
+// ------------------------------------
+@mixin font($key) {
+  font-size: font-size($key);
+  line-height: line-height($key);
+}

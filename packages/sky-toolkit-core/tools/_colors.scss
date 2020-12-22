@@ -1,0 +1,22 @@
+// =============================================================================
+// TOOLS / #COLORS
+// =============================================================================
+
+// color()
+// ------------------------------------
+//
+//   .foo {
+//     color: color(primary, dark);
+//   }
+//
+// ------------------------------------
+
+@function color($key, $variant: regular) {
+  $key-value: map-get-deep($colors, $key);
+
+  @if type_of($key-value) == map {
+    @return map-get-deep($key-value, $variant);
+  }
+
+  @return $key-value;
+}

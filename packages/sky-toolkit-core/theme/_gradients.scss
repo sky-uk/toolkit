@@ -1,5 +1,5 @@
 // =============================================================================
-// SETTINGS / #GRADIENTS
+// THEME / #GRADIENTS
 // =============================================================================
 
 $gradients: (
@@ -105,8 +105,6 @@ $gradients: (
   )
 ) !default;
 
-// Directional settings required for defining both prefixed and standard
-// gradients in our `tools/gradients` mixins.
 $gradient-directions: (
   vertical: (
     standard: "to bottom",

@@ -1,9 +1,8 @@
-// Functions (Private / Framework Only)
-// ==============================================
+// THIS FILE NEEDS A REWRITE
+// Quite a lot of complexity we can probably strip back.
 
-// _gradient-color-stops()
-// ------------------------------------
-
+// gradient-color-stops()
+//
 // Function to return the gradient color points in a format usable by
 // `linear-gradient` and other gradient mixins.
 //
@@ -11,11 +10,20 @@
 //   - $key - The gradient key i.e. `sky-arts`
 //   - $modifier - To reverse the gradient direction set this to 'invert'
 //
-// Example output:
-// `_gradient-color-stops(sky-cinema)` = `#903 0%, #cb0033 100%`
-// `_gradient-color-stops(sky-cinema, reverse)` = `#cb0033 0%, #903 100%`
 //
-@function _gradient-color-stops($key, $modifier: null) {
+// ------------------------------------
+//
+//   gradient-color-stops(sky-cinema)
+//   gradient-color-stops(sky-cinema, reverse)
+//
+// ------------------------------------
+//
+//   #903 0%, #cb0033 100%
+//   #cb0033 0%, #903 100%
+//
+// ------------------------------------
+
+@function gradient-color-stops($key, $modifier: null) {
   @if map-has-key($gradients, $key) {
     $gradient: map-get($gradients, $key);
     // Create blank list to store color points
@@ -53,17 +61,17 @@
   @return null;
 }
 
-// _gradient-fallback()
+// gradient-fallback()
 // ------------------------------------
 
 // Function to automate selecting a fallback value for our gradient mixins,
 // handling the logic of selecting a value if a valid colour is not supplied.
 //
-// `_gradient-fallback()` takes two arguments:
+// `gradient-fallback()` takes two arguments:
 //   - $key - The gradient key i.e. `sky-arts`
 //   - $fallback - The supplied fallback color to check
 //
-@function _gradient-fallback($key, $fallback: null) {
+@function gradient-fallback($key, $fallback: null) {
   // Set default fallback value
   $fallback-default: gradient-color($key, end);
 
@@ -76,9 +84,6 @@
 
   @return $fallback;
 }
-
-// Functions
-// ==============================================
 
 // gradient-color()
 // ------------------------------------
@@ -121,11 +126,14 @@
   @return null;
 }
 
-// Mixins
-// ===========================================
-
 // @include gradient-background()
 // ------------------------------------
+
+// SUGGESTED API:
+//
+// REMOVE RADIAL, not part of system.
+//
+// @include gradient-background($key: sky-one, $direction: "up/left/right/down", $reverse: true/false);
 
 // Mixin to generate complete background gradients. Uses values from our
 // `$gradients` map in `settings/colors`.
@@ -141,7 +149,7 @@
 // See `docs/` for usage.
 @mixin gradient-background($key, $direction: "vertical", $fallback: null) {
   @if map-has-key($gradients, $key) {
-    $gradient-color-stops: _gradient-color-stops($key);
+    $gradient-color-stops: gradient-color-stops($key);
 
     @if map-has-key($gradient-directions, $direction) {
       // Fetch the direction map settings and assign to variables.
@@ -160,11 +168,11 @@
 
       // Reverse our gradient color stops for specified directions.
       @if ($direction-reverse == true) {
-        $gradient-color-stops: _gradient-color-stops($key, reverse);
+        $gradient-color-stops: gradient-color-stops($key, reverse);
       }
 
       // Define our fallback background-color
-      $fallback: _gradient-fallback($key, $fallback);
+      $fallback: gradient-fallback($key, $fallback);
 
       // Output fallback background color + gradient with appropriate prefixes.
       background-color: $fallback;
@@ -221,15 +229,15 @@
       );
 
       // Fetch a list of the gradient's color stops from `$gradients`.
-      $gradient-color-stops: _gradient-color-stops($key);
+      $gradient-color-stops: gradient-color-stops($key);
 
       // Reverse our gradient color stops for specified directions.
       @if ($direction-reverse == true) {
-        $gradient-color-stops: _gradient-color-stops($key, reverse);
+        $gradient-color-stops: gradient-color-stops($key, reverse);
       }
 
       // Define our fallback background-color
-      $fallback: _gradient-fallback($key, $fallback);
+      $fallback: gradient-fallback($key, $fallback);
 
       /*! autoprefixer: off */
       /* stylelint-disable property-no-vendor-prefix, value-no-vendor-prefix */

@@ -1,0 +1,32 @@
+@use '../tools';
+
+// Typography
+// ==============================================
+
+$font-size: tools.font-size(body) !default;
+$line-height: tools.line-height(body) !default;
+$font-family: Helvetica, Arial, sans-serif !default;
+
+// Spacing
+// ==============================================
+
+$spacing-unit: tools.spacing(4);
+$spacing-unit-tiny: tools.spacing(1);
+$spacing-unit-small: tools.spacing(2);
+$spacing-unit-large: tools.spacing(6);
+$spacing-unit-x-large: tools.spacing(8);
+
+// Container
+// ==============================================
+
+$max-container-width: 1596px !default;
+
+// Utilities
+// ==============================================
+
+$layout-widths: 1 2 3 4 5 6 !default;
+
+// Misc
+// ==============================================
+
+$radius: 4px;

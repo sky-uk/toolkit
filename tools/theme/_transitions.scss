@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../../theme";
+
+// transition()
+// ------------------------------------
+//
+//   .foo {
+//     transition: transition(slow);
+//   }
+//
+// ------------------------------------
+
+@function transition($key: medium) {
+  @if map.has-key(theme.$transitions, $key) == false {
+    @warn "transition() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  @return map.get(theme.$transitions, $key);
+}

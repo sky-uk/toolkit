@@ -1,0 +1,46 @@
+// @include hide-visually()
+// ==============================================
+
+@mixin hide-visually($option: default, $important: true) {
+  $default: (
+    border: 0,
+    clip: rect(0 0 0 0),
+    height: 1px,
+    margin: -1px,
+    overflow: hidden,
+    padding: 0,
+    position: absolute,
+    width: 1px,
+    white-space: nowrap,
+  );
+
+  $reset: (
+    clip: auto,
+    height: auto,
+    margin: 0,
+    overflow: visible,
+    position: static,
+    width: auto,
+    white-space: normal,
+  );
+
+  $apply-properties: $default;
+  @if ($option == "default") {
+    $apply-properties: $default;
+  } @else if ($option == "reset") {
+    $apply-properties: $reset;
+  } @else {
+    @warn "`#{$option}` is not valid, it must be `default` or `reset`";
+  }
+
+  @each $prop, $value in $apply-properties {
+    #{$prop}: #{$value}#{_important($important)};
+  }
+}
+
+// @include hide-completely()
+// ==============================================
+
+@mixin hide-completely() {
+  display: none;
+}

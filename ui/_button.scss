@@ -1,0 +1,78 @@
+@use "../tools";
+@use "../settings";
+
+.c-btn {
+  @include tools.font(body);
+
+  align-items: center;
+  background-color: transparent;
+  background-image: linear-gradient(
+    -1deg,
+    transparent 49%,
+    rgba(tools.color(white), 0.25) 50%,
+    rgba(tools.color(white), 0)
+  );
+  border-radius: settings.$radius;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: tools.spacing(2) tools.spacing(5);
+  font-weight: bold;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: tools.transition(fast);
+  transition-property: background, color, box-shadow;
+  transition-timing-function: ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 7px rgba(tools.color(primary, dark), 0.2);
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: tools.color(grey20);
+    border-color: transparent;
+    color: tools.color(white);
+    cursor: not-allowed;
+  }
+}
+
+.c-btn--primary {
+  background-color: tools.color(primary);
+  color: tools.color(white);
+
+  &:not(:disabled):hover {
+    background-color: tools.color(primary, dark);
+  }
+}
+
+.c-btn--secondary {
+  border-color: tools.color(primary);
+  color: tools.color(primary);
+
+  &:not(:disabled):hover {
+    border-color: tools.color(primary, dark);
+    color: tools.color(primary, dark);
+  }
+}
+
+.c-btn--minimal {
+  border-radius: settings.$radius;
+  color: tools.color(primary);
+
+  &:not(:disabled):hover {
+    text-decoration: underline;
+  }
+
+  &:not(:disabled):focus {
+    background-color: rgba(tools.color(primary, dark), 0.2);
+    box-shadow: none;
+  }
+}

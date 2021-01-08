@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../../theme";
+
+// radius()
+// ------------------------------------
+//
+//   .foo {
+//     padding: radius(5);
+//   }
+//
+// ------------------------------------
+
+@function radius($key: 0) {
+  @if map.has-key(theme.$radius, $key) == false {
+    @warn "radius() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  @return map.get(theme.$radius, $key);
+}

@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "../../theme";
+
+// breakpoint()
+// ------------------------------------
+//
+//   .foo {
+//     @media (max-width: breakpoint(large, false)) {
+//       // stuff...
+//     }
+//   }
+//
+// ------------------------------------
+
+@function breakpoint(
+  $key: md,
+  $min: true,
+  $breakpoints-map: theme.$breakpoints
+) {
+  @if map.has-key($breakpoints-map, $key) == false {
+    @return null;
+  }
+  @if $min {
+    @return map.get($breakpoints-map, $key);
+  }
+
+  @return map.get($breakpoints-map, $key) - 1;
+}

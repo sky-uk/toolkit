@@ -1,0 +1,14 @@
+// reverse()
+// ------------------------------------
+
+// Function to reverse list of values.
+// See `docs/` for usage.
+@function reverse($list) {
+  $reversed-list: ();
+
+  @for $index from length($list) * -1 through -1 {
+    $reversed-list: append($reversed-list, nth($list, abs($index)), comma);
+  }
+
+  @return $reversed-list;
+}

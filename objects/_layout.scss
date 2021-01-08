@@ -1,0 +1,18 @@
+@use "../tools";
+
+.o-layout {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: -tools.spacing(5);
+}
+
+.o-layout__item {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: tools.spacing(5);
+}

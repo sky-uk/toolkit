@@ -1,0 +1,19 @@
+@use "../../theme";
+@use "../theme/breakpoints" as tools;
+
+// @include responsivize()
+// ==============================================
+
+@mixin responsivize($breakpoints: theme.$legacy-breakpoints) {
+  @at-root #{&} {
+    @content;
+  }
+
+  @each $alias, $bp in $breakpoints {
+    @media (min-width: tools.breakpoint($alias, true, theme.$legacy-breakpoints)) {
+      @at-root #{&}\@#{$alias} {
+        @content;
+      }
+    }
+  }
+}

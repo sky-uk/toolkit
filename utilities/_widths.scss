@@ -1,0 +1,46 @@
+@use "../theme";
+@use "../tools";
+@use "../settings";
+
+@mixin generate-layout($columns, $breakpoint: null) {
+  /**
+       * Generate an auto width utility class at each of our breakpoints.
+       */
+  .u-width-auto#{$breakpoint} {
+    width: auto !important;
+  }
+
+  // Loop through the number of columns for each denominator of our fractions.
+  @each $denominator in $columns {
+    // Sanity check number of columns
+    @if ($denominator > 24) {
+      @error "Please choose a more sensible number of columns (less than 25)";
+    }
+
+    // Begin creating a numerator for our fraction up until we hit the
+    // denominator.
+    @for $numerator from 1 through $denominator {
+      // Build a class in the format `.u-width-3/4[@<breakpoint>]`.
+      .u-width-#{$numerator}\/#{$denominator}#{$breakpoint} {
+        width: ($numerator / $denominator) * 100% !important;
+      }
+    }
+  }
+}
+
+// Build the grids
+// Create all of our classes for any/all breakpoints (e.g. `.u-width-1/2`).
+
+@include generate-layout(settings.$layout-widths);
+
+// Create classes that take effect only at specific breakpoints
+// (e.g. `.u-width-1/3@medium`).
+//
+// Here we’re just looping through our Sass MQ array and generating classes to
+// suit each of the breakpoints we find.
+
+@each $alias, $bp in theme.$legacy-breakpoints {
+  @media (min-width: tools.breakpoint( $alias)) {
+    @include generate-layout(settings.$layout-widths, \@#{$alias});
+  }
+}

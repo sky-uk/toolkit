@@ -1,0 +1,8 @@
+// Function to conditionally return !important rule.
+@function _important($important: true) {
+  @if $important {
+    @return " !important";
+  } @else {
+    @return null;
+  }
+}

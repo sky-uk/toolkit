@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "../../theme";
+
+// color()
+// ------------------------------------
+//
+//   .foo {
+//     color: color(primary, dark);
+//   }
+//
+// ------------------------------------
+
+@function color($key, $variant: regular) {
+  @if map.has-key(theme.$colors, $key, $variant) {
+    @return map.get(theme.$colors, $key, $variant);
+  }
+  @if map.has-key(theme.$colors, $key) {
+    @return map.get(theme.$colors, $key);
+  } @else {
+    @warn "color() : key (#{$key}) and variant (#{$variant}) must be valid values";
+    @return null;
+  }
+}

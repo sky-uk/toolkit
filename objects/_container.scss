@@ -1,0 +1,9 @@
+@use "../settings";
+
+.o-container {
+  max-width: settings.$max-container-width;
+  padding-right: settings.$spacing-unit;
+  padding-left: settings.$spacing-unit;
+  margin-right: auto;
+  margin-left: auto;
+}

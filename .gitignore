@@ -1,8 +1,6 @@
-.DS_Store
-.sass-cache
 node_modules/
-build/*.css
+build/
 npm-debug.log
-lerna-debug.log
-.vscode/
-.idea/
+.sass-cache
+*.css.map
+*.DS_Store

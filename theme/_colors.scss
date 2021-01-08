@@ -1,0 +1,41 @@
+$colors: (
+  black: #000000,
+  white: #ffffff,
+  grey2: #f9f9f9,
+  grey5: #f5f5f5,
+  grey10: #eaeaea,
+  grey20: #c0c0c0,
+  grey40: #9f9f9f,
+  grey50: #7f7f7f,
+  grey70: #4a4a4a,
+  grey80: #222222,
+  primary: (
+    regular: #0073c5,
+    light: #3e8eef,
+    dark: #004894,
+  ),
+  positive: (
+    regular: #16ac2e,
+    dark: #046714,
+  ),
+  negative: (
+    regular: #ff2744,
+    dark: #c4001d,
+  ),
+  attention: (
+    regular: #f15a22,
+    dark: #b72500,
+  ),
+  tv: (
+    regular: #5c29f9,
+    dark: #0000c5,
+  ),
+  mobile: (
+    regular: #ff4b29,
+    dark: #c40000,
+  ),
+  broadband: (
+    regular: #8e2ae6,
+    dark: #5700b3,
+  ),
+);

@@ -1,0 +1,17 @@
+// z-index()
+// ------------------------------------
+//
+//   .foo {
+//     z-index: z-index(4);
+//   }
+//
+// ------------------------------------
+
+@function z-index($key: 0) {
+  @if map-has-key($z-index, $key) == false {
+    @warn "z-index() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  @return map-get($z-index, $key);
+}

@@ -1,0 +1,22 @@
+// @include breakout()
+// ==============================================
+
+// Breakout of a parent element's `max-width` to fill the entire viewport width.
+@mixin breakout() {
+  position: relative !important;
+  width: 100vw !important;
+  left: 50% !important;
+  margin-left: -50vw !important;
+}
+
+// @include edge-position()
+// ==============================================
+
+// Used to simplify and avoid repeated use of individual edge positioning.
+// See `docs/` for usage.
+@mixin edge-position($edge-position-offset: 0) {
+  top: $edge-position-offset;
+  right: $edge-position-offset;
+  bottom: $edge-position-offset;
+  left: $edge-position-offset;
+}

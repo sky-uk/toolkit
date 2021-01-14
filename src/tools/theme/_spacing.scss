@@ -1,0 +1,17 @@
+// spacing()
+// ------------------------------------
+//
+//   .foo {
+//     padding: spacing(5);
+//   }
+//
+// ------------------------------------
+
+@function spacing($key: 0) {
+  @if map-has-key($spacing, $key) == false {
+    @warn "spacing() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  @return map-get($spacing, $key);
+}

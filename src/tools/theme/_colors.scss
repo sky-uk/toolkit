@@ -1,0 +1,22 @@
+// color()
+// ------------------------------------
+//
+//   .foo {
+//     color: color(primary, dark);
+//   }
+//
+// ------------------------------------
+
+@function color($key, $variant: regular) {
+  @if map.has-key($colors, $key) {
+    @if map.has-key(map-get($colors, $key), $variant) {
+      @return map-get(map-get($colors, $key), $variant);
+    }
+  }
+  @if map.has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @warn "color() : key (#{$key}) and variant (#{$variant}) must be valid values";
+    @return null;
+  }
+}

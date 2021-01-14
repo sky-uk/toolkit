@@ -1,0 +1,17 @@
+// shadow()
+// ------------------------------------
+//
+//   .foo {
+//     padding: shadow(5);
+//   }
+//
+// ------------------------------------
+
+@function shadow($key: 0) {
+  @if map-has-key($shadow, $key) == false {
+    @warn "shadow() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  @return map-get($shadow, $key);
+}

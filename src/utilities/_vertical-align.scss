@@ -1,0 +1,23 @@
+/* ==========================================================================
+   UTILITIES / #VERTICAL-ALIGN
+   ========================================================================== */
+
+/**
+ * Utility classes to vertically align an element centrally within its parent.
+ *
+ * This class requires a set height on the parent element to function correctly.
+ */
+.u-vertical-align-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/**
+ * Using .u-vertical-align-center on an element can cause visual issues if it renders
+ * on a half pixel so we can apply preserve-3d to prevent this on the parent
+ * element.
+ */
+.u-vertical-align-parent {
+  transform-style: preserve-3d;
+}

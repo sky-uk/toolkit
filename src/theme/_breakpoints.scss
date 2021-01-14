@@ -1,0 +1,15 @@
+$breakpoints: (
+  xs: 0px,
+  sm: 480px,
+  md: 640px,
+  lg: 800px,
+  xl: 960px,
+  xxl: 1120px,
+) !default;
+
+$legacy-breakpoints: (
+  small: 480px,
+  medium: 640px,
+  large: 800px,
+  x-large: 960px,
+);

@@ -1,0 +1,43 @@
+// gradient-color()
+// ------------------------------------
+//
+//   .foo {
+//     background-color: gradient-color(100%);
+//   }
+//
+// ------------------------------------
+@function gradient-color($key, $stop: '0%') {
+  @if map-has-key($gradients, $key) == false {
+    @warn "gradient-value() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+  @if map-has-key(map-get($gradients, $key), $stop) == false {
+    @warn "gradient-value() : stop (#{$stop}) must be a valid value";
+    @return null;
+  }
+
+  @return  map-get(map-get($gradients, $key), $stop);
+}
+
+// gradient-stops()
+// ------------------------------------
+//
+//   .foo {
+//     background-image: linear-gradient(to bottom, #{gradient-color(100%)});
+//   }
+//
+// ------------------------------------
+@function gradient-stops($key) {
+  @if map-has-key($gradients, $key) == false {
+    @warn "gradient-stops() : key (#{$key}) must be a valid value";
+    @return null;
+  }
+
+  $gradient-stops: null;
+
+  @each $position, $value in map-get($gradients, $key) {
+    $gradient-stops: append($gradient-stops, ($value $position), comma);
+  }
+
+  @return $gradient-stops;
+}

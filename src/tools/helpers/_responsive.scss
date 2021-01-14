@@ -1,0 +1,16 @@
+// @include responsivize()
+// ==============================================
+
+@mixin responsivize($breakpoints: $legacy-breakpoints) {
+  @at-root #{&} {
+    @content;
+  }
+
+  @each $alias, $bp in $breakpoints {
+    @media (min-width: breakpoint($alias, true, $breakpoints)) {
+      @at-root #{&}\@#{$alias} {
+        @content;
+      }
+    }
+  }
+}

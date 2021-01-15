@@ -28,12 +28,7 @@
 }
 
 /**
- * Text utility to constrain text to a maximum of 75 characters per line,
- * regardless of the text’s `font-size`. 30em is roughly equal to 75 characters,
- * so we hard-code this value. Please don’t change it.
- *
- * https://jsfiddle.net/5571te7g/
- *
+ * Text utility to constrain text to a maximum of 75 characters per line.
  */
 .u-text-constrain {
   max-width: 30em !important;

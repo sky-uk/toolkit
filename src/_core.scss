@@ -2,50 +2,21 @@
    TOOLKIT-CORE
    ========================================================================== */
 
-// Dependencies
-// 1. Normalize - Render all elements more consistently across browsers
-// 2. Supercell - Grid/Layout system
-
 @import "theme";
 @import "settings";
 @import "tools";
 
-// Generic
-// @import "generic/font-face";
-// @import "generic/box-sizing";
-// @import "normalize.css/normalize"; // [1]
-// @import "generic/reset";
-// @import "generic/overflow";
-// @import "generic/vertical-rhythm";
-// @import "generic/keyframes";
-
-// Elements
-// @import "elements/page";
-// @import "elements/typography";
-// @import "elements/forms";
-// @import "elements/links";
-// @import "elements/tables";
-// @import "elements/images";
-
-// Objects
-// @import "supercell/objects.layout"; // [2]
-// @import "objects/container";
-// @import "objects/flag";
-// @import "objects/media";
-// @import "objects/tables";
-// @import "objects/list-bare";
-// @import "objects/list-block";
-// @import "objects/list-inline";
+@import "generic";
+@import "elements";
+@import "supercell/objects.layout";
+@import "objects";
 
 // Utilities
 // @import "utilities/breakout";
-// @import "utilities/clearfix";
 // @import "utilities/hide";
 // @import "utilities/typography";
 // @import "utilities/spacing";
 // @import "utilities/widths";
 // @import "utilities/vertical-align";
-// @import "utilities/ie9";
-// @import "utilities/debug";
 // @import "utilities/fill";
 // @import "utilities/overflow";

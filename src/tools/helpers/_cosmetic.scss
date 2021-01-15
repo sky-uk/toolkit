@@ -1,0 +1,12 @@
+// @include sheen()
+// ==============================================
+
+// Adds reflection/sheen to element
+@mixin sheen() {
+  background-image: linear-gradient(
+    -1deg,
+    transparent 49%,
+    rgba(color(white), 0.25) 50%,
+    rgba(color(white), 0)
+  );
+}

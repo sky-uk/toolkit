@@ -32,11 +32,11 @@ $global-spacing-units: (
 
 // Legacy Units
 
-$global-spacing-unit: $spacing(4) !default;
-$global-spacing-unit-tiny: $spacing(1);
-$global-spacing-unit-small: $spacing(2);
-$global-spacing-unit-large: $spacing(6);
-$global-spacing-unit-x-large: $spacing(8);
+$global-spacing-unit: spacing(4) !default;
+$global-spacing-unit-tiny: spacing(1);
+$global-spacing-unit-small: spacing(2);
+$global-spacing-unit-large: spacing(6);
+$global-spacing-unit-x-large: spacing(8);
 
 // Global Container Settings
 // ==============================================

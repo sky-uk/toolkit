@@ -3,41 +3,18 @@
    ========================================================================== */
 
 // Imports
-@import "sky-toolkit-core/tools";
+@import "../tools.scss";
 
-/**
- * In order to divorce our semantic decisions from our stylistic ones, we only
- * define opinionated typographical styles against classes, NOT against
- * typographic HTML elements.
- *
- * https://csswizardry.com/2016/02/managing-typography-on-large-apps/
- *
- * Using the properties defined in toolkit-core/settings/typography,
- * the loop below will generate us a suite of mobile-first responsive
- * typographical component classes:
- *
- *   Heading-level Typography
- *   ---------------------------------
- *   .c-heading-alpha
- *   .c-heading-bravo
- *   .c-heading-charlie
- *   .c-heading-delta
- *
- *   Text-level Typography
- *   ---------------------------------
- *   .c-text-lead
- *   .c-text-body
- *   .c-text-smallprint
- */
-
-// Separate out the properties to get the font size name.
+/* Base
+  ============================================ */
 @each $name, $properties in $text {
-  // Output the font size name with component prefix.
   .c-#{$name} {
-    @include font($name, small);
+    @include font($name);
+  }
 
-    @include mq($from: medium) {
-      @include font($name, large);
+  .c-#{$name}\@medium {
+    @media (min-width: breakpoint(md)) {
+      @include font($name);
     }
   }
 }

@@ -2,147 +2,35 @@
    COMPONENTS / #LINKS
    ========================================================================== */
 
-/**
- * ⚠️ DEPRECATION WARNING
- * The following classes will be deprecated in sky-toolkit-ui@3.0.0, please use
- * the alternatives detailed below:
- *   ◦ `c-link-external` → `c-link--external`
- *   ◦ `c-link-back` → `c-link--back`
- *   ◦ `c-link-back c-link-back--invert` → `c-link c-link--back c-link--invert`
- */
-
 // Imports
-@import "sky-toolkit-core/tools";
+@import "../tools.scss";
 
 /* Base
-  =========================================== */
-
-/**
- * Link
- *
- * Make a element look and act like an `<a:link>`. Recommended for `<button>s`
- * that need an alternative display.
- *
- * 1. Reset browser styles.
- * 2. Force element to appear clickable.
- * 3. Match to `<a:link>` styling.
- */
+  ============================================ */
 .c-link {
-  border: none;  /* [1] */
-  background: none;  /* [1] */
-  padding: 0;  /* [1] */
-  cursor: pointer; /* [2] */
-  color: color(brand); /* [3] */
+  background-color: transparent;
+  border: 0;
+  color: color(primary);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
 
   @include hocus() {
-    text-decoration: underline; /* [3] */
+    color: color(primary, dark);
+    text-decoration: underline;
   }
 }
 
-/**
- * Link Label
- *
- * Note: should only be used alongside an icon modifier.
- */
-.c-link__label {
-  @include mq($until: small) {
-    @include hide-visually();
+/* Appearances
+   =========================================== */
+.c-link--invert {
+  color: color(grey-2);
+
+  @include hocus() {
+    color: color(grey-20);
   }
-}
-
-/* Modifiers
-  =========================================== */
-
-/* Icons
-  ---------------------------------- */
-
-/**
- * Link Back & Link External
- *
- * Shared pseudo-element styling for our "chevron" icons used in both our Link
- * Back and Link External modifiers.
- *
- * 1. Hard-coded values to match chevron icon sizing ratio.
- */
-.c-link-back::before, /* ⚠️ [SEE DEPRECATION WARNING] */
-.c-link--back::before,
-.c-link-external::after, /* ⚠️ [SEE DEPRECATION WARNING] */
-.c-link--external::after {
-  content: "";
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  vertical-align: text-bottom;
-  width: convert-to-em(11px); /* [1] */
-  height: convert-to-em(20px); /* [1] */
-}
-
-/**
- * Link Back
- *
- * Adding a `<` to the beginning of any back links
- *
- * 1. Currently uses an inline Base64 png chevron icon.
- *    This will eventually be replaced by SVG.
- */
-.c-link-back, /* ⚠️ [SEE DEPRECATION WARNING] */
-.c-link--back {
-  &::before {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAflBMVEUAAAAAjOkAc8YAdMYAecoAdMYAc8YAdMYAc8YAc8YAd8kAd8kAfswAc8YAdMYAdMYAdMYAc8YAdMYAdMcAdcgAd8gAdskAd8kAe8wAe9AAgtAAc8YAc8YAdMYAc8YAdcgAdccAdckAdcgAdMcAdMYAdMYAdMcAdMUAd8YAc8XwTFXoAAAAKXRSTlMABPrOG+3c6ePAMCQR1vXn4NJaUywoIBcUDQnxyLitTEE7NaahsntuR62QE84AAADlSURBVEjHjdbXEoIwEIVhFESlCEi3d837v6AzJl4e/uz1N0PJ5uwGk5WE8TYAsjDGvJkYU0+QZml+tdakdSTMNCmQpCtLqgFJ3kvSlUgiR+JIk9iblJ0kfW7JSpOhciRFUmiShZYsWyaNJOPBkoUHSTRZO3KTZOfI3oNcNTlastFk9icXTZ5MTpbMP0zOmtz9Sa3JA0nwMram8qFAwoaf5YremT+M/yGfBZ8p9wb3GPeqZ8/z3dE1AuK7zJnA2cIZxVnHmcnZqyvKMcN5FvBM4dnEM45nJc9cnt28A/Au4beT8G7zBQdzSZh10g/3AAAAAElFTkSuQmCC"); /* [1] */
-    margin-right: $global-spacing-unit-small;
-  }
-}
-
-/* When Link Back is used alongside `.c-link--invert` */
-.c-link-back--invert, /* ⚠️ [SEE DEPRECATION WARNING] */
-.c-link--back.c-link--invert {
-  &::before {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAh1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9qkf8RAAAALHRSTlMA++zi3QXm2dEnIxsUEQn49OnUzMNXUDAYAvC8trGpokE7NS4rHw17bl1KR26dH2oAAADvSURBVEjHpdbXDoJAEIVhVETsXVDsgJX3fz5Jdrw8+5Ow119C2Zk5E3hPEofbAEi3qqqXl+Q1qc/OQwpHqkyT4dKR9VSTyJFYk5GR1USTHpLSyCCVZBwaGSMJNUkHRkokvZEkkxWT2JFoKMnUyNJD1kYKSR5GurkmGyOJJDMjh3srkjmyuGlyRNL/k6smJ0fmDchXk7ORjyR7I52dJpfmxNP8TyZB5Mg7aGH4WXbgneHb6R/yXfCdcm1wjQGCWuWa595hxL3MM4FnC8+o5rOOZybPXkalJJwFnCmcTZxxnJWcuZzdvAPwLtFsJ+Hd5gc3bk6uPnGoHwAAAABJRU5ErkJggg=="); /* [1] */
-  }
-}
-
-/**
- * Link External
- *
- * Adding a `>` icon to the end of any external links
- *
- * 1. `.c-link-external` currently uses an inline Base64 png chevron icon.
- *    This will eventually be replaced by SVG.
- */
-.c-link-external, /* ⚠️ [SEE DEPRECATION WARNING] */
-.c-link--external {
-  &::after {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAflBMVEUAAAAAjOkAc8YAdMYAecoAdMYAc8YAdMYAc8YAc8YAd8kAd8kAfswAc8YAdMYAdMYAdMYAc8YAdMYAdMcAdcgAd8gAdskAd8kAe8wAe9AAgtAAc8YAc8YAdMYAc8YAdcgAdccAdckAdcgAdMcAdMYAdMYAdMcAdMUAd8YAc8XwTFXoAAAAKXRSTlMABPrOG+3c6ePAMCQR1vXn4NJaUywoIBcUDQnxyLitTEE7NaahsntuR62QE84AAADlSURBVEjHpdbXDsIwDIXhQGnppHuxaVl5/xdEIuH2x1V8/UlVE8fHSqkq8GLF9dJa+4xqrf+iSH9r24BJPYtaAcoJDaVBYQKozxagogO0CSzaCFBAqCsMyhCFFvWAEovKgVAuQO3WIC8F1IiQb9BxBBRL0HQwKBKhPaCbCO0MOhG6/tBKgB6E3muDzoQuS9BMqLboLkIKqtKmngKUOxj4FvwYkXnlcoZ8F3yn3BvcY9yrLj0/CYhvyejylhskPFt4RvGs45npMnu7AgY9ZAFmCmeTS8ZxVnLmcnbzDsC7hONOItltPoBXSZjOoXJsAAAAAElFTkSuQmCC"); /* [1] */
-    margin-left: $global-spacing-unit-small;
-  }
-}
-
-/**
- * Link Close
- *
- * Adding a `×` icon to the end of any close links
- */
-.c-link--close {
-  color: color(text);
-
-  &::after {
-    display: inline-block;
-    margin-left: $global-spacing-unit-tiny;
-    vertical-align: sub;
-    content: "\2715"; // ×
-    font-size: 1.5em;
-  }
-}
-
-/* Cosmetic
-  ---------------------------------- */
-
-/**
- * Link Invert
- *
- * For links used in dark areas of UI.
- */
-.c-link--invert,
-.c-link-back--invert /* ⚠️ [SEE DEPRECATION WARNING] */ {
-  color: color(white);
 }

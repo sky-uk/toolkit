@@ -2,14 +2,14 @@
    TOOLKIT-CORE
    ========================================================================== */
 
-@import "theme";
-@import "settings";
-@import "tools";
+@import "./theme";
+@import "./settings";
+@import "./tools";
 
-@import "generic";
-@import "elements";
+@import "./generic";
+@import "./elements";
 @import "supercell/objects.layout";
-@import "objects";
+@import "./objects";
 
 
 // Utilities

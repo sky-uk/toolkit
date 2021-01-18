@@ -39,51 +39,6 @@ jobs:
           paths:
             - build
 
-  deploy:
-    <<: *default_build
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/toolkit
-      - run:
-          name: Gzip Assets
-          command: |
-            mkdir dist
-            gzip -6 build/toolkit-core.min.css
-            mv build/toolkit-core.min.css.gz dist/toolkit-core.min.css
-            gzip -6 build/toolkit.min.css
-            mv build/toolkit.min.css.gz dist/toolkit.min.css
-      - store_artifacts:
-          path: dist
-          prefix: dist
-      - run:
-          name: Install AWS CLI
-          command: sudo apt-get -y -qq install awscli
-      - run:
-          name: Deploy Assets to S3
-          command: |
-            aws s3 cp --content-encoding 'gzip' dist/toolkit-core.min.css s3://${BUCKET}/toolkit-core/${CIRCLE_TAG}/
-            aws s3 cp --content-encoding 'gzip' dist/toolkit.min.css s3://${BUCKET}/toolkit/${CIRCLE_TAG}/
-      - persist_to_workspace:
-          root: .
-          paths:
-            - dist
-
-  latest:
-    <<: *default_build
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/toolkit
-      - run:
-          name: Install AWS CLI
-          command: sudo apt-get -y -qq install awscli
-      - run:
-          name: Override `latest` Assets on S3.
-          command: |
-            aws s3 cp --content-encoding 'gzip' dist/toolkit-core.min.css s3://${BUCKET}/toolkit-core/latest/
-            aws s3 cp --content-encoding 'gzip' dist/toolkit.min.css s3://${BUCKET}/toolkit/latest/
-
 # Workflows
 # ===============================================
 
@@ -103,22 +58,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - deploy:
-          requires:
-            - build
-          filters:
-              tags:
-                only: /^v(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+).*/
-              branches:
-                ignore: /.*/
-      - latest:
-          requires:
-            - deploy
-          filters:
-              tags:
-                only: /^v(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/
-              branches:
-                ignore: /.*/
 
 # Notifications
 # ===============================================

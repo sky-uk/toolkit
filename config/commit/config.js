@@ -44,23 +44,14 @@ module.exports = {
     body: 'Give context with some extra background info (optional)\n',
     breaking: 'List any BREAKING CHANGES (optional):\n',
     footer: 'Which issue does this relate to? e.g. #469',
-    confirmCommit: 'Are you sure you want to proceed with the commit above?',
+    confirmCommit: 'Are you sure you want to proceed with this commit?',
   },
   scopes: [
     {
-      name: 'platform',
+      name: 'core-platform',
     },
     {
-      name: 'toolkit-ui',
-    },
-    {
-      name: 'toolkit-core',
-    },
-    {
-      name: 'preview',
-    },
-    {
-      name: 'readme',
+      name: 'toolkit',
     },
   ],
   allowBreakingChanges: ['feat', 'fix', 'refactor'],

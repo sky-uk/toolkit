@@ -1,17 +1,17 @@
 {
   "private": true,
   "engines": {
-    "node": "10.15.0"
+    "node": "14.15.0"
   },
   "config": {
-    "paths": "--include-path node_modules/ --include-path packages/sky-toolkit-core/node_modules/ --include-path packages/sky-toolkit-ui/node_modules/",
-    "precision": "--precision 9",
     "commitizen": {
       "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
       "config": "config/commit/config.js"
-    }
+    },
+    "paths": "--include-path node_modules/ --include-path node_modules/",
+    "precision": "--precision 9"
   },
   "husky": {
     "hooks": {
@@ -19,20 +19,12 @@
     }
   },
   "scripts": {
-    "build": "node-sass $npm_package_config_precision --output-style expanded $npm_package_config_paths build.scss build/toolkit.css",
-    "clean": "touch build/tmp.css && rm build/*.css",
     "commit": "git-cz",
-    "lint": "npm run lint:scss && npm run lint:js",
-    "lint:js": "eslint .",
-    "lint:scss": "stylelint '**/*.scss' --syntax scss",
-    "minify": "npm run clean && npm run minify:toolkit-core && npm run minify:toolkit",
-    "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build.scss build/toolkit.min.css",
-    "minify:toolkit-core": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths --include-path packages/sky-toolkit-core/node_modules/ packages/sky-toolkit-core/_all.scss build/toolkit-core.min.css",
-    "nuke": "npm run clean && rm -rf node_modules/ && lerna clean",
-    "postinstall": "cd packages/sky-toolkit && npm i && cd ../sky-toolkit-core && npm i && cd ../sky-toolkit-ui && npm i && cd -",
-    "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch",
-    "release": "./scripts/release.sh",
-    "watch": "node-sass $npm_package_config_precision --output-style expanded -w $npm_package_config_paths build.scss build/toolkit.css"
+    "lint": "stylelint '**/*.scss' --syntax scss",
+    "build": "npm run build:core && npm run build:toolkit",
+    "build:core": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths src/_core.scss build/toolkit-core.min.css",
+    "build:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths src/_core.scss build/toolkit.min.css",
+    "release": "./scripts/release.sh"
   },
   "pre-commit": [
     "lint",
@@ -68,7 +60,6 @@
     "husky": "1.2.0",
     "lerna": "3.4.3",
     "mini-css-extract-plugin": "0.5.0",
-    "node-sass": "^4.7.2",
     "normalize.css": "7.0.0",
     "pre-commit": "^1.2.2",
     "prettier": "1.8.2",
@@ -90,5 +81,8 @@
     "webpack": "4.28.3",
     "webpack-cli": "3.2.1",
     "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "node-sass": "5.0.0"
   }
 }

@@ -1,28 +1,4 @@
-/* ==========================================================================
-   TOOLKIT-CORE
-   ========================================================================== */
-
-   // Dependencies
-// 1. Sass-mq - Sass library for creating cleaner media queries
-// 2. Supercell - Grid/Layout system
-// 3. Normalize CSS - Set of standard UI style resets
-@import "sass-mq/mq"; // [1]
-@import "supercell/tools.widths"; // [2]
-@import "normalize.css/normalize";
-@import "./theme/index";
-@import "./settings/index";
-@import "./tools/index";
-@import "./generic/index";
-@import "./elements/index";
-@import "supercell/objects.layout";
-@import "./objects/index";
-
-// Utilities
-// @import "utilities/breakout";
-// @import "utilities/hide";
-// @import "utilities/typography";
-// @import "utilities/spacing";
-// @import "utilities/widths";
-// @import "utilities/vertical-align";
-// @import "utilities/fill";
-// @import "utilities/overflow";
+// Core theme and tooling with no output CSS
+@import "theme/index";
+@import "tools/index";
+@import "settings/index";

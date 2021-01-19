@@ -1,26 +1,14 @@
-/* ==========================================================================
-   GENERIC / #FONT-FACE
-   ========================================================================== */
+@font-face {
+  font-family: "Sky Text";
+  font-display: fallback;
+  src: url("//static.skyassets.com/fonts/sky-regular.woff2") format("woff2"),
+        url("//static.skyassets.com/fonts/sky-regular.woff") format("woff");
+}
 
-@if (str-index(#{$global-font-family}, "Sky Text") != null) {
-  /**
-   * Define our custom Sky `@font-face` rules here in order to use them later on in
-   * the project.
-   *
-   * We only output this if "Sky Text" is defined in the `$global-font-family`.
-   */
-  @font-face {
-    font-family: "Sky Text";
-    font-display: fallback;
-    src: url("//static.skyassets.com/fonts/sky-regular.woff2") format("woff2"),
-         url("//static.skyassets.com/fonts/sky-regular.woff") format("woff");
-  }
-
-  @font-face {
-    font-family: "Sky Text";
-    font-weight: bold;
-    font-display: fallback;
-    src: url("//static.skyassets.com/fonts/sky-medium.woff2") format("woff2"),
-         url("//static.skyassets.com/fonts/sky-medium.woff") format("woff");
-  }
+@font-face {
+  font-family: "Sky Text";
+  font-weight: bold;
+  font-display: fallback;
+  src: url("//static.skyassets.com/fonts/sky-medium.woff2") format("woff2"),
+        url("//static.skyassets.com/fonts/sky-medium.woff") format("woff");
 }

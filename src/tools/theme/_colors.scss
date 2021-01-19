@@ -8,15 +8,16 @@
 // ------------------------------------
 
 @function color($key, $variant: regular) {
-  @if map.has-key($colors, $key) {
-    @if map.has-key(map-get($colors, $key), $variant) {
+  @if map-has-key($colors, $key) {
+    @if type-of(map-get($colors, $key)) == color {
+      @return map-get($colors, $key);
+    } @if type-of(map-get(map-get($colors, $key), $variant)) == color {
       @return map-get(map-get($colors, $key), $variant);
+    } @else {
+      @warn "color() : key (#{$key}) and variant (#{$variant}) must be valid values";
     }
-  }
-  @if map.has-key($colors, $key) {
-    @return map-get($colors, $key);
   } @else {
-    @warn "color() : key (#{$key}) and variant (#{$variant}) must be valid values";
-    @return null;
+    @warn "color() : key (#{$key}) must be valid values";
   }
+  @return null;
 }

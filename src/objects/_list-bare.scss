@@ -1,12 +1,8 @@
-/* ==========================================================================
-   OBJECTS / #LIST-BARE
-   ========================================================================== */
-
 /**
  * The list-bare object removes indents and bullet points from any list.
  */
 
-/* [ul|ol] */.o-list-bare {
+ .o-list-bare {
   margin-left: 0;
   list-style: none;
 }

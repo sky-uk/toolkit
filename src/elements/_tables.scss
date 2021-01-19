@@ -1,24 +1,14 @@
-/* ==========================================================================
-   ELEMENTS / #TABLES
-   ========================================================================== */
-
-/**
- * Table styles are incredibly unopinionated. Simply:
- *
- * 1. Force `<table>`s to be full-width by default.
- * 2. Ensure their first and last cells in each row carry no indents.
- */
 table {
-  width: 100%; /* [1] */
+  width: 100%;
 }
 
 th,
 td {
   &:first-child {
-    padding-left: 0; /* [2] */
+    padding-left: 0;
   }
 
   &:last-child {
-    padding-right: 0; /* [2] */
+    padding-right: 0;
   }
 }

@@ -7,13 +7,13 @@
  * `<legend>`s, but we don’t want to visually see them.
  * Note that sky-toolkit@3.0 will use c-form-caption to limit scope on legend
  */
-fieldset {
-  border: none;
-}
+// fieldset {
+//   border: none;
+// }
 
-legend {
-  @include hide-visually();
-}
+// legend {
+//   @include hide-visually();
+// }
 
 /**
  * Make sure our form elements don’t use any UA-specific font styles: we want

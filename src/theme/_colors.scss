@@ -7,35 +7,40 @@ $colors: (
   grey-20: #c0c0c0,
   grey-40: #9f9f9f,
   grey-50: #7f7f7f,
-  grey-70: #4a4a4a,
+  grey-70: #4D4D4D,
   grey-80: #222222,
+  text: (
+    regular: #4a4a4a,
+    light: #7f7f7f,
+    dark: #222222
+  ),
   primary: (
     regular: #0073c5,
     light: #3e8eef,
-    dark: #004894,
+    dark: #004894
   ),
   positive: (
     regular: #16ac2e,
-    dark: #046714,
+    dark: #046714
   ),
   negative: (
     regular: #ff2744,
-    dark: #c4001d,
+    dark: #c4001d
   ),
   attention: (
     regular: #f15a22,
-    dark: #b72500,
+    dark: #b72500
   ),
   tv: (
     regular: #5c29f9,
-    dark: #0000c5,
+    dark: #0000c5
   ),
   mobile: (
     regular: #ff4b29,
-    dark: #c40000,
+    dark: #c40000
   ),
   broadband: (
     regular: #8e2ae6,
-    dark: #5700b3,
+    dark: #5700b3
   ),
 );

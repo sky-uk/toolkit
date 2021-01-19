@@ -1,11 +1,3 @@
-/* ==========================================================================
-   GENERIC / #RESET
-   ========================================================================== */
-
-/**
- * As well as using Normalize.css, it is often advantageous to remove all
- * margins from certain elements.
- */
 body,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -18,9 +10,6 @@ hr {
   padding: 0;
 }
 
-/**
- * Remove trailing margins from nested lists.
- */
 li > {
   ul,
   ol {
@@ -28,9 +17,6 @@ li > {
   }
 }
 
-/**
- * Let’s get `<table>`s behaving how we expect.
- */
 table {
   border-collapse: collapse;
   border-spacing: 0;

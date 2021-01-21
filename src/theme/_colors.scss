@@ -1,46 +1,46 @@
 $colors: (
   black: #000000,
-  white: #ffffff,
-  grey-2: #f9f9f9,
-  grey-5: #f5f5f5,
-  grey-10: #eaeaea,
-  grey-20: #c0c0c0,
-  grey-40: #9f9f9f,
-  grey-50: #7f7f7f,
-  grey-70: #4D4D4D,
-  grey-80: #222222,
+  white: #FFFFFF,
+  grey2: #F9F9F9,
+  grey5: #F5F5F5,
+  grey10: #EAEAEA,
+  grey20: #C0C0C0,
+  grey40: #9F9F9F,
+  grey50: #7F7F7F,
+  grey70: #4A4A4A,
+  grey80: #222222,
   text: (
     regular: #4a4a4a,
     light: #7f7f7f,
-    dark: #222222
+    dark: #222222,
   ),
   primary: (
-    regular: #0073c5,
-    light: #3e8eef,
-    dark: #004894
+    regular: #0073C5,
+    light: #3E8EEF,
+    dark: #004894,
   ),
   positive: (
-    regular: #16ac2e,
-    dark: #046714
+    regular: #16AC2E,
+    dark: #046714,
   ),
   negative: (
-    regular: #ff2744,
-    dark: #c4001d
+    regular: #FF2744,
+    dark: #C4001D,
   ),
   attention: (
-    regular: #f15a22,
-    dark: #b72500
+    regular: #F15A22,
+    dark: #B72500,
   ),
   tv: (
-    regular: #5c29f9,
-    dark: #0000c5
+    regular: #5C29F9,
+    dark: #0000C5,
   ),
   mobile: (
-    regular: #ff4b29,
-    dark: #c40000
+    regular: #FF4B29,
+    dark: #C40000,
   ),
   broadband: (
-    regular: #8e2ae6,
-    dark: #5700b3
+    regular: #8E2AE6,
+    dark: #5700B3,
   ),
 );

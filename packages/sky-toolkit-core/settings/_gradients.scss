@@ -13,6 +13,10 @@ $toolkit-ui-gradients: (
     0%:   #cdccd4,
     100%: #fff
   ),
+  primary: (
+    0%: #02498d,
+    100%: #0072c4,
+  ),
   page: (
     0%:   #e4e3e8,
     6%:   #f2f2f5,
@@ -35,11 +39,11 @@ $toolkit-ui-gradients: (
     100%: #197bc9
   ),
   sky-spectrum: (
-    0%:  #ff9e00,
+    0%: #ff9e00,
     35%: #f00,
     60%: #b5007d,
     85%: #21429c,
-    100%: #0071ff
+    100%: #0071ff,
   ),
 ) !default;
 
@@ -116,15 +120,42 @@ $toolkit-channel-gradients: (
 
 $toolkit-mobile-gradients: (
   sky-mobile: (
-    0%: #ff00a5,
-    100%: #ff6400
+    0%: #ff6400,
+    50%: #ff0a50,
+    100%: #ff00a5
   )
 ) !default;
 
 $toolkit-broadband-gradients: (
   sky-broadband: (
-    0%: #6e00ff,
-    100%: #ff00a5
+    0%: #ff00a5,
+    100%: #6e00ff,
+  ),
+  broadband-essential: (
+    0%: #ff5c00,
+    100%: #e30253,
+  ),
+  broadband-superfast: (
+    0%: #d71494,
+    100%: #930fcb,
+  ),
+  broadband-ultrafast: (
+    0%: #6c1dec,
+    100%: #1400ff,
+  ),
+) !default;
+
+$toolkit-tv-gradients: (
+  sky-tv: (
+    0%: #000ff5,
+    100%: #00d2ff,
+  ),
+) !default;
+
+$toolkit-deprecated-gradients: (
+  sky-living: (
+    0%:   #68879c,
+    100%: #67a0b5
   ),
   broadband-entry: (
     0%: #b600d2,
@@ -150,32 +181,17 @@ $toolkit-broadband-gradients: (
     0%: #9300e7,
     100%: #b600d2
   ),
-) !default;
-
-$toolkit-tv-gradients: (
-  sky-tv: (
-    0%: #6e00ff,
-    100%: #00ffdc
-  ),
   tv-entertainment: (
-    0%:   #0062a3,
-    100%: #007ac1
+    0%: #000ff5,
+    100%: #00d2ff,
   ),
   tv-hd: (
-    0%:   #000,
-    100%: #535353
+    0%: #000ff5,
+    100%: #00d2ff,
   ),
   ultimate-on-demand: (
-    0%:   #000514,
-    50%:  #133e73,
-    100%: #3c7191
-  ),
-) !default;
-
-$toolkit-deprecated-gradients: (
-sky-living: (
-    0%:   #68879c,
-    100%: #67a0b5
+    0%: #000ff5,
+    100%: #00d2ff,
   ),
 ) !default;
 

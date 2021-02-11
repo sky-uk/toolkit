@@ -117,35 +117,35 @@ $toolkit-channel-gradients: (
 
 $toolkit-mobile-gradients: (
   sky-mobile: (
-    0%: #ff6400,
+    0%: #ff00a5,
     50%: #ff0a50,
-    100%: #ff00a5
+    100%: #ff6400
   )
 ) !default;
 
 $toolkit-broadband-gradients: (
   sky-broadband: (
-    0%: #ff00a5,
-    100%: #6e00ff,
+    0%: #6e00ff,
+    100%: #ff00a5
   ),
   broadband-essential: (
-    0%: #ff5c00,
-    100%: #e30253,
+    0%: #e30253,
+    100%: #ff5c00
   ),
   broadband-superfast: (
-    0%: #d71494,
-    100%: #930fcb,
+    0%: #930fcb,
+    100%: #d71494
   ),
   broadband-ultrafast: (
-    0%: #6c1dec,
-    100%: #1400ff,
+    0%: #1400ff,
+    100%: #6c1dec
   ),
 ) !default;
 
 $toolkit-tv-gradients: (
   sky-tv: (
-    0%: #000ff5,
-    100%: #00d2ff,
+    0%: #00d2ff,
+    100%: #000ff5,
   ),
 ) !default;
 

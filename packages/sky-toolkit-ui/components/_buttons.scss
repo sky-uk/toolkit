@@ -111,8 +111,8 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 
   &:hover,
   &:active {
-    background-color: color(highlight);
-    border-color: color(highlight);
+    background-color: color(brand-dark);
+    border-color: color(brand-dark);
   }
 
   &:focus {
@@ -126,13 +126,12 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 .c-btn--secondary {
   color: color(brand);
   background-color: transparent;
-  border-color: color(brand);
+  border-color: color(brand-dark);
 
   &:hover,
   &:active {
-    color: color(white);
-    background-color: color(highlight);
-    border-color: color(highlight);
+    color: color(brand-dark);
+    border-color: color(brand-dark);
   }
 
   &:focus {

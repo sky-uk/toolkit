@@ -14,10 +14,6 @@ $toolkit-ui-gradients: (
     0%:   #cdccd4,
     100%: #fff
   ),
-  primary: (
-    0%: #02498d,
-    100%: #0072c4,
-  ),
   page: (
     0%:   #e4e3e8,
     6%:   #f2f2f5,
@@ -183,16 +179,17 @@ $toolkit-deprecated-gradients: (
     100%: #b600d2
   ),
   tv-entertainment: (
-    0%: #000ff5,
-    100%: #00d2ff,
+    0%: #0062a3,
+    100%: #pp7ac1,
   ),
   tv-hd: (
-    0%: #000ff5,
-    100%: #00d2ff,
+    0%: #000,
+    100%: #535353,
   ),
   ultimate-on-demand: (
-    0%: #000ff5,
-    100%: #00d2ff,
+    0%: #000514,
+    50%: #133e73,
+    100%: #3c7191,
   ),
 ) !default;
 

@@ -68,7 +68,7 @@ $select-animation-speed: $global-animation-speed-fast !default;
     top: 0; /* [2] */
     right: 0; /* [2] */
     bottom: 0; /* [2] */
-    background-color: color(brand-dark);
+    background-color: color(primary-dark);
     // The select button currently uses an inline Base64 png tick icon.
     // This will eventually be replaced by SVG.
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBKKAAAAM1BMVEX////w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////C7fNeAAAAAXRSTlMAQObYZgAAAVBJREFUeNrt2MtOA0EMRNFAeDPTU///tUhZxJGQuKxcJtTdd+vI8sqnlFJKKaWU0l20pDXMAyKDR9qHeaQ1zCMdEzy7bpvm0TSPpnk0zaNpHk3zaJpH8fzoOeKJ5448K5544vk3nj2eeOKJJ55LWzzxxBNPPH/bsySDBx5P80jTPNKY/bk2wqPbpniqZg+D1OxhkJo9DFKzh0Fq9jBIBg+IHJ7qAFGXp1og6vCwyOCBvwweElnvCRuIOubDIoMHRA5P9Qmijv1hkcNTfYCow8Miw/6AyHvPfAdRh4dFDk/1RiL2GETgMYjAYxFtPZ5LryCC+TSJHJ7qBUTgaRI59qd61vfAYxCBxyCC/TGIYD4GkQye6sngAZHBgyL2GER+T3U2eEAEHoMIPH5ReVw9kscvKo9fVB6vCDxeUXn8ovL4ezB5+LZwSimllFJKKaVf9gXIMq5peLHXMwAAAABJRU5ErkJggg==");
@@ -96,7 +96,7 @@ $select-animation-speed: $global-animation-speed-fast !default;
   }
 
   &:hover + .c-select__btn:not(.is-disabled) {
-    border-color: color(brand-dark);
+    border-color: color(primary-dark);
   }
 
   &:checked + .c-select__btn:not(.is-disabled) {

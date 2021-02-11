@@ -14,7 +14,6 @@
 
 $colors: (
   brand:     #000ff5,
-  brand-dark: #000fbe,
   highlight: #73add8,
   error:     #ff2744,
   success:   #2fa841,
@@ -26,5 +25,14 @@ $colors: (
   text:      #4a4a4a,
   black:     #000,
   white:     #fff,
-  offer:     #f15a22
+  offer:     #f15a22,
+  primary-regular: #000ff5,
+  primary-dark: #000fbe,
+  primary-light: #00a0ff,
+  positive-regular: #2fa841,
+  positive-dark: #046714,
+  negative-regular: #ff2744,
+  negative-dark: #c4001d,
+  attention-Regular:#f15a22,
+  attention-dark: #b72500,
 ) !default;
